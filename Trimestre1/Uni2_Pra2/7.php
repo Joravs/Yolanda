@@ -13,6 +13,6 @@
     }
     echo "<br>";
     foreach($arraymax as $elemmax){
-        echo $elemmax . " ";
+        echo $elemmax . " "; 
     }
 ?>
