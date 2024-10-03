@@ -9,7 +9,7 @@
             }
             $acumulador+=$matriz[$i][$j];
         }
-        $arrayprom[]=$acumulador;
+        $arrayprom[]=$acumulador/4;
         $arraymax[]=$num;
         echo "<br>";
     }
