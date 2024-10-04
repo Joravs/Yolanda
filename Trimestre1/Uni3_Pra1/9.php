@@ -17,5 +17,5 @@
             $mostrar=$num;
         }
     }
-    echo "<br>".$mostrar . " ";
+    echo "<br>".$mostrar ." ";
 ?>
