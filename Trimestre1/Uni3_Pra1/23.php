@@ -17,14 +17,14 @@
             echo "<li>$namefam</li>";
             echo "<ul>";
             foreach($familia as $nameinte=> $integrantes){
-                if($integrantes != 'hijos'){
-                    echo "<li>$nameinte : $integrantes</li>";
-                }else{
+                if($integrantes == 'hijos'){
                     echo "<ul>";
                     foreach($integrantes as $hijos => $namehijos){
                         echo "<li>$namehijos</li>";
                     }
                     echo "</ul>";
+                }else{
+                    echo "<li>$nameinte : $integrantes</li>";
                 }
             }
             echo "</ul>";
