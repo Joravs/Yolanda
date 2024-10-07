@@ -18,6 +18,7 @@
             echo "<ul>";
             foreach($familia as $nameinte=> $integrantes){
                 if($nameinte=='hijos'){
+                    echo "<li>$nameinte:</li>";
                     echo "<ul>";
                     foreach($integrantes as $hijos => $namehijos){
                         echo "<li>$namehijos</li>";
