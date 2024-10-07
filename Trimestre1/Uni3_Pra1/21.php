@@ -6,7 +6,7 @@
     'El'=>5,
     'Ejercicio'=>1);
 
-    foreach(array_sort($numeros) as $numero){
+    foreach(asort($numeros) as $numero){
         echo "$numero ";
     }
 ?>
