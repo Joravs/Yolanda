@@ -4,4 +4,14 @@
     foreach($nums as $num){
         echo "$num ";
     }
+
+    echo "<br> " . count($nums);
+
+    unset($nums[5]);
+
+    foreach($nums as $num){
+        echo "$num ";
+    }
+
+    unset($nums);
 ?>
