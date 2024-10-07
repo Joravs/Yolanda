@@ -21,8 +21,8 @@
                     echo "<li>$nameinte : $integrantes</li>";
                 }else{
                     echo "<ul>";
-                    foreach($integrantes as $hijos){
-                        echo "<li>$hijos</li>";
+                    foreach($integrantes as $hijos => $namehijos){
+                        echo "<li>$namehijos</li>";
                     }
                     echo "</ul>";
                 }
