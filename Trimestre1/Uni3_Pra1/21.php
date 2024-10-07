@@ -6,7 +6,7 @@
     'Tienes'=>5,
     'Buenas'=>1);
     asort($numeros);
-    foreach($numeros as $numero){
-        echo "$numero ";
+    foreach($numeros as $index => $elem){
+        echo "$index : $elem <br>";
     }
 ?>
