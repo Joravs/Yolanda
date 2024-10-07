@@ -6,9 +6,12 @@
         'Real Sociedad'=>"Anoeta"
     );
 
+    //A)
     echo "<table border='1'>";
         foreach($estadios_futbol as $index => $elem){
             echo "<tr><td>$index</td><td>$elem</td></tr> <br>";
         }
     echo "</table>"
+
+    //B)
 ?>
