@@ -14,7 +14,7 @@
     echo "</table>";
 
     //B)
-    $estadios_futbol['Real Madrid']="";
+    //$estadios_futbol['Real Madrid']="";
 
     //C)
     echo "<table border='1'>";
