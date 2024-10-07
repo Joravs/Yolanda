@@ -5,8 +5,8 @@
     'Tienes'=>123,
     'El'=>5,
     'Ejercicio'=>1);
-
-    foreach(asort($numeros) as $numero){
+    asort($numeros);
+    foreach($numeros as $numero){
         echo "$numero ";
     }
 ?>
