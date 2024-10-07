@@ -20,8 +20,8 @@
                 if($nameinte=='hijos'){
                     echo "<li>$nameinte:</li>";
                     echo "<ul>";
-                    foreach($integrantes as $hijos => $namehijos){
-                        echo "<li>$namehijos</li>";
+                    foreach($integrantes as $hijos){
+                        echo "<li>$hijos</li>";
                     }
                     echo "</ul>";
                 }else{
