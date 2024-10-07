@@ -5,4 +5,8 @@
         'Valencia'=>"Mestalla",
         'Real Sociedad'=>"Anoeta"
     );
+
+    echo "<table border='1'>";
+        
+    echo "</table>"
 ?>
