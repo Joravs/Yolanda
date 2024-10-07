@@ -1,10 +1,10 @@
 <?php
-    $numeros=array('Buenas'=>3,
+    $numeros=array('Aqui'=>3,
     'Yolanda'=> 2,
-    'Aqui'=>8,
-    'Tienes'=>123,
-    'El'=>5,
-    'Ejercicio'=>1);
+    'El'=>8,
+    'Ejercicio'=>123,
+    'Tienes'=>5,
+    'Buenas'=>1);
     asort($numeros);
     foreach($numeros as $numero){
         echo "$numero ";
