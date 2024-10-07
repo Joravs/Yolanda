@@ -11,7 +11,13 @@
         foreach($estadios_futbol as $index => $elem){
             echo "<tr><td>$index</td><td>$elem</td></tr> <br>";
         }
-    echo "</table>"
+    echo "</table>";
 
     //B)
+    unset($estadios_futbol['Real Madrid']);
+    echo "<table border='1'>";
+        foreach($estadios_futbol as $index => $elem){
+            echo "<tr><td>$index</td><td>$elem</td></tr> <br>";
+        }
+    echo "</table>";
 ?>
