@@ -9,7 +9,9 @@
         echo "<br>";
     //C)
         $confirmado=array(true,true,false,true,false,false);
-        echo $confirmado[0] ;
+        if ($confirmado[0]){
+            echo "true" ;
+        }
         echo "<br>";
     //D)
     $jugador= array( "Crovic", "Antic", "Malic", "Zulic", "Rostrich");
