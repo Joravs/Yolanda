@@ -5,7 +5,7 @@
         echo "$num ";
     }
 
-    echo "<br> " . count($nums);
+    echo "<br> " . count($nums). "<br>";
 
     unset($nums[5]);
 
