@@ -16,7 +16,7 @@
         foreach($familias as $namefam=>$familia){
             echo $namefam;
             foreach($familia as $nameinte=> $integrantes){
-
+                echo "$nameinte : $integrante";
             }
         }
     echo "</ul>";
