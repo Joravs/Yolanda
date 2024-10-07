@@ -11,5 +11,6 @@
     foreach($fusiondearrays as $elem){
         echo "$elem, ";
     }
+
     
 ?>
