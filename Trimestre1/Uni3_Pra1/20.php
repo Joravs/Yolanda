@@ -14,7 +14,9 @@
     echo "</table>";
 
     //B)
-    unset($estadios_futbol['Real Madrid']);
+    $estadios_futbol['Real Madrid']="";
+
+    //C)
     echo "<table border='1'>";
         foreach($estadios_futbol as $index => $elem){
             echo "<tr><td>$index</td><td>$elem</td></tr> <br>";
