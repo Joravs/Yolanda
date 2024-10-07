@@ -1,3 +1,3 @@
 <?php
-    $deportes=array();
+    $deportes=array("Futbol","Baloncesto","Natacion","Tenis");
 ?>
