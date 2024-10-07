@@ -17,8 +17,8 @@
             echo "<li>$namefam</li>";
             foreach($familia as $nameinte=> $integrantes){
                 echo "<li>$nameinte : $integrantes</li>";
-                foreach($integrantes as $hijos=>$namehijos){
-                    echo "<li>$hijos : $namehijos</li>";
+                foreach($integrantes as $hijos){
+                    echo "<li>$hijos</li>";
                 }
             }
         }
