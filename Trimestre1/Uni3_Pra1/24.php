@@ -4,9 +4,13 @@
     for($i=0;$i<$total;$i++){
         echo $deportes[$i] ." ";
     }
-    echo "<br>";
-    echo $total;
-    echo "<br>";
-    echo current($deportes);
-    
+    echo "<br>$total";
+    $pos=current($deportes);
+    echo "<br>".$pos;
+    $pos=next($deportes);
+    echo "<br>".$pos;
+    $pos=end($deportes);
+    echo "<br>".$pos;
+    $pos=prev($deportes);
+    echo "<br>".$pos;
 ?>
