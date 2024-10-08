@@ -8,4 +8,5 @@
     echo $total;
     echo "<br>";
     echo current($deportes);
+    
 ?>
