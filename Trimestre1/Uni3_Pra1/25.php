@@ -20,7 +20,8 @@
     foreach($amigos as $ciudad => $datos){
         echo "En $ciudad: <br>";
         foreach($datos as $info=>$valor){
-            echo "$info: $valor <br>";
+            if ($info=='Nombre')
+            {echo "$info: $valor <br>";}
         }
     }
 ?>
