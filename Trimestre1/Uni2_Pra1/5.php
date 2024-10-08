@@ -1,11 +1,11 @@
 <?php
-    $a= -6;
+    $a= 6;
     $b= 4;
     $c= 2;
     $elevarB=pow($b,2);
     $raiz=sqrt($elevarB-(4*$a*$c));
 
-    $sol=$elevarB-(4-$a-$c);
+    $sol=$elevarB-(4*$a*$c);
     $solneg=$b-$raiz;
     $solpos=$b+$raiz;
 
