@@ -5,6 +5,7 @@
     require_once "Camion.php";
     require_once "Coche.php";
 
+    echo "<h3>Ejercicio 3</h3>";
     $vehiculo= new Vehiculo("negro",1500);
 
     echo $vehiculo->_toString();
@@ -12,6 +13,10 @@
     $vehiculo->aniadir_personas(70);
     echo "<br>".$vehiculo->_toString();
     
-    Cuatro_rueda::$vehiculo->repintar("Rojo");
-    echo "<br>".$vehiculo->_toString();
+    echo "<h3>Ejercicio 4</h3>";
+
+    $cuatro_ruedas= new Cuatro_ruedas(4,"negro",1000);
+    $cuatro_ruedas->repintar("Rojo");
+    echo "<br>".$cuatro_ruedas->_toString();
+    
 ?>
