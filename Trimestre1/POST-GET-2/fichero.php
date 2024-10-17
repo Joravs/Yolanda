@@ -1,8 +1,6 @@
 <?php
     if(isset($_POST['nombre'])){
-        $nombre=$_POST['nombre'];
-        $apellidos=$_POST['apellidos'];
-        echo "$nombre, $apellidos";
+        echo $_POST['nombre'] .", ". $_POST['apellidos'];
     }else{
 ?>
 <!DOCTYPE html>
@@ -23,4 +21,4 @@
         </form>
     </body>
     </html>
-<?php }?>
+<?php } ?>
