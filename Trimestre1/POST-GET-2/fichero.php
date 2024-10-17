@@ -1,6 +1,6 @@
 <?php
-    if(isset($_POST['nombre'])){
-        echo "<script> alert('".$_POST['nombre'] .", ". $_POST['apellidos']."')</script>";
+    if(isset($_POST['n1'])){
+        echo "<script> alert('".$_POST['n1'] .", ". $_POST['n2']."')</script>";
         unset($_POST);
     }else{
 ?>
@@ -12,13 +12,13 @@
         <title>Formulario</title>
     </head>
     <body>
-        <!--Formulario con nombre y apellido-->
+        <!--Formulario con n1 y apellido-->
         <form action="" method="post">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required><br><br>
-            <label for="apellido">Apellidos:</label>
-            <input type="text" id="apellidos" name="apellidos" required><br><br>
-            <input type="submit" value="Enviar">
+            <label for="n1">N1:</label>
+            <input type="text" id="n1" name="n1" required><br><br>
+            <label for="n2">N2:</label>
+            <input type="text" id="n2" name="n2" required><br><br>
+            <input type="submit" value="Sumar">
         </form>
     </body>
     </html>
