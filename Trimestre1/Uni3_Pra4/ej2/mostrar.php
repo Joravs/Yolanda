@@ -20,4 +20,7 @@
     $coche->aniadir_personas(65);
 
     echo "<br>".$coche->_toString();
+
+    $coche->repintar("rojo");
+    $coche->aniadir_cadenas_nieve(2);
 ?>
