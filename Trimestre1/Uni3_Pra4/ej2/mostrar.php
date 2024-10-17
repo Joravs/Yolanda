@@ -36,5 +36,7 @@
 
     echo "<h3>Ejercicio 5</h3>";
 
-    
+    $ej5dosruedas= new Dos_ruedas(125,"rojo",150);
+    $ej5dosruedas->aniadir_personas(70);
+    echo "<br>".$ej5dosruedas->getPeso();
 ?>
