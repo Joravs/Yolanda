@@ -30,5 +30,5 @@
     $dos_ruedas->poner_Gasolina(20);
     echo "<br>Color: " . $dos_ruedas->getColor(). ", Peso: ". $dos_ruedas->getPeso() ."kg";
     //Camion
-    $camion=new Camion()
+    $camion=new Camion(10,2,"azul",10000)
 ?>
