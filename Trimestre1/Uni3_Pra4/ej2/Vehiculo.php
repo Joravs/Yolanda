@@ -28,7 +28,7 @@ class Vehiculo{
     }
 
     public function _toString(){
-        return "Vehiculo de color ". $this->color. ", y peso ". $this->peso."kg";
+        return get_class()." de color ". $this->color. ", y peso ". $this->peso."kg";
     }
 }
 ?>
