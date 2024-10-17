@@ -28,18 +28,18 @@ abstract class Vehiculo{
         return get_class()." de color ". $this->color. ", y peso ". $this->peso."kg";
     }
 
-    public function ver_atributo(Vehiculo $ver){
-        echo "Color: ".$ver->getColor();
-        echo "<br>Peso: ".$ver->getPeso()."kg";
+    public static function ver_atributo(Vehiculo $ver){
+        echo "El color es: ".$ver->getColor();
+        echo "<br>El peso es: ".$ver->getPeso()."kg";
         if($ver instanceof Cuatro_ruedas){
-            echo "<br>Numero de Puertas: ".$ver->getNumeroPuertas();
+            echo "<br>El numero de puertas es: ".$ver->getNumeroPuertas();
             if($ver instanceof Coche){
-                echo "<br>Numero de Cadenas para la nieve: ".$ver->getNumero_cadenas_nieve();
+                echo "<br>El numero de cadenas para la nieve es: ".$ver->getNumero_cadenas_nieve();
             }else{
-                echo "<br>Longitud: ".$ver->getLongitud();
+                echo "<br>La longitud es: ".$ver->getLongitud();
             }
         }else{
-            echo "<br>Cilindrada: ".$ver->getCilindrada()."CC";
+            echo "<br>La cilindrada es: ".$ver->getCilindrada()."CC";
         }
     }
 }

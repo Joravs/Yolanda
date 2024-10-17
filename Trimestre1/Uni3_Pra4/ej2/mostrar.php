@@ -35,17 +35,18 @@
     echo "<br>El color del camion es: " . $camion->getColor(). "<br>El peso del camion es: ". $camion->getPeso() . "<br>La longitud del camion es: ". $camion->getLongitud()."<br>El numero de puertas del camion es: ".$camion->getNumeroPuertas();
 
     echo "<h3>Ejercicio 5</h3>";
-
+    
     $ej5dosruedas= new Dos_ruedas(125,"rojo",150);
     $ej5dosruedas->aniadir_personas(70);
-    echo "<br>".$ej5dosruedas->getPeso()."<br>";
+    echo "El peso de dos ruedas es: ".$ej5dosruedas->getPeso()."<br>";
     $ej5dosruedas->setColor("Verde");
     $ej5dosruedas->setCilindrada(1000);
-    $ej5dosruedas->ver_atributo($ej5dosruedas);
+    Vehiculo::ver_atributo($ej5dosruedas);
     //Camion blanco
     $ej5camion=new Camion(100,2,"blanco",6000);
     $ej5camion->aniadir_personas(84);
     $ej5camion->repintar("azul");
     $ej5camion->setNumeroPuertas(2);
-    ver_atributo($ej5camion);
+    echo "<br><br>";
+    Vehiculo::ver_atributo($ej5camion);
 ?>
