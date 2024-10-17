@@ -1,7 +1,6 @@
 <?php
     if(isset($_POST['n1'])){
-        echo "<script> alert('".$_POST['n1'] .", ". $_POST['n2']."')</script>";
-        unset($_POST);
+        echo "La suma es: ". $_POST['n1'] + $_POST['n2'];
     }else{
 ?>
 <!DOCTYPE html>
