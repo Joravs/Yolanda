@@ -13,15 +13,14 @@
     $vehiculo->aniadir_personas(70);
     echo "<br>".$vehiculo->_toString();
     
-<<<<<<< HEAD
     echo "<h3>Ejercicio 4</h3>";
 
     $cuatro_ruedas= new Cuatro_ruedas(4,"negro",1000);
     $cuatro_ruedas->repintar("Rojo");
     echo "<br>".$cuatro_ruedas->_toString();
+
+    $dos_ruedas= new Dos_ruedas(125,"morado",750);
+    $dos_ruedas->poner_Gasolina(10);
+    echo "<br>".$dos_ruedas->_toString();
     
-=======
-    (Cuatro_ruedas)->$vehiculo->repintar("Rojo");
-    echo "<br>".$vehiculo->_toString();
->>>>>>> 43b725fb3d3b429c4328bfe374aeb585470e33d9
 ?>
