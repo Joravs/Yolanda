@@ -38,7 +38,10 @@
 
     $ej5dosruedas= new Dos_ruedas(125,"rojo",150);
     $ej5dosruedas->aniadir_personas(70);
-    echo "<br>".$ej5dosruedas->getPeso();
+    echo "<br>".$ej5dosruedas->getPeso()."<br>";
     $ej5dosruedas->setColor("Verde");
     $ej5dosruedas->setCilindrada(1000);
+    $ej5dosruedas->ver_atributo($ej5dosruedas);
+    //Camion blanco
+    $ej5camion=new Camion();
 ?>
