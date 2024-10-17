@@ -24,8 +24,11 @@
     $coche->repintar("rojo");
     $coche->aniadir_cadenas_nieve(2);
     echo "<br>Color: " . $coche->getColor(). ", Numero de Cadenas: ". $coche->getNumero_cadenas_nieve() . "<br>";
+    //Dos Ruedas
     $dos_ruedas=new Dos_ruedas(125,"negro",120);
     $dos_ruedas->aniadir_personas(80);
     $dos_ruedas->poner_Gasolina(20);
     echo "<br>Color: " . $dos_ruedas->getColor(). ", Peso: ". $dos_ruedas->getPeso() ."kg";
+    //Camion
+    $camion=new Camion()
 ?>
