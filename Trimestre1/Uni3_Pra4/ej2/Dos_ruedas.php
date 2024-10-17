@@ -8,7 +8,7 @@
             $this->cilindrada = $cilindrada;
         }
         public function poner_Gasolina($litros){
-
+            parent::setPeso(parent::getPeso()+$litros);
         }
     }
 ?>
