@@ -23,5 +23,5 @@
 
     $coche->repintar("rojo");
     $coche->aniadir_cadenas_nieve(2);
-    echo "Color: $coche->getColor(), Numero de Cadenas: $coche->getNumero_cadenas_nieve()"
+    echo "<br>Color: " . $coche->getColor(). ", Numero de Cadenas: ". $coche->getNumero_cadenas_nieve();
 ?>
