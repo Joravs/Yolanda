@@ -28,7 +28,7 @@ abstract class Vehiculo{
         return get_class()." de color ". $this->color. ", y peso ". $this->peso."kg";
     }
 
-    public function ver_atributo(){
+    public function ver_atributo(Vehiculo $ver){
         
     }
 }
