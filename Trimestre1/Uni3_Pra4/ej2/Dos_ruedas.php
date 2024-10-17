@@ -14,11 +14,11 @@
             $this->cilindrada=$cilindrada;
         }
         public function poner_Gasolina($litros){
-            parent::setPeso(parent::getPeso()+$litros);
+            $this->setPeso($this->getPeso()+$litros);
         }
 
         public function _toString(){
-            return parent::_toString() . ", cilindrada: " . $this->getCilindrada();
+            return $this->_toString() . ", cilindrada: " . $this->getCilindrada();
         }
     }
 ?>

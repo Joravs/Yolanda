@@ -14,7 +14,7 @@
             $this->numero_puertas=$numero_puertas;
         }
         public function repintar($color){
-            parent::setColor($color);
+            $this->setColor($color);
         }
     }
 ?>
