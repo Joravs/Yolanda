@@ -43,5 +43,5 @@
     $ej5dosruedas->setCilindrada(1000);
     $ej5dosruedas->ver_atributo($ej5dosruedas);
     //Camion blanco
-    $ej5camion=new Camion();
+    $ej5camion=new Camion(100,2,"blanco",6000);
 ?>
