@@ -14,7 +14,7 @@
             $this->longitud = $longitud;
         }
         public function aniadir_remolque($longitud_remolque){
-
+            $this->setLongitud($this->getLongitud()+$longitud_remolque);
         }
     }
 ?>
