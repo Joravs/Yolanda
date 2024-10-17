@@ -19,4 +19,5 @@
     $coche->aniadir_personas(65);
     $coche->aniadir_personas(65);
 
+    echo "<br>".$coche->_toString();
 ?>
