@@ -44,4 +44,7 @@
     $ej5dosruedas->ver_atributo($ej5dosruedas);
     //Camion blanco
     $ej5camion=new Camion(100,2,"blanco",6000);
+    $ej5camion->aniadir_personas(84);
+    $ej5camion->repintar("azul");
+    $ej5camion->setNumeroPuertas(2);
 ?>
