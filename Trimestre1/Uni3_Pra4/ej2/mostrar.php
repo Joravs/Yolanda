@@ -47,4 +47,5 @@
     $ej5camion->aniadir_personas(84);
     $ej5camion->repintar("azul");
     $ej5camion->setNumeroPuertas(2);
+    ver_atributo($ej5camion);
 ?>
