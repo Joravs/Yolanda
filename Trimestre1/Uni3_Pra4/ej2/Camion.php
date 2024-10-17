@@ -7,6 +7,12 @@
             parent::__construct($numero_puertas,$color,$peso);
             $this->longitud = $longitud;
         }
+        public function getLongitud():float{
+            return $this->longitud;
+        }
+        public function setLongitud($longitud){
+            $this->longitud = $longitud;
+        }
         public function aniadir_remolque($longitud_remolque){
 
         }
