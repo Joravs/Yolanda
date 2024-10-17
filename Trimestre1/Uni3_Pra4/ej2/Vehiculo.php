@@ -7,12 +7,24 @@ class Vehiculo{
         $this->color=$color;
         $this->peso=$peso;
     }
+    public function getColor():?string{
+        return $this->color;
+    }
+    public function getPeso():float{
+        return $this->peso;
+    }
+    public function setColor(?string $color){
+        $this->color=$color;
+    }
+    public function setPeso(float $peso){
+        $this->peso=$peso;
+    }
     public function circular(){
         echo "<br>El vehiculo circula";
     }
     public function aniadir_personas($peso_persona){
         echo "<br>Se sube una persona al vehiculo";
-        $this->peso+=$peso_persona;
+        $this->setPeso($this->getPeso()+$peso_persona);
     }
 
     public function _toString(){

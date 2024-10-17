@@ -12,6 +12,6 @@
     $vehiculo->aniadir_personas(70);
     echo "<br>".$vehiculo->_toString();
     
-    Cuatro_rueda::$vehiculo->repintar("Rojo");
+    (Cuatro_ruedas)->$vehiculo->repintar("Rojo");
     echo "<br>".$vehiculo->_toString();
 ?>
