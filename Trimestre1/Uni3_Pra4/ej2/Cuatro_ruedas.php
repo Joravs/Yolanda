@@ -16,5 +16,8 @@
         public function repintar($color){
             $this->setColor($color);
         }
+        public function aniadir_personas($peso_persona){
+            $this->setPeso($this->getPeso()+$peso_persona);
+        }
     }
 ?>

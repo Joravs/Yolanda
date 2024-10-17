@@ -32,5 +32,9 @@
     $camion=new Camion(10,2,"azul",10000);
     $camion->aniadir_remolque(5);
     $camion->aniadir_personas(80);
-    echo "El color del camion es: " . $camion->getColor(). "<br>El peso del camion es: ". $camion->getPeso() . "<br>La longitud del camion es: ". $camion->getLongitud();
+    echo "<br>El color del camion es: " . $camion->getColor(). "<br>El peso del camion es: ". $camion->getPeso() . "<br>La longitud del camion es: ". $camion->getLongitud()."<br>El numero de puertas del camion es: ".$camion->getNumeroPuertas();
+
+    echo "<h3>Ejercicio 5</h3>";
+
+    
 ?>

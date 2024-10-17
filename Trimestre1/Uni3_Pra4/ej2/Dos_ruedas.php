@@ -20,5 +20,9 @@
         public function _toString(){
             return $this->_toString() . ", cilindrada: " . $this->getCilindrada();
         }
+
+        public function aniadir_personas($peso_persona){
+            $this->setPeso($this->getPeso()+$peso_persona+2);        
+        }
     }
 ?>

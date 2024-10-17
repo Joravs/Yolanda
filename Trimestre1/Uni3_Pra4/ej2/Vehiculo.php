@@ -1,5 +1,5 @@
 <?php
-class Vehiculo{
+abstract class Vehiculo{
     private ?string $color;
     private float $peso;
 
@@ -22,9 +22,7 @@ class Vehiculo{
     public function circular(){
         echo "<br>El vehiculo circula";
     }
-    public function aniadir_personas($peso_persona){
-        $this->setPeso($this->getPeso()+$peso_persona);
-    }
+    public abstract function aniadir_personas($peso_persona);
 
     public function _toString(){
         return get_class()." de color ". $this->color. ", y peso ". $this->peso."kg";
