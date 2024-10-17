@@ -7,8 +7,14 @@
             parent::__construct($color, $peso);
             $this->numero_puertas=$numero_puertas;
         }
+        public function getNumeroPuertas(): int{
+            return $this->numero_puertas;
+        }
+        public function setNumeroPuertas($numero_puertas){
+            $this->numero_puertas=$numero_puertas;
+        }
         public function repintar($color){
-
+            parent::setColor($color);
         }
     }
 ?>
