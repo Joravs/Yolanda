@@ -14,10 +14,10 @@
             $this->numero_cadenas_nieve = $numero_cadenas_nieve;
         }
         public function aniadir_cadenas_nieve($num){
-
+            $this->setNumero_cadenas_nieve($this->getNumero_cadenas_nieve()+$num);
         }
         public function quitar_cadenas_nieve($num){
-
+            $this->setNumero_cadenas_nieve($this->getNumero_cadenas_nieve()-$num);
         }
 
     }
