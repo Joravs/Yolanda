@@ -1,6 +1,7 @@
 <?php
     if(isset($_POST['n1'])){
-        echo "La suma es: ". $_POST['n1'] + $_POST['n2'];
+        echo "La suma es: ". $_POST['n1'] + $_POST['n2'] ."<br>";
+        var_dump($_POST);
     }else{
 ?>
 <!DOCTYPE html>
@@ -14,9 +15,9 @@
         <!--Formulario con n1 y apellido-->
         <form action="" method="post">
             <label for="n1">N1:</label>
-            <input type="text" id="n1" name="n1" required><br><br>
+            <input type="number" id="n1" name="n1" required><br><br>
             <label for="n2">N2:</label>
-            <input type="text" id="n2" name="n2" required><br><br>
+            <input type="number" id="n2" name="n2" required><br><br>
             <input type="submit" value="Sumar">
         </form>
     </body>
