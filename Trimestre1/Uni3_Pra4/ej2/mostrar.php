@@ -22,7 +22,7 @@
     echo "<br>El color del coche es: " . $coche->getColor(). "<br>El nuevo peso del coche es: ". $coche->getPeso() . "<br>";
     $coche->repintar("rojo");
     $coche->aniadir_cadenas_nieve(2);
-    echo "<br>El color del coche es: " . $coche->getColor(). "<br>El numero de cadenas para la nieve del coche es: ". $coche->getNumero_cadenas_nieve() . "<br>";
+    echo "El color del coche es: " . $coche->getColor(). "<br>El numero de cadenas para la nieve del coche es: ". $coche->getNumero_cadenas_nieve() . "<br>";
     //Dos Ruedas
     $dos_ruedas=new Dos_ruedas(125,"negro",120);
     $dos_ruedas->aniadir_personas(80);
