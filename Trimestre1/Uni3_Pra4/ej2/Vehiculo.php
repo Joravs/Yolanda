@@ -27,5 +27,9 @@ abstract class Vehiculo{
     public function _toString(){
         return get_class()." de color ". $this->color. ", y peso ". $this->peso."kg";
     }
+
+    public function ver_atributo(){
+        
+    }
 }
 ?>
