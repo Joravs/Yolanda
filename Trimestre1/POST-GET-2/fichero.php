@@ -1,6 +1,8 @@
 <?php
     if(isset($_POST['nombre'])){
-        include("fichero2.php");
+        $nombre=$_POST['nombre'];
+        $apellidos=$_POST['apellidos'];
+        echo "$nombre, $apellidos";
     }else{
         echo '<!DOCTYPE html>
                 <html lang="en">
