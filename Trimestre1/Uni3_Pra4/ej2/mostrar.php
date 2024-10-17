@@ -18,7 +18,8 @@
     $cuatro_ruedas= new Cuatro_ruedas(4,"negro",1000);
     $cuatro_ruedas->repintar("Rojo");
     echo "<br>".$cuatro_ruedas->_toString();
-
+    
+    echo "<br>".$dos_ruedas->_toString();
     $dos_ruedas= new Dos_ruedas(125,"morado",750);
     $dos_ruedas->poner_Gasolina(10);
     echo "<br>".$dos_ruedas->_toString();
