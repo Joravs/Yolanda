@@ -16,6 +16,7 @@
     echo "<h3>Ejercicio 4</h3>";
 
     $coche=new Coche(0,5,"verde",1400);
-    $coche->anniadir
+    $coche->aniadir_personas(65);
+    $coche->aniadir_personas(65);
 
 ?>
