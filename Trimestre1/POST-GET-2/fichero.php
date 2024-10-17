@@ -1,7 +1,7 @@
 <?php
     if(isset($_POST['nombre'])){
         echo "<script> alert('".$_POST['nombre'] .", ". $_POST['apellidos']."')</script>";
-        unset($_POST);
+        unset($_POST['nombre']);
     }else{
 ?>
 <!DOCTYPE html>
