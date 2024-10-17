@@ -28,7 +28,10 @@
     $dos_ruedas=new Dos_ruedas(125,"negro",120);
     $dos_ruedas->aniadir_personas(80);
     $dos_ruedas->poner_Gasolina(20);
-    echo "<br>Color: " . $dos_ruedas->getColor(). ", Peso: ". $dos_ruedas->getPeso() ."kg";
+    echo "<br>Color: " . $dos_ruedas->getColor(). ", Peso: ". $dos_ruedas->getPeso() ."kg<br>";
     //Camion
-    $camion=new Camion(10,2,"azul",10000)
+    $camion=new Camion(10,2,"azul",10000);
+    $camion->aniadir_remolque(5);
+    $camion->aniadir_personas(80);
+    echo "<br>".$camion->_toString();
 ?>

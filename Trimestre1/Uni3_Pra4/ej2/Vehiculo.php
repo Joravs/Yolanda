@@ -23,7 +23,7 @@ class Vehiculo{
         echo "<br>El vehiculo circula";
     }
     public function aniadir_personas($peso_persona){
-        echo "<br>Se sube una persona al vehiculo";
+        echo "<br>Se sube una persona al vehiculo ";
         $this->setPeso($this->getPeso()+$peso_persona);
     }
 
