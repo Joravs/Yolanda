@@ -13,7 +13,7 @@
     </head>
     <body>
         <!--Formulario con nombre y apellido-->
-        <form action="#" method="post">
+        <form action="" method="post">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required><br><br>
             <label for="apellido">Apellidos:</label>
