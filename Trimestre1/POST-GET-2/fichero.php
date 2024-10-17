@@ -1,6 +1,6 @@
 <?php
     if(isset($_POST['nombre'])){
-        echo $_POST['nombre'] .", ". $_POST['apellidos'];
+        echo "<script> alert('".$_POST['nombre'] .", ". $_POST['apellidos']."')</script>";
     }else{
 ?>
 <!DOCTYPE html>
