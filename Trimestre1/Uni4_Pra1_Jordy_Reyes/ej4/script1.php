@@ -1,8 +1,19 @@
 <?php
     if (isset($_POST['mes'])) {
-        $fecha=mktime(0,0,0,int($_POST['mes']),0,int($_POST['anio']),0);
-        var_dump($fecha);
-        var_dump($_POST);
+        $fecha=mktime(0,0,0,(int)$_POST['mes'],0,(int)$_POST['anio']);
+        echo<<<_END
+            <table>
+                 <tr>
+                    <th>Domingo</th>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miércoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                    <th>Sábado</th>
+                </tr>   
+            </table>
+        _END;
     }else{
 ?>
 <!DOCTYPE html>
