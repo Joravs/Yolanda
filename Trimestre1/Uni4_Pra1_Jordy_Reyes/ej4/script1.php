@@ -26,8 +26,8 @@
                     echo "<td>".$num."</td>";
                 }
             };
-            $i=$num;
             echo "</tr>";
+            $i=$num;
         };
         echo "</table>";
     }else{
