@@ -9,8 +9,12 @@
     <form action="">
     <?php
         for ($i = 0; $i <9; $i++){
-            echo '<label for="'.$i.'">Numero</label><br>';
+            echo<<<_END
+                <label for="num'.$i.'">Num $i</label>
+                <input type="number" id="num'.$i.'" name="'.$i.'"><br>
+            _END;
         }
+        echo '<input type="submit" value="Submit">';
     ?>
     </form>
 </body>
