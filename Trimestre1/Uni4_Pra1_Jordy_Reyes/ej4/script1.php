@@ -15,9 +15,9 @@
                     <th>Viernes</th>
                     <th>Sábado</th>
                 </tr>
-                
-            </table>
         _END;
+            var_dump(date('l',$fecha));
+        echo "</table>";
     }else{
 ?>
 <!DOCTYPE html>
