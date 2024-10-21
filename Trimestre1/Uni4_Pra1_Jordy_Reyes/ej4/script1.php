@@ -1,6 +1,8 @@
 <?php
     if (isset($_POST['mes'])) {
         $fecha=mktime(0,0,0,$_POST['mes'],0,$_POST['anio'],0);
+        var_dump($fecha);
+        var_dump($_POST);
     }else{
 ?>
 <!DOCTYPE html>
