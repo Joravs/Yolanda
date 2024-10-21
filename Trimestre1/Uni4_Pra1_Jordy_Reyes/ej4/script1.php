@@ -13,7 +13,7 @@
     <title>Calendario</title>
 </head>
 <body>
-    <form action="#">
+    <form action="#" method="post">
         <label for="mes">Introduce un mes</label>
         <input type="number" name="mes" id="mes">
         <label for="anio">Introduce un anio</label>
