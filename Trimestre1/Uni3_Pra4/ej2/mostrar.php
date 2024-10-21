@@ -6,6 +6,7 @@
     require_once "Coche.php";
 
     echo "<h3>Ejercicio 3</h3>";
+    //Ejercicio comentado debido al cambio a abstracta la clase Vehiculo.
     /**$vehiculo= new Vehiculo("negro",1500);
 
     echo $vehiculo->_toString();
@@ -49,4 +50,15 @@
     $ej5camion->setNumeroPuertas(2);
     echo "<br><br>";
     Vehiculo::ver_atributo($ej5camion);
+
+    echo "<h3>Ejercicio 6</h3>";
+
+    $ej6coche=new Coche(0,4,"",2100);
+    $ej6coche->aniadir_cadenas_nieve(2);
+    $ej6coche->aniadir_personas(80);
+    $ej6coche->repintar("azul");
+    $ej6coche->quitar_cadenas_nieve(4);
+    $ej6coche->repintar("negro");
+    echo Vehiculo::$SALTO_DE_LINEA;
+    Vehiculo::ver_atributo($ej6coche);
 ?>

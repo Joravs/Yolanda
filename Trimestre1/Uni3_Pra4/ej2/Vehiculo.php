@@ -2,6 +2,8 @@
 abstract class Vehiculo{
     private ?string $color;
     private float $peso;
+    public static $SALTO_DE_LINEA="<br/>";
+    protected static $NUMERO_CAMBIO_COLOR=0;
 
     public function __construct(?string $color, float $peso){
         $this->color=$color;
@@ -15,9 +17,14 @@ abstract class Vehiculo{
     }
     public function setColor(?string $color){
         $this->color=$color;
+        Vehiculo::$NUMERO_CAMBIO_COLOR++;
     }
     public function setPeso(float $peso){
-        $this->peso=$peso;
+        if ($peso<=2100){
+            $this->peso=$peso;
+        }else{
+            echo "El peso no puede ser superior a 2100kg";
+        }
     }
     public function circular(){
         echo "<br>El vehiculo circula";
@@ -30,16 +37,18 @@ abstract class Vehiculo{
 
     public static function ver_atributo(Vehiculo $ver){
         echo "El color es: ".$ver->getColor();
-        echo "<br>El peso es: ".$ver->getPeso()."kg";
+        echo Vehiculo::$SALTO_DE_LINEA ."El peso es: ".$ver->getPeso()."kg";
         if($ver instanceof Cuatro_ruedas){
-            echo "<br>El numero de puertas es: ".$ver->getNumeroPuertas();
+            echo Vehiculo::$SALTO_DE_LINEA ."El numero de puertas es: ".$ver->getNumeroPuertas();
             if($ver instanceof Coche){
-                echo "<br>El numero de cadenas para la nieve es: ".$ver->getNumero_cadenas_nieve();
+                echo Vehiculo::$SALTO_DE_LINEA ."El numero de cadenas para la nieve es: ".$ver->getNumero_cadenas_nieve();
             }else{
-                echo "<br>La longitud es: ".$ver->getLongitud();
+                echo Vehiculo::$SALTO_DE_LINEA ."La longitud es: ".$ver->getLongitud();
             }
+            
+            echo Vehiculo::$SALTO_DE_LINEA."El color se ha cambiado ". Vehiculo::$NUMERO_CAMBIO_COLOR;
         }else{
-            echo "<br>La cilindrada es: ".$ver->getCilindrada()."CC";
+            echo Vehiculo::$SALTO_DE_LINEA ."La cilindrada es: ".$ver->getCilindrada()."CC";
         }
     }
 }
