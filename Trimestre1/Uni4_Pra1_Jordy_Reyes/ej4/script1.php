@@ -3,6 +3,9 @@
         $fecha=mktime(0,0,0,(int)$_POST['mes'],0,(int)$_POST['anio']);
         echo<<<_END
             <table>
+                <tr>
+                    <th style="justify-content:center;">Calendario</th>
+                </tr>
                  <tr>
                     <th>Domingo</th>
                     <th>Lunes</th>
