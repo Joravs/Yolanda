@@ -17,10 +17,11 @@
                 </tr>
         _END;
         $dia=date('j',$fecha);
-            for($i=0;$i<7;$i++){
+            for($i=0;$i<$dia;$i++){
                 echo "<tr>";
-                for($j=0;$j<$dia;$j++){
-                    echo "<td>".$dia."</td>";
+                $num=$i+1;
+                for($j=0;$j<7;$j++){
+                    echo "<td>".$j*$num."</td>";
                 };
                 echo "</tr>";
             };
