@@ -16,7 +16,14 @@
                     <th>Sábado</th>
                 </tr>
         _END;
-            var_dump(date('l',$fecha));
+        $dia=date('j',$fecha);
+            for($i=0;$i<7;$i++){
+                echo "<tr>";
+                for($j=0;$j<$dia;$j++){
+                    echo "<td>".$dia."</td>";
+                };
+                echo "</tr>";
+            };
         echo "</table>";
     }else{
 ?>
