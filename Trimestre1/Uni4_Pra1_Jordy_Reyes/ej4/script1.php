@@ -11,7 +11,8 @@
                     <th>Jueves</th>
                     <th>Viernes</th>
                     <th>Sábado</th>
-                </tr>   
+                </tr>
+                
             </table>
         _END;
     }else{
