@@ -1,6 +1,8 @@
 <?php
     if (isset($_POST['mes'])) {
-        $fecha=mktime(0,0,0,(int)$_POST['mes'],0,(int)$_POST['anio']);
+        $diafinal=mktime(0,0,0,(int)$_POST['mes']+1,0,(int)$_POST['anio']);
+        $diainicial=mktime(0,0,0,(int)$_POST['mes'],1,(int)$_POST['anio']);
+        echo date("Y-m-d H:i:s",$diafinal);
         echo<<<_END
             <table>
                 <tr>
@@ -16,10 +18,10 @@
                     <th>Sábado</th>
                 </tr>
         _END;
-        for($i=0;$i<date('j',$fecha);$i++){
+        for($i=1;$i<=date('j',$diafinal);$i++){
             echo "<tr>";
             for($j=0;$j<7;$j++){
-                $num=$j+$i+1;
+                $num=$j+$i;
                 echo "<td>".$num."</td>";
             };
             $i+=$num;
