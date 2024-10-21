@@ -23,6 +23,7 @@
                 $num=$j+$i+1;
                 echo "<td>".$num."</td>";
             };
+            $i+=$num;
             echo "</tr>";
         };
         echo "</table>";
