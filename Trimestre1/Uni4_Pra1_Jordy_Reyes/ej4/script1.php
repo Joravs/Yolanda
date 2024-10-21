@@ -17,14 +17,14 @@
                 </tr>
         _END;
         $dia=date('j',$fecha);
-            for($i=0;$i<$dia;$i++){
-                echo "<tr>";
-                for($j=0;$j<7;$j++){
-                    $num=$j+$i+1;
-                    echo "<td>".$num."</td>";
-                };
-                echo "</tr>";
+        for($i=0;$i<$dia;$i++){
+            echo "<tr>";
+            for($j=0;$j<7;$j++){
+                $num=$j+$i+1;
+                echo "<td>".$num."</td>";
             };
+            echo "</tr>";
+        };
         echo "</table>";
     }else{
 ?>
