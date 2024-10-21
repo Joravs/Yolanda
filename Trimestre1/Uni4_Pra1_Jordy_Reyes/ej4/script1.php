@@ -16,8 +16,7 @@
                     <th>Sábado</th>
                 </tr>
         _END;
-        $dia=date('j',$fecha);
-        for($i=0;$i<$dia;$i++){
+        for($i=0;$i<date('j',$fecha);$i++){
             echo "<tr>";
             for($j=0;$j<7;$j++){
                 $num=$j+$i+1;
