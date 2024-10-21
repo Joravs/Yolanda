@@ -9,7 +9,7 @@
     <form action="">
     <?php
         for ($i = 0; $i <9; $i++){
-            echo '<label for="'.$i.'">Numero</label><br>';
+            echo '<label for="'.$i.'">Numero </label><br>';
         }
     ?>
     </form>
