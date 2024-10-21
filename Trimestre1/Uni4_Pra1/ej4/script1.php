@@ -1,6 +1,6 @@
 <?php
     if (isset($_POST['mes'])) {
-        
+        $fecha=mktime(0,0,0,$_POST['mes'],0,$_POST['anio'],0);
     }else{
 ?>
 <!DOCTYPE html>
