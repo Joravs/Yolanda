@@ -18,6 +18,9 @@
         }
         public function quitar_cadenas_nieve($num){
             $this->setNumero_cadenas_nieve($this->getNumero_cadenas_nieve()-$num);
+            if ($this->getNumero_cadenas_nieve() < 0){
+                $this->setNumero_cadenas_nieve(0);
+            }
         }
 
         public function aniadir_personas($peso_persona){
