@@ -22,9 +22,11 @@
             echo "<tr>";
             for($j=0;$j<7;$j++){
                 $num=$j+$i;
-                echo "<td>".$num."</td>";
+                if ($num<=$diafinal){
+                    echo "<td>".$num."</td>";
+                }
             };
-            $i+=$num;
+            $i=$num;
             echo "</tr>";
         };
         echo "</table>";
