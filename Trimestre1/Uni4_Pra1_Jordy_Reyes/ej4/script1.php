@@ -35,11 +35,12 @@
                     <th>Sábado</th>
                 </tr>
         _END;
-        $inicio=date("l",$diainicial);
+        $inicio=date("N",$diainicial);
         echo $inicio;
         for($i=1;$i<=date('j',$diafinal);$i++){
             echo "<tr>";
             for($j=0;$j<7;$j++){
+                
                 $num=$j+$i;
                 if ($num<$diafinal){
                     echo "<td>".$num."</td>";
