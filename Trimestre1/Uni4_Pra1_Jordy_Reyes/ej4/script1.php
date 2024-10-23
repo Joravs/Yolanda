@@ -16,9 +16,6 @@
         th {
             background-color: #f2f2f2;
         }
-        .nombre{
-            
-        }
     </style>
 </head>
 <body>
@@ -38,7 +35,7 @@
         echo<<<_END
             <table>
                 <tr>
-                    <th class="nombre">Calendario</th>
+                    <th class="nombre" colspan="7">Calendario</th>
                 </tr>
                  <tr>
                     <th>Lunes</th>
