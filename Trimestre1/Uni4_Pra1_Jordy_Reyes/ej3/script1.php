@@ -1,5 +1,5 @@
 <?php
-    if (isset($_POST)){
+    if (isset($_POST['num1'])){
         $num1=$_POST['num1'];
         $num2=$_POST['num2'];
         $calcular=$_POST['calcular'];
@@ -22,6 +22,7 @@
                 }
                 break;
         }
+        echo "Resultado: ".$result;
     }
     else{
 ?>
@@ -39,11 +40,11 @@
         <input type="number" id="num1" name="num1">
         <label for="num2">Número 2:</label>
         <input type="number" id="num2" name="num2">
-        <label for="operacion">Operación:</label>
-        <input type="button" name="calcular" value="suma">Suma</input>
-        <input type="button" name="calcular" value="resta">Resta</input>
-        <input type="button" name="calcular" value="multiplicacion">Multiplicación</input>
-        <input type="button" name="calcular" value="division">División</input>
+        <label for="operacion"><br><br></label>
+        <input type="submit" name="calcular" value="suma"></input>
+        <input type="submit" name="calcular" value="resta"></input>
+        <input type="submit" name="calcular" value="multiplicacion"></input>
+        <input type="submit" name="calcular" value="division"></input>
     </form>
 </body>
 </html>
