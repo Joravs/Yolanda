@@ -26,24 +26,26 @@
                     <th style="display:flex; justify-content:center;">Calendario</th>
                 </tr>
                  <tr>
-                    <th>Domingo</th>
                     <th>Lunes</th>
                     <th>Martes</th>
                     <th>Miércoles</th>
                     <th>Jueves</th>
                     <th>Viernes</th>
                     <th>Sábado</th>
+                    <th>Domingo</th>
                 </tr>
         _END;
         $inicio=date("N",$diainicial);
         echo $inicio;
+        $k=1;
         for($i=1;$i<=date('j',$diafinal);$i++){
             echo "<tr>";
-            for($j=0;$j<7;$j++){
-                if ($i==1 && $j<$inicio){
-                    $j=$inicio;
+            for($j=1;$j<=7;$j++){
+                if ($i==1 && $k<$inicio){
+                    echo "<td></td>";
+                    $k++;
                 }
-                $num=$j+$i;
+                $num=$j+$i-1;
                 if ($num<$diafinal){
                     echo "<td>".$num."</td>";
                 }
