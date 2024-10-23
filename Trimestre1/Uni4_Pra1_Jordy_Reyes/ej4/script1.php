@@ -48,9 +48,10 @@
                 </tr>
         _END;
         $inicio=date("N",$diainicial); // Dia de la semana en la que empieza el mes, formato numero
+        $final=date("j",$diafinal); // Dia final del mes, formato numero
         $k=1; // saltar espacios de dias
         $num=0; // dias que se imprimiran
-        for($i=1;$i<=date('j',$diafinal);$i++){
+        for($i=1;$i<=$final;$i++){
             echo "<tr>";
             for($j=1;$j<=7;$j++){
                 while ($k<$inicio){
@@ -59,7 +60,7 @@
                     $j++;
                 }
                 $num=$j+$i-$k;
-                if ($num<=date('j',$diafinal)){
+                if ($num<=$final){
                     echo "<td>".$num."</td>";
                 }else{
                     $j=7;
