@@ -59,18 +59,17 @@
                     $j++;
                 }
                 $num=$j+$i-$k;
-                echo $num . " " . $j ." ".$i ." ".$k . "<br>";
-                if ($num<$diafinal){
+                if ($num<=date('j',$diafinal)){
                     echo "<td>".$num."</td>";
                 }else{
                     $j=7;
                 }
-            };
+            }
             $k=1;
             $inicio=-1;
             echo "</tr>";
             $i=$num;
-        };
+        }
         echo "</table>";
     }
 ?>
