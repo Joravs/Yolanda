@@ -34,9 +34,9 @@
                     <th>Domingo</th>
                 </tr>
         _END;
-        $inicio=date("N",$diainicial);
-        $k=1;
-        $num=0;
+        $inicio=date("N",$diainicial); // Dia de la semana en la que empieza el mes, formato numero
+        $k=1; // saltar espacios de dias
+        $num=0; // dias que se imprimiran
         for($i=1;$i<=date('j',$diafinal);$i++){
             echo "<tr>";
             for($j=1;$j<=7;$j++){
