@@ -34,6 +34,9 @@
         $diafinal=mktime(0,0,0,(int)$_POST['mes']+1,0,(int)$_POST['anio']);
         $diainicial=mktime(0,0,0,(int)$_POST['mes'],1,(int)$_POST['anio']);
         echo<<<_END
+        <br>
+        <br>
+        <br>
             <table>
                 <tr>
                     <th class="nombre" colspan="7">Calendario</th>
