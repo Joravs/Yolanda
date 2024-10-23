@@ -40,11 +40,10 @@
         <label for="num2">Número 2:</label>
         <input type="number" id="num2" name="num2">
         <label for="operacion">Operación:</label>
-        <option value="suma">Suma</option>
-        <option value="resta">Resta</option>
-        <option value="multiplicacion">Multiplicación</option>
-        <option value="division">División</option>
-        <input type="submit" value="Calcular">
+        <input type="button" value="suma">Suma</input>
+        <input type="button" value="resta">Resta</input>
+        <input type="button" value="multiplicacion">Multiplicación</input>
+        <input type="button" value="division">División</input>
     </form>
 </body>
 </html>
