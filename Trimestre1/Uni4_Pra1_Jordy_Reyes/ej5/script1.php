@@ -22,7 +22,7 @@
     <?php
         for ($i = 0; $i <9; $i++){
             echo<<<_END
-                <label for="num$i">Num $i</label>
+                <label for="num$i">$i</label>
                 <input type="number" id="num$i" name="num$i"><br>
             _END;
         }
