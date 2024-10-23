@@ -54,7 +54,7 @@
                     }
                 }else{$j=7;}
             };
-            $k=0;
+            $k=1;
             $inicio=-1;
             echo "</tr>";
             $i=$num;
