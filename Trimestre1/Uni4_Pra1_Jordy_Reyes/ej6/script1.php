@@ -1,3 +1,15 @@
+<?php
+    if (isset($_POST['1'])){
+        $sum=0;
+        echo "El vector tiene ". count($_POST). " elementos <br>";
+        for ($i=1; $i<=count($_POST); $i++) {
+            echo $i . " = " . $_POST[$i];
+            $sum+=$_POST[$i];
+            echo "<br>";
+        }
+        echo "La suma es: ".$sum;
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,36 +19,27 @@
 </head>
 <body>
     <form method="get">
+        <br>
+        <br>
         <label for="caja">Numero de Elementos: </label>
         <input type="text" id="caja" name="caja">
-        <input type="button" value="Aceptar">
+        <input type="submit" value="Aceptar">
+        <br>
+        <br>
     </form>
-    <form method="post">
-        <?php
-        if (isset($_GET[1])){
-            for ($i=1;$i<=count($_GET);$i++){
-                echo<<<_END
-                    <label for=$i>$i</label>
-                    _END;
-                    echo '<input type="number" name="'. $_GET[$i] .'"></input>';
-            }
-            echo '<input type="button" value="Enviar">';
+    <?php
+    if (isset($_GET['caja'])){
+        echo '<form method="post">';
+        for ($i=1;$i<=$_GET['caja'];$i++){
+            echo<<<_END
+                <label for=$i>$i</label>
+                _END;
+                echo '<input type="number" name="'.$i.'"></input>';
+                echo "<br>";
         }
-        ?>
-    </form>
-    <div>
-        <?php
-            if (isset($_POST['1'])){
-                $sum=0;
-                echo "El vector tiene ". count($_POST). " elementos <br>";
-                for ($i=0; $i<=(count($_POST) - 1); $i++) {
-                    echo $i . " = " . $_POST[$i];
-                    $sum+=$_POST[$i];
-                    echo "<br>";
-                }
-                echo "La suma es: ".$sum;
-            }
-        ?>
-    </div>
+        echo '<input type="submit" value="Enviar">';
+        echo "</form>";
+    }
+    ?>
 </body>
 </html>
