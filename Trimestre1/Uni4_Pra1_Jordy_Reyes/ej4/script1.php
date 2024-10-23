@@ -7,6 +7,7 @@
     <style>
         table {
             border-collapse: collapse;
+            border:1px solid #ddd;
         }
         th, td {
             padding: 8px;
