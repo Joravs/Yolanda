@@ -2,8 +2,8 @@
     if (isset($_POST)){
         $num1=$_POST['num1'];
         $num2=$_POST['num2'];
-        $operacion=$_POST['operacion'];
-        switch ($operacion){
+        $calcular=$_POST['calcular'];
+        switch ($calcular){
             case "suma":
                 $result=$num1+$num2;
                 break;
@@ -40,10 +40,10 @@
         <label for="num2">Número 2:</label>
         <input type="number" id="num2" name="num2">
         <label for="operacion">Operación:</label>
-        <input type="button" value="suma">Suma</input>
-        <input type="button" value="resta">Resta</input>
-        <input type="button" value="multiplicacion">Multiplicación</input>
-        <input type="button" value="division">División</input>
+        <input type="button" name="calcular" value="suma">Suma</input>
+        <input type="button" name="calcular" value="resta">Resta</input>
+        <input type="button" name="calcular" value="multiplicacion">Multiplicación</input>
+        <input type="button" name="calcular" value="division">División</input>
     </form>
 </body>
 </html>
