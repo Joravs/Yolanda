@@ -54,17 +54,17 @@
         for($i=1;$i<=date('j',$diafinal);$i++){
             echo "<tr>";
             for($j=1;$j<=7;$j++){
-                if($num<$diafinal){
-                    while ($k<$inicio){
-                        echo "<td></td>";
-                        $k++;
-                        $j++;
-                    }
-                    $num=$j+$i-$k;
-                    if ($num<$diafinal){
-                        echo "<td>".$num."</td>";
-                    }
-                }else{$j=7;}
+                while ($k<$inicio){
+                    echo "<td></td>";
+                    $k++;
+                    $j++;
+                }
+                $num=$j+$i-$k;
+                if ($num<$diafinal){
+                    echo "<td>".$num."</td>";
+                }else{
+                    $j=7;
+                }
             };
             $k=1;
             $inicio=-1;
