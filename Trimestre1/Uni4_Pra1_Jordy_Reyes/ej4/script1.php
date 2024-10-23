@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendario</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
     <form action="#" method="post">
@@ -22,7 +35,7 @@
         echo<<<_END
             <table>
                 <tr>
-                    <th style="display:flex; justify-content:center;">Calendario</th>
+                    <th class="nombre">Calendario</th>
                 </tr>
                  <tr>
                     <th>Lunes</th>
