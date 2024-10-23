@@ -1,12 +1,13 @@
 <?php
-var_dump($_POST);
     if (isset($_POST['num0'])){
-        echo "El vector tiene ". count($_POST) - 1 . " elementos";
-        for ($i=0; $i<(count($_POST) - 1); $i++) {
+        $sum=0;
+        echo "El vector tiene ". count($_POST). " elementos <br>";
+        for ($i=0; $i<=(count($_POST) - 1); $i++) {
             echo $i . " = " . $_POST['num'.$i];
+            $sum+=$_POST['num'.$i];
             echo "<br>";
         }
-        var_dump($_POST);
+        echo "La suma es: ".$sum;
     }
 ?>
 <!DOCTYPE html>
