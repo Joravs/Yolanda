@@ -37,11 +37,11 @@
         _END;
         $inicio=date("N",$diainicial);
         echo $inicio;
-        $k=1;
+        $k=2;
         for($i=1;$i<=date('j',$diafinal);$i++){
             echo "<tr>";
             for($j=1;$j<=7;$j++){
-                if ($i==1 && $k<$inicio){
+                if ($k<$inicio && $i==1){
                     echo "<td></td>";
                     $k++;
                 }
