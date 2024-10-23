@@ -38,18 +38,24 @@
         $inicio=date("N",$diainicial);
         echo $inicio;
         $k=1;
+        $num=0;
         for($i=1;$i<=date('j',$diafinal);$i++){
             echo "<tr>";
             for($j=1;$j<=7;$j++){
-                while ($k<$inicio){
-                    echo "<td></td>";
-                    $k++;
-                }
-                $num=$j+$i-1;
-                if ($num<$diafinal){
-                    echo "<td>".$num."</td>";
-                }
+                if($num<31){
+                    while ($k<$inicio){
+                        echo "<td></td>";
+                        $k++;
+                        $j++;
+                    }
+                    $num=$j+$i-$k;
+                    if ($num<$diafinal){
+                        echo "<td>".$num."</td>";
+                    }
+                }else{$j=7;}
             };
+            $k=0;
+            $inicio=-1;
             echo "</tr>";
             $i=$num;
         };
