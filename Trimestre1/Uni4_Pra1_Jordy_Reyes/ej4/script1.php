@@ -23,7 +23,7 @@
         echo<<<_END
             <table>
                 <tr>
-                    <th style="justify-content:center;">Calendario</th>
+                    <th style="display:flex; justify-content:center;">Calendario</th>
                 </tr>
                  <tr>
                     <th>Domingo</th>
@@ -40,7 +40,9 @@
         for($i=1;$i<=date('j',$diafinal);$i++){
             echo "<tr>";
             for($j=0;$j<7;$j++){
-                if ($j==$inicio)  
+                if ($i==1 && $j<$inicio){
+                    $j=$inicio;
+                }
                 $num=$j+$i;
                 if ($num<$diafinal){
                     echo "<td>".$num."</td>";
