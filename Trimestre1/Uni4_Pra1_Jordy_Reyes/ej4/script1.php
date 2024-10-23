@@ -40,12 +40,13 @@
         for($i=1;$i<=date('j',$diafinal);$i++){
             echo "<tr>";
             for($j=0;$j<7;$j++){
-                
+                $j=$inicio;
                 $num=$j+$i;
                 if ($num<$diafinal){
                     echo "<td>".$num."</td>";
                 }
             };
+            $inicio=0;
             echo "</tr>";
             $i=$num;
         };
