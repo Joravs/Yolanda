@@ -35,6 +35,8 @@
                     <th>Sábado</th>
                 </tr>
         _END;
+        $inicio=date("l",$diainicial);
+        echo $inicio;
         for($i=1;$i<=date('j',$diafinal);$i++){
             echo "<tr>";
             for($j=0;$j<7;$j++){
