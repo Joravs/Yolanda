@@ -16,6 +16,9 @@
         th {
             background-color: #f2f2f2;
         }
+        .nombre{
+            
+        }
     </style>
 </head>
 <body>
