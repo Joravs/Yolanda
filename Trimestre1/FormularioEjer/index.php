@@ -30,8 +30,32 @@
         }
     ?>
     <?php
+        function sumardiag($arr){
+            $suma=0;
+            foreach ($arr as $value) {
+                $suma+=$value;
+            }
+            return $suma;
+        }
+
         if (isset($_POST['00'])) {
-            
+            for ($i=0; $i <sqrt(count($_POST)); $i++) { 
+                for ($j=0; $j < sqrt(count($_POST)); $j++) { 
+                    $matriz[$i][$j]=$_POST[.$i$j.];
+                }
+            }
+            $diagonal=array();
+            for ($i=0; $i < count($matriz); $i++) { 
+                echo "La diagonal mayor es: ".$matriz[$i][$i]." ";
+                $diagonal[$i]=$matriz[$i][$i];
+            }
+            echo "La suma de la diagonal mayor es: ".sumardiag($diagonal);
+
+            for ($i=0; $i < count($matriz); $i++) { 
+                echo "La diagonal menor es: ".$matriz[count($matriz)-$i-1][$i]." ";
+                $diagonal[$i]=$matriz[$i][$i];
+            }
+            echo "La suma de la diagonal menor es: ".sumardiag($diagonal);
         }
     ?>
 </body>
