@@ -18,6 +18,7 @@
     </form>
     <?php
         if (isset($_POST['Enviar'])){
+            echo "<form>";
             for($i=0;$i<$_POST['dimen'];$i++){
                 for($j=0;$j<$_POST['dimen'];$j++){
                     echo "<div>"
@@ -26,7 +27,8 @@
                     echo "</div>"
                 }
             }
-            'echo <input type="submit" value="calcular">';
+            echo '<input type="submit" value="calcular">';
+            echo '</form>';
         }
     ?>
     <?php
