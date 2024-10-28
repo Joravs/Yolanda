@@ -21,11 +21,12 @@
             echo "<form>";
             for($i=0;$i<$_POST['dimen'];$i++){
                 for($j=0;$j<$_POST['dimen'];$j++){
-                    echo "<div>"
-                    echo '<label for="'.$i$j.'">('.$i,$j.')</label><br>';
-                    echo '<input type="number" name="'.$i$j.'" id="'.$i$j.'">';
-                    echo "</div>"
+                    echo "<div>";
+                    echo '<label for="'.$i.$j.'">('.$i.$j.')</label><br>';
+                    echo '<input type="number" name="'.$i.$j.'" id="'.$i.$j.'">';
+                    echo "</div>";
                 }
+                echo '<br>';
             }
             echo '<input type="submit" value="calcular">';
             echo '</form>';
@@ -39,11 +40,11 @@
             }
             return $suma;
         }
-
+        var_dump($_POST);
         if (isset($_POST['00'])) {
             for ($i=0; $i <sqrt(count($_POST)); $i++) { 
                 for ($j=0; $j < sqrt(count($_POST)); $j++) { 
-                    $matriz[$i][$j]=$_POST[.$i$j.];
+                    $matriz[$i][$j]=$_POST[$i.$j];
                 }
             }
             $diagonal=array();
