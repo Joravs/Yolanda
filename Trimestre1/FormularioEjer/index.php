@@ -18,11 +18,11 @@
     </form>
     <?php
         if (isset($_POST['Enviar'])){
-            echo "<form>";
+            echo '<form method="post">';
             for($i=0;$i<$_POST['dimen'];$i++){
                 for($j=0;$j<$_POST['dimen'];$j++){
                     echo "<div>";
-                    echo '<label for="'.$i.$j.'">('.$i.$j.')</label><br>';
+                    echo '<label for="'.$i.$j.'">('.$i.','.$j.')</label><br>';
                     echo '<input type="number" name="'.$i.$j.'" id="'.$i.$j.'">';
                     echo "</div>";
                 }
@@ -40,7 +40,7 @@
             }
             return $suma;
         }
-        var_dump($_POST);
+        
         if (isset($_POST['00'])) {
             for ($i=0; $i <sqrt(count($_POST)); $i++) { 
                 for ($j=0; $j < sqrt(count($_POST)); $j++) { 
@@ -48,14 +48,17 @@
                 }
             }
             $diagonal=array();
+            echo "La diagonal mayor es: ";
             for ($i=0; $i < count($matriz); $i++) { 
-                echo "La diagonal mayor es: ".$matriz[$i][$i]." ";
+                echo $matriz[$i][$i]." ";
                 $diagonal[$i]=$matriz[$i][$i];
             }
             echo "La suma de la diagonal mayor es: ".sumardiag($diagonal);
+            echo '<br>';
 
+            echo "La diagonal menor es: ";
             for ($i=0; $i < count($matriz); $i++) { 
-                echo "La diagonal menor es: ".$matriz[count($matriz)-$i-1][$i]." ";
+                echo $matriz[count($matriz)-$i-1][$i]." ";
                 $diagonal[$i]=$matriz[$i][$i];
             }
             echo "La suma de la diagonal menor es: ".sumardiag($diagonal);
