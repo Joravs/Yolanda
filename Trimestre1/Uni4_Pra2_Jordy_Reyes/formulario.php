@@ -9,7 +9,7 @@
 <body>
     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>">
         <h1>PHP Form Validator Example</h1>
-        <?php if(isset($_POST["enviar"]))?>
+        <span class="error">*<?php if(!isset($_POST["enviar"])) echo "required field"?></span><br><br>
         <label for="name">Nombre:</label>
         <input type="text" id="name" name="name" value=""><span class="error">* <?php validar_nombre()?></span><br><br>
         <label for="email">Email:</label>
