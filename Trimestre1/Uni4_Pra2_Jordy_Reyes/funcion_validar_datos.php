@@ -1,5 +1,7 @@
 <?php
-    if (isset($_POST['enviar']){
-        
-    }
+    function fieldreq(){
+        if (isset($_POST['enviar'])){
+            
+        }
+    }   
 ?>
