@@ -39,3 +39,6 @@ value="hombre"> Hombre
 <br>mail: <input type="text" name="email" value="<?php echo $email;?>"><span class="error">* <?php echo $emailErr;?></span><br><br>
 
 <!--Ejercicio 7-->
+<!--Es un patron que se compara con una cadena objetivo, sirven para buscar, comparar y sustituirr cadenas en Strings-->
+
+<!--Ejercicio 8-->
