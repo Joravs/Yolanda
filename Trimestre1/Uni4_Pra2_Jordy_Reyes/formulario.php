@@ -8,12 +8,12 @@
 <body>
     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>">
         <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" required><br><br>
+        <input type="text" id="name" name="name" value="<?php echo $name?>"><br><br>
         <label for="email">Email:</label>
-        <input type="text" name="email" id="email" required><br><br>
-        <input type="radio" name="sexo" <?php if (isset($sexo) && $sexo=="mujer") echo "checked";?> value="mujer" required> Mujer
-        <input type="radio" name="sexo" <?php if (isset($sexo) && $sexo=="hombre") echo "checked";?> value="hombre" required> Hombre
-
+        <input type="text" name="email" id="email" value="<?php echo $email?>"><br><br>
+        <input type="radio" name="sexo" <?php if (isset($sexo) && $sexo=="mujer") echo "checked";?> value="mujer"> Mujer
+        <input type="radio" name="sexo" <?php if (isset($sexo) && $sexo=="hombre") echo "checked";?> value="hombre"> Hombre
+        
         <input type="submit" value="Enviar">
     </form>
 </body>
