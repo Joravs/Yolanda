@@ -1,3 +1,4 @@
+<?php require_once "funcion_nombre.php" && "funcion_validar_email.php" && "funcion_validar_url.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
