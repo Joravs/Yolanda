@@ -1,6 +1,6 @@
 <?php
     function validar_nombre(){
-        $nameErr=null;
+        $nameErr="";
         if (empty($_POST["name"])) {
             $nameErr = "* El nombre es obligatorio";
         } else {
