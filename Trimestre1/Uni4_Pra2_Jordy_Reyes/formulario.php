@@ -27,7 +27,7 @@ require_once "funcion_validar_email.php"; require_once "funcion_validar_url.php"
         <label for="sexo">Gender:</label>
         <input type="radio" name="sexo" value="mujer"> Mujer
         <input type="radio" name="sexo" value="hombre"> Hombre
-        <span class="error">* <?php echo validar_genero()?></span><br><br>
+        <span class="error"><?php echo validar_genero()?></span><br><br>
         
         <input type="submit" value="Enviar" name="enviar">
     </form>
