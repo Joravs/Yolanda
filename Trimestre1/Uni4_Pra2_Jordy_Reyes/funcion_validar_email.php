@@ -1,7 +1,7 @@
 <?php
     function validar_email() {
         if (empty($_POST['email'])) {
-            $emailErr="Se requiere email"
+            $emailErr="Se requiere email";
         }else {
             if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
                 $emailErr="Formato de email incorrecto";

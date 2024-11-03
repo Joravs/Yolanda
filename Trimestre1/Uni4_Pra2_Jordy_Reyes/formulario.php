@@ -1,10 +1,16 @@
-<?php require_once "funcion_validar_nombre.php" && "funcion_validar_email.php" && "funcion_validar_url.php" && "funcion_validar_genero.php"?>
+<?php require_once "funcion_validar_nombre.php";
+require_once "funcion_validar_email.php"; require_once "funcion_validar_url.php"; require_once "funcion_validar_genero.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unidad 4 Practica 2</title>
+    <style>
+        span.error{
+            color: red;
+        }
+    </style>
 </head>
 <body>
     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>">
