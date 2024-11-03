@@ -16,6 +16,8 @@
         <input type="text" name="email" id="email" value=""><span class="error">* <?php validar_email()?></span><br><br>
         <label for="url">URL:</label>
         <input type="text" name="url" id="url" value=""><span class="error">* <?php validar_url()?></span><br><br>
+        <label for="comentario">Comentario</label>
+        <input type="text" name="comentario" id="comentario"><br><br>
         <label for="sexo">Gender:</label>
         <input type="radio" name="sexo" value="mujer"> Mujer
         <input type="radio" name="sexo" value="hombre"> Hombre
