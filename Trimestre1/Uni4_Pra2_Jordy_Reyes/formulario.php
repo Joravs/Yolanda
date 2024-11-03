@@ -7,7 +7,10 @@
 </head>
 <body>
     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>">
-        
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email">
     </form>
 </body>
 </html>
