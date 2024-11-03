@@ -20,16 +20,18 @@ value="hombre"> Hombre
 
 
 <?php
-$email="abc@abc.com";
-$emailErr="Email correcto";
-if (empty($email)) {
- $emailErr = "Se requiere Email";
- } else {
- if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
- $emailErr = "Fomato de Email invalido";
- }
- }
-echo $email;
-echo "<br>";
-echo $emailErr;
+    $email="abc@abc.com";
+    $emailErr="Email correcto";
+    if (empty($email)) {
+        $emailErr = "Se requiere Email";
+    } else {
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $emailErr = "Fomato de Email invalido";
+        }
+    }
+    echo $email;
+    echo "<br>";
+    echo $emailErr;
 ?>
+
+<br>mail: <input type="text" name="email" value="<?php echo $email;?>"><span class="error">* <?php echo $emailErr;?></span><br><br>
