@@ -6,6 +6,8 @@
     <title>Unidad 4 Practica 2</title>
 </head>
 <body>
-    
+    <form action="<?php echo $_SERVER["PHP_SELF"]; ?>">
+        
+    </form>
 </body>
 </html>
