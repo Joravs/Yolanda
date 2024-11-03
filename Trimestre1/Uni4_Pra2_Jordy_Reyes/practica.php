@@ -42,3 +42,13 @@ value="hombre"> Hombre
 <!--Es un patron que se compara con una cadena objetivo, sirven para buscar, comparar y sustituirr cadenas en Strings-->
 
 <!--Ejercicio 8-->
+<?php
+    if (empty($_POST["name"])) {
+        $nameErr = "El nombre es obligatorio";
+    } else {
+        $name = test_input($_POST["name"]);
+        if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+            $nameErr = "Únicamente se permiten letras y espacios";
+        }
+    }
+?>
