@@ -17,11 +17,11 @@ require_once "funcion_validar_email.php"; require_once "funcion_validar_url.php"
         <h1>PHP Form Validator Example</h1>
         <span class="error"><?php if(empty($_POST["enviar"])) echo "required field"?></span><br><br>
         <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" value="<?php if (isset($_POST['name']))?>>"><span class="error"><?php echo validar_nombre()?></span><br><br>
+        <input type="text" id="name" name="name" value="<?php if (isset($_POST['name'])) echo $_POST['name']?>"><span class="error"><?php echo validar_nombre()?></span><br><br>
         <label for="email">Email:</label>
-        <input type="text" name="email" id="email" value=""><span class="error"><?php echo validar_email()?></span><br><br>
+        <input type="text" name="email" id="email" value="<?php if (isset($_POST['email'])) echo $_POST['email']?>"><span class="error"><?php echo validar_email()?></span><br><br>
         <label for="url">URL:</label>
-        <input type="text" name="url" id="url" value=""><span class="error"><?php echo validar_url()?></span><br><br>
+        <input type="text" name="url" id="url" value="<?php if (isset($_POST['comentario'])) echo $_POST['comentario']?>"><span class="error"><?php echo validar_url()?></span><br><br>
         <label for="comentario">Comentario</label>
         <input type="text" name="comentario" id="comentario"><br><br>
         <label for="sexo">Gender:</label>
