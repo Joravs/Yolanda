@@ -26,7 +26,13 @@
         <input type="submit" value="Enviar" name="enviar">
     </form>
     <?php
-        if (isset($_POST['enviar'])
+        if (isset($_POST['enviar'])){
+            echo "Nombre: ".$_POST['name']."<br>";
+            echo "Email: ".$_POST['email']."<br>";
+            echo "URL: ".$_POST['url']."<br>";
+            echo "Comentario: ".$_POST['comentario']."<br>";
+            echo "Sexo: ".$_POST['sexo']."<br>";
+        }
     ?>
 </body>
 </html>
