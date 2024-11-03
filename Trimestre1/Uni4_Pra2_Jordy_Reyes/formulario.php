@@ -13,7 +13,7 @@ require_once "funcion_validar_email.php"; require_once "funcion_validar_url.php"
     </style>
 </head>
 <body>
-    <form action="<?php echo $_SERVER["PHP_SELF"]; ?>">
+    <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
         <h1>PHP Form Validator Example</h1>
         <span class="error">*<?php if(!isset($_POST["enviar"])) echo "required field"?></span><br><br>
         <label for="name">Nombre:</label>
