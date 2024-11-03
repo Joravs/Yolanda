@@ -1,4 +1,4 @@
-<?php require_once "funcion_nombre.php" && "funcion_validar_email.php" && "funcion_validar_url.php" ?>
+<?php require_once "funcion_validar_nombre.php" && "funcion_validar_email.php" && "funcion_validar_url.php" && "funcion_validar_genero.php"?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +11,11 @@
         <label for="name">Nombre:</label>
         <input type="text" id="name" name="name" value=""><span class="error">* <?php validar_nombre()?></span><br><br>
         <label for="email">Email:</label>
-        <input type="text" name="email" id="email" value=""><span class="error">* <?php funcion_validar_email()?></span><br><br>
-        <input type="radio" name="sexo" <?php if (isset($sexo) && $sexo=="mujer") echo "checked";?> value="mujer"> Mujer
-        <input type="radio" name="sexo" <?php if (isset($sexo) && $sexo=="hombre") echo "checked";?> value="hombre"> Hombre
+        <input type="text" name="email" id="email" value=""><span class="error">* <?php validar_email()?></span><br><br>
+        <label for="sexo">Gender:</label>
+        <input type="radio" name="sexo" value="mujer"> Mujer
+        <input type="radio" name="sexo" value="hombre"> Hombre
+        <span class="error">* <?php validar_genero()?></span><br><br>
         
         <input type="submit" value="Enviar">
     </form>
