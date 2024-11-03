@@ -15,19 +15,19 @@ require_once "funcion_validar_email.php"; require_once "funcion_validar_url.php"
 <body>
     <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>" autocomplete="off">
         <h1>PHP Form Validator Example</h1>
-        <span class="error">*<?php if(!isset($_POST["enviar"])) echo "required field"?></span><br><br>
+        <span class="error"><?php if(empty($_POST["enviar"])) echo "required field"?></span><br><br>
         <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" value=""><span class="error">* <?php validar_nombre()?></span><br><br>
+        <input type="text" id="name" name="name" value=""><span class="error"><?php validar_nombre()?></span><br><br>
         <label for="email">Email:</label>
-        <input type="text" name="email" id="email" value=""><span class="error">* <?php validar_email()?></span><br><br>
+        <input type="text" name="email" id="email" value=""><span class="error"><?php validar_email()?></span><br><br>
         <label for="url">URL:</label>
-        <input type="text" name="url" id="url" value=""><span class="error">* <?php validar_url()?></span><br><br>
+        <input type="text" name="url" id="url" value=""><span class="error"><?php validar_url()?></span><br><br>
         <label for="comentario">Comentario</label>
         <input type="text" name="comentario" id="comentario"><br><br>
         <label for="sexo">Gender:</label>
         <input type="radio" name="sexo" value="mujer"> Mujer
         <input type="radio" name="sexo" value="hombre"> Hombre
-        <span class="error">* <?php validar_genero()?></span><br><br>
+        <span class="error"><?php validar_genero()?></span><br><br>
         
         <input type="submit" value="Enviar" name="enviar">
     </form>
