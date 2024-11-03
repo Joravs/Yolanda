@@ -8,8 +8,10 @@
     echo test_entrada($valor);
 ?>
 
+<!--Ejercicio 3-->
 <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>"><!--Devuelve la misma url de la pagina-->
 
+<!--Ejercicio 4-->
 <input type="radio" name="sexo"
 <?php if (isset($sexo) && $sexo=="mujer") echo "checked";?>
 value="mujer"> Mujer
@@ -18,7 +20,7 @@ value="mujer"> Mujer
 value="hombre"> Hombre
 <span class="error">* <?php //echo $sexoErr;?></span><br><br>
 
-
+<!--Ejercicio 5-->
 <?php
     $email="abc@abc.com";
     $emailErr="Email correcto";
@@ -33,5 +35,7 @@ value="hombre"> Hombre
     echo "<br>";
     echo $emailErr;
 ?>
-
+<!--Ejercicio 6-->
 <br>mail: <input type="text" name="email" value="<?php echo $email;?>"><span class="error">* <?php echo $emailErr;?></span><br><br>
+
+<!--Ejercicio 7-->
