@@ -47,7 +47,7 @@ value="hombre"> Hombre
         $nameErr = "El nombre es obligatorio";
     } else {
         $name = test_input($_POST["name"]);
-        if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+        if (!preg_match("/^[a-zA-Z ]*$/",$name)) { //sirve para comparar la cadena objetivo que se introduce como segundo parametro con un patron que se introduce como primer parametro
             $nameErr = "Únicamente se permiten letras y espacios";
         }
     }
