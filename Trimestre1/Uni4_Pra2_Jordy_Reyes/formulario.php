@@ -11,8 +11,10 @@
         <input type="text" id="name" name="name" required><br><br>
         <label for="email">Email:</label>
         <input type="text" name="email" id="email" required><br><br>
-        <input type="radio" name="sexo" <?php if (isset($sexo) && $sexo=="mujer") echo "checked";?> value="mujer"> Mujer
-        <input type="radio" name="sexo" <?php if (isset($sexo) && $sexo=="hombre") echo "checked";?> value="hombre"> Hombre
+        <input type="radio" name="sexo" <?php if (isset($sexo) && $sexo=="mujer") echo "checked";?> value="mujer" required> Mujer
+        <input type="radio" name="sexo" <?php if (isset($sexo) && $sexo=="hombre") echo "checked";?> value="hombre" required> Hombre
+
+        <input type="submit" value="Enviar">
     </form>
 </body>
 </html>
