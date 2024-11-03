@@ -1,10 +1,10 @@
 <?php
-    function validar_url($value) {
+    function validar_url() {
         $urlErr="URL correcta";
-        if (empty($value)){
+        if (empty($_POST['url'])){
             $urlErr="URL vacia";
         }else{
-            if (!filter_var($value, FILTER_VALIDATE_URL)){
+            if (!filter_var($_POST['url'], FILTER_VALIDATE_URL)){
                 $urlErr="URL incorrecta";
             }
         }

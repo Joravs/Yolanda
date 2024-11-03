@@ -1,5 +1,5 @@
 <?php
-    function test_entrada($valor){
+    function test_entrada(){
         if (empty($_POST["name"])) {
             $nameErr = "El nombre es obligatorio";
         } else {
