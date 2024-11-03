@@ -2,6 +2,7 @@
     $valor=" Es tu nombre O\'reilly? ";
 
     $resultado = trim($valor);
-    echo $valor;
-    echo $resultado;
+    $resultado2= stripslashes($valor);
+    echo $resultado . "<br>" . $resultado2;
+
 ?>
