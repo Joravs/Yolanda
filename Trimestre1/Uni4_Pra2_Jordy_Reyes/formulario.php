@@ -1,5 +1,5 @@
 <?php require_once "funcion_validar_nombre.php";
-require_once "funcion_validar_email.php"; require_once "funcion_validar_url.php"; require_once "funcion_validar_genero.php"; ?>
+require_once "funcion_validar_email.php"; require_once "funcion_validar_url.php"; require_once "funcion_validar_genero.php"; require_once "funcion_validar_datos.php"?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +15,7 @@ require_once "funcion_validar_email.php"; require_once "funcion_validar_url.php"
 <body>
     <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>" autocomplete="off">
         <h1>PHP Form Validator Example</h1>
-        <span class="error"><?php if(isset($_POST["enviar"])) echo "* Required field"?></span><br><br>
+        <span class="error"><?php fieldreq()?></span><br><br>
         <label for="name">Nombre:</label>
         <input type="text" id="name" name="name" value="<?php if (isset($_POST['name'])) echo $_POST['name']?>"><span class="error"><?php echo validar_nombre()?></span><br><br>
         <label for="email">Email:</label>
