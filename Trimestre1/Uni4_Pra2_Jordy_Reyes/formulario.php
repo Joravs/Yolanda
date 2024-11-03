@@ -8,16 +8,20 @@
 </head>
 <body>
     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>">
+        <h1>PHP Form Validator Example</h1>
+        <?php if(isset($_POST["enviar"]))?>
         <label for="name">Nombre:</label>
         <input type="text" id="name" name="name" value=""><span class="error">* <?php validar_nombre()?></span><br><br>
         <label for="email">Email:</label>
         <input type="text" name="email" id="email" value=""><span class="error">* <?php validar_email()?></span><br><br>
+        <label for="url">URL:</label>
+        <input type="text" name="url" id="url" value=""><span class="error">* <?php validar_url()?></span><br><br>
         <label for="sexo">Gender:</label>
         <input type="radio" name="sexo" value="mujer"> Mujer
         <input type="radio" name="sexo" value="hombre"> Hombre
         <span class="error">* <?php validar_genero()?></span><br><br>
         
-        <input type="submit" value="Enviar">
+        <input type="submit" value="Enviar" name="enviar">
     </form>
 </body>
 </html>
