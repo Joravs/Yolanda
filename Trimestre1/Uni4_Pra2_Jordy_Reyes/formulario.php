@@ -25,5 +25,8 @@
         
         <input type="submit" value="Enviar" name="enviar">
     </form>
+    <?php
+        if (isset($_POST['enviar'])
+    ?>
 </body>
 </html>

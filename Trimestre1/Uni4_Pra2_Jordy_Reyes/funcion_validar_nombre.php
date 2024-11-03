@@ -8,5 +8,6 @@
                 $nameErr = "Únicamente se permiten letras y espacios";
             }
         }
+        return $nameErr;
     }
 ?>

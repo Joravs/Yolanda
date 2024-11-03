@@ -1,6 +1,5 @@
 <?php
     function validar_email() {
-        $emailErr = "Email correcto";
         if (empty($_POST['email'])) {
             $emailErr="Se requiere email"
         }else {

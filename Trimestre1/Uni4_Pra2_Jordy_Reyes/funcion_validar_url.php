@@ -1,6 +1,5 @@
 <?php
     function validar_url() {
-        $urlErr="URL correcta";
         if (empty($_POST['url'])){
             $urlErr="URL vacia";
         }else{
