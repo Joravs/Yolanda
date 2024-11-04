@@ -13,7 +13,7 @@
     </form>
     <?php
         if(isset($_POST["enviar"])){
-            $target_dir="uploads/";
+            $target_dir="/Yolanda/Trimestre1/Uni4_Pra3_Jordy_Reyes/uploads/";
             $target_file=$target_dir.basename($_FILES["filetoUpload"]["name"]);
             $uploadOk=1;
             $fileType=pathinfo($target_file, PATHINFO_EXTENSION);
