@@ -23,7 +23,8 @@
         <input type="radio" id='azul' name="color" value="blue"><br><br>
         <input type="submit" value="Crear Cookie" name="enviar">
         <?php
-            setcookie("color", $_POST["color"]);
+            if(isset($_POST['enviar']))
+             setcookie("color", $_POST["color"]);
         ?>
         Se crea la cookie.
         <a href="<?php echo $_SERVER['PHP_SELF']?>">ir a la otra web</a>
