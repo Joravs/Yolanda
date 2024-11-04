@@ -12,7 +12,7 @@
         $colors = ["red", "blue", "green", "yellow"];
         $color = $colors[array_rand($colors)];
         echo<<<_END
-            <button style="height:100px; border-radius: 50%; width: 100px; background-color: $color;" name="color"></button>
+            <input style="height:100px; border-radius: 50%; width: 100px; background-color: $color;" name="color"></input>
         _END;
     ?>
     <input type="submit" value="Jugar">

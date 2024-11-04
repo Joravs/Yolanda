@@ -1,4 +1,4 @@
-<?php session_start() ?>
+<?php session_start(); var_dump($_POST)?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
