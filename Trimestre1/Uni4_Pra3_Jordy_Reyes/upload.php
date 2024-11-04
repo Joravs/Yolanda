@@ -12,4 +12,16 @@
         echo "El archivo no es una imagen.";
         $uploadOk=0;
     }
+    if(file_exists($target_file)){
+        echo "El archivo ya existe.";
+        $uploadOk=0;
+    }
+    if($_FILES["filetoUpload"]["size"]>500000){
+        echo "El archivo es demasiado grande.";
+        $uploadOk=0;
+    }
+    if($imageFileType !="jpg" && $imageFileType !="png" && $imageFileType !="jpeg" && $imageFileType !="gif"){
+        echo "Solo se permiten imágenes JPG, PNG, JPEG y GIF.";
+        $uploadOk=0;
+    }
 ?>
