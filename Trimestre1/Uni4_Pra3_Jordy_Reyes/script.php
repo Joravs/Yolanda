@@ -30,7 +30,7 @@
                 echo "El archivo es demasiado largo.";
                 $uploadOk=0;
             }
-            if($uploadOk==1){
+            if(move_uploaded_file($_FILES["filetoUpload"]["tmp_name"], $target_file)){
                 echo "El fichero subido correctamente";
             }
         }
