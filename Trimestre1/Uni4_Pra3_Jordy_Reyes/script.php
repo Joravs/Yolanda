@@ -13,7 +13,7 @@
     </form>
     <?php
         if(isset($_POST["enviar"])){
-            $target_dir="/Yolanda/Trimestre1/Uni4_Pra3_Jordy_Reyes/uploads/";
+            $target_dir="uploads/";
             $target_file=$target_dir.basename($_FILES["filetoUpload"]["name"]);
             $uploadOk=1;
             $fileType=pathinfo($target_file, PATHINFO_EXTENSION);
@@ -30,7 +30,7 @@
                 echo "El archivo es demasiado largo.";
                 $uploadOk=0;
             }
-            if(move_uploaded_file($_FILES["filetoUpload"]["tmp_name"], $target_file)){
+            if(move_uploaded_file($_FILES["filetoUpload"]["name"], $target_file)){
                 echo "El fichero subido correctamente";
             }
         }
