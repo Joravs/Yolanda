@@ -1,5 +1,5 @@
 <?php
-    $target_dir="uploads/";
+    /**$target_dir="uploads/";
     $target_file=$target_dir.basename($_FILES["filetoUpload"]["name"]);
     $uploadOk=1;
     $imageFileType=pathinfo($target_file, PATHINFO_EXTENSION);
@@ -23,5 +23,10 @@
     if($imageFileType !="jpg" && $imageFileType !="png" && $imageFileType !="jpeg" && $imageFileType !="gif"){
         echo "Solo se permiten imágenes JPG, PNG, JPEG y GIF.";
         $uploadOk=0;
-    }
+    }*/
+    $target_file=$target_dir.basename($_FILES["filetoUpload"]["name"]);
+    $uploadOk=1;
+    $imageFileType=pathinfo($target_file, PATHINFO_EXTENSION);
+
+    
 ?>
