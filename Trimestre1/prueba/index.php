@@ -7,6 +7,12 @@
 </head>
 <body>
     Generar una combiacion de 1 color: <br>
-    <button style="height:100px; border-radius: 50%; width: 100px;"></button>
+    <?php
+        $colors = ["red", "blue", "green", "yellow"];
+        $color = $colors[array_rand($colors)];
+        echo<<<_END
+            <button style="height:100px; border-radius: 50%; width: 100px; background-color: $color;"></button>
+        _END;
+    ?>
 </body>
 </html>
