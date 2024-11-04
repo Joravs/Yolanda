@@ -31,7 +31,7 @@
                 $uploadOk=0;
             }
             var_dump($_FILES);
-            if(move_uploaded_file($_FILES["filetoUpload"]["name"], $target_file)){
+            if(move_uploaded_file($_FILES["filetoUpload"]["tmp_name"], $target_file)){
                 echo "El fichero subido correctamente";
             }
         }
