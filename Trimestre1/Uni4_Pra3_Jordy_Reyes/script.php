@@ -6,6 +6,10 @@
     <title>Ficheros</title>
 </head>
 <body>
-    <form action="upload.php" method="post"></form>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        Seleccionar un fichero:
+        <input type="file" name="filetoUpload" id="filetoUpload">
+        <input type="submit" value="Enviar">
+    </form>
 </body>
 </html>
