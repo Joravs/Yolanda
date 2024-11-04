@@ -1,3 +1,6 @@
+<?php
+    $_COOKIE;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +21,5 @@
             }
         ?>
     </form>
-    <p>Se crea la cookie</p>
-    <a href="<?php echo $_SERVER["PHP_SELF"]?>">Ir a la otra web</a>
 </body>
 </html>
