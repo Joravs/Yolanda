@@ -6,7 +6,7 @@
     <title>Ficheros</title>
 </head>
 <body>
-    <form action="<?php echo $_SERVER[""]?>" method="post" enctype="multipart/form-data">
+    <form action="<?php echo $_SERVER["PHP_SELF"]?>" method="post" enctype="multipart/form-data">
         Seleccionar un fichero:
         <input type="file" name="filetoUpload" id="filetoUpload">
         <input type="submit" value="Enviar" name="enviar">
