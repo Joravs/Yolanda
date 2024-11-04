@@ -24,9 +24,13 @@
         echo "Solo se permiten imágenes JPG, PNG, JPEG y GIF.";
         $uploadOk=0;
     }*/
+    $target_dir="uploads/";
     $target_file=$target_dir.basename($_FILES["filetoUpload"]["name"]);
     $uploadOk=1;
-    $imageFileType=pathinfo($target_file, PATHINFO_EXTENSION);
+    $fileType=pathinfo($target_file, PATHINFO_EXTENSION);
 
-    
+    if($fileType!="txt"){
+        echo "Solo se permiten archivos de texto.";
+        $uploadOk=0;
+    }
 ?>
