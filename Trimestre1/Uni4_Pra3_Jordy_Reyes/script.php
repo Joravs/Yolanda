@@ -26,7 +26,7 @@
                 echo "El archivo ya existe.";
                 $uploadOk=0;
             }
-            if($_FILES["filetoUpload"]["size"]>(300*102400)){
+            if($_FILES["filetoUpload"]["size"]>300000){
                 echo "El archivo es demasiado largo.";
                 $uploadOk=0;
             }
