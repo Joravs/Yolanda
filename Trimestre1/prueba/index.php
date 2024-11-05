@@ -12,9 +12,8 @@
         $colors = ["red", "blue", "green", "yellow"];
         for($i=0;$i<4;$i++){
             $color = $colors[array_rand($colors)];
-            echo<<<_END
-                <input style="height:100px; border-radius: 50%; width: 100px; background-color: $color; color: transparent;" name="color$i" value="$color"></input>
-            _END;
+            echo
+                '<input style="height:100px; border-radius: 50%; width: 100px; background-color: $color; color: transparent;" name="color'.$i.'" value="'.$color.'"></input>';
         }
     ?>
     <input type="submit" value="Jugar">
