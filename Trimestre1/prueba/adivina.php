@@ -21,7 +21,6 @@
             <option value="blue">Blue</option>
             <option value="green">Green</option>
             <option value="yellow">Yellow</option>
-            
         _END;
     ?>
     <input type="submit" value="Comprobar">
