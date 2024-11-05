@@ -9,10 +9,11 @@
 <body>
     <form action="verificar.php" method='post'>
         Generar una combiacion de 1 color: <br>
-        <script>function cambiarColor(id){
-            let color = document.getElementById(id);
-            const boton = document.getElementByClassName('boton');
-            color.style.backgroundColor = boton.value;
+        <script>
+        function cambiarColor(id,boton){
+            let circulo = document.getElementById(id);
+            const boton = document.getElementById(boton);
+            circulo.style.backgroundColor = red;
         }
         </script>
         <?php
@@ -21,7 +22,7 @@
                 $_SESSION['color'.$i] = $_POST['color'.$i];
                 echo '<button id="b'.$i.'" style="height:100px; border-radius: 50%; width: 100px; background-color:'. $color.';"></button>';
                 for($j=0;$j<count($colors);$j++){
-                    echo '<button type="button" class="boton" onclick="cambiarColor("b'.$j.'")" value="'.$colors[$j].'">'.$colors[$j].'</button>';
+                    echo '<button type="button" class="boton" onclick="cambiarColor("i'.$i.'","b'.$j.'")" value="'.$colors[$j].'">'.$colors[$j].'</button>';
                 }
                 echo '<br>';
             }
