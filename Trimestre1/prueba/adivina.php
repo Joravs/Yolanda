@@ -10,9 +10,9 @@
     <form action="verificar.php" method='post'>
         Generar una combiacion de 1 color: <br>
         <script>
-        function cambiarColor(id,boton){
+        function cambiarColor(id,btn){
             let circulo = document.getElementById(id);
-            const boton = document.getElementById(boton);
+            const boton = document.getElementById(btn);
             circulo.style.backgroundColor = red;
         }
         </script>
