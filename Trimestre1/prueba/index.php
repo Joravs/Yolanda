@@ -10,7 +10,7 @@
     Generar una combiacion de 1 color: <br>
     <?php
         $colors = ["red", "blue", "green", "yellow"];
-        for($i=0;$i<4;$i++){
+        for($i=1;$i<=4;$i++){
             $color = $colors[array_rand($colors)];
             echo<<<_END
                 <input style="height:100px; border-radius: 50%; width: 100px; background-color: $color; color: transparent;" name="color$i" value="$color"></input>

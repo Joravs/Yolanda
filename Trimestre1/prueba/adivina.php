@@ -10,7 +10,9 @@
 <form action="verificar.php" method='post'>
     Generar una combiacion de 1 color: <br>
     <?php
-        $_SESSION['color'] = $_POST['color'];
+        for($i=1;$i<=4;$i++){
+            $_SESSION['color'.$i] = $_POST['color'.$i];
+        }
         $colors = ["red", "blue", "green", "yellow"];
         $color="black";
         echo<<<_END
