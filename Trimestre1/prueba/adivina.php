@@ -13,7 +13,8 @@
         function cambiarColor(id,btn){
             let circulo = document.getElementById(id);
             const boton = document.getElementById(btn);
-            circulo.style.backgroundColor = red;
+            circulo.style.backgroundColor = boton.innerHTML;
+            console.log("boton: " + boton.innerHTML);
         }
         </script>
         <?php
