@@ -10,10 +10,12 @@
     Generar una combiacion de 1 color: <br>
     <?php
         $colors = ["red", "blue", "green", "yellow"];
-        $color = $colors[array_rand($colors)];
-        echo<<<_END
-            <input style="height:100px; border-radius: 50%; width: 100px; background-color: $color;" name="color" value="$color"></input>
-        _END;
+        for($i=0;$i<4;$i++){
+            $color = $colors[array_rand($colors)];
+            echo<<<_END
+                <input style="height:100px; border-radius: 50%; width: 100px; background-color: $color;" name="color" value="$color"></input>
+            _END;
+        }
     ?>
     <input type="submit" value="Jugar">
     </form>
