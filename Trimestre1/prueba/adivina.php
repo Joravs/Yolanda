@@ -7,12 +7,12 @@
     <title>Simon Dice</title>
 </head>
 <body>
-<form action="verificar.php" method='post'>
+
     Generar una combiacion de 1 color: <br>
     <script>function cambiarColor(id){
         let color = document.getElementById(id);
         const boton = document.getElementByClassName('boton');
-        color.style.backgroundColor = ;
+        color.style.backgroundColor = boton.value;
     }
     </script>
     <?php
@@ -24,6 +24,6 @@
         }
     ?>
     <input type="submit" value="Comprobar">
-    </form>
+
 </body>
 </html>
