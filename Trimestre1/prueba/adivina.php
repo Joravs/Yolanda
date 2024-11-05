@@ -22,7 +22,7 @@
                 $_SESSION['color'.$i] = $_POST['color'.$i];
                 echo '<button id="b'.$i.'" style="height:100px; border-radius: 50%; width: 100px; background-color:'. $color.';"></button>';
                 for($j=0;$j<count($colors);$j++){
-                    echo '<button type="button" class="boton" onclick="cambiarColor("i'.$i.'","b'.$j.'")" value="'.$colors[$j].'">'.$colors[$j].'</button>';
+                    echo '<button type="button" id="boton'.$j.'" onclick="cambiarColor("i'.$i.'","b'.$j.'")" value="'.$colors[$j].'">'.$colors[$j].'</button>';
                 }
                 echo '<br>';
             }
