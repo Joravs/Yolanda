@@ -16,12 +16,14 @@
         echo<<<_END
             <button style="height:100px; border-radius: 50%; width: 100px; background-color: $color;"></button>
             <p>Escoge un color: </p>
-            <select name="color">
-            <option value="red">Red</option>
-            <option value="blue">Blue</option>
-            <option value="green">Green</option>
-            <option value="yellow">Yellow</option>
+            <input onclick="changeColor()" value="red">Red</input>
+            <input value="blue">Blue</input>
+            <input value="green">Green</input>
+            <input value="yellow">Yellow</input>
         _END;
+        function changeColor() {
+            $color = $_POST['color'];
+        }
     ?>
     <input type="submit" value="Comprobar">
     </form>

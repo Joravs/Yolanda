@@ -13,7 +13,7 @@
         for($i=0;$i<4;$i++){
             $color = $colors[array_rand($colors)];
             echo<<<_END
-                <input style="height:100px; border-radius: 50%; width: 100px; background-color: $color; color: transparent;" name="color" value="$color"></input>
+                <input style="height:100px; border-radius: 50%; width: 100px; background-color: $color; color: transparent;" name="color$i" value="$color"></input>
             _END;
         }
     ?>
