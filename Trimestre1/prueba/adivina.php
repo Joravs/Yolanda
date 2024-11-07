@@ -12,11 +12,7 @@
         <?php
             function cambiarColor($btn){
                 $color='black';
-                if (isset($html[btn])){
-
-                }else{
-                    return $color;
-                }
+                echo "<script>console.log(".$html[$btn].")</script>";
             }
             $color="black";
             for($i=0;$i<4;$i++){
