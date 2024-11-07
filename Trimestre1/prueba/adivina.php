@@ -18,7 +18,8 @@
             $dom = new DOMDocument();
             @$dom->loadHTML($html);
             $xpath = new DOMXPath($dom);
-            $elements = $xpath->query($selector);
+            $elements = $xpath->query("//p[@]");
+
             function cambiarColor($btn){
                 $color='black';
             
