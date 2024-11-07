@@ -19,7 +19,7 @@
                 $color='black';
             
             }
-            echo $_SERVER['PHP_SELF'];
+            echo '127.0.0.1'.$_SERVER['PHP_SELF'];
             $color="black";
             for($i=0;$i<4;$i++){
                 $_SESSION['color'.$i] = $_POST['color'.$i];
