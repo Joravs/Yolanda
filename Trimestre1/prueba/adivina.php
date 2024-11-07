@@ -15,8 +15,7 @@
                 $dom = new DOMDocument();
                 @$dom->loadHTML($html);
                 $xpath = new DOMXPath($dom);
-                $elements = $xpath->query($selector);
-                preg_match_all("/\d+/",$btn,$dom);
+                $elements = $xpath->query($btn);
                 if (($elements->length) > 0) {
                     return $elements->item(0)->nodeValue;
                 } else {
