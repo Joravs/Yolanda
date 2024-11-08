@@ -19,6 +19,9 @@
     <form action="acierto.php" method="post">
         <?php
             pintar_circulos($colors[0],$colors[1],$colors[2],$colors[3]);
+            for($i=1;$i<=4;$i++){
+                
+            }
         }
         ?>
     </form>
