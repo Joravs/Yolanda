@@ -10,7 +10,7 @@
     <form action="verificar.php" method="post">
         Adivinar una combiacion de 4 color: <br>
     <?php
-            $colors=["red", "blue", "green", "yellow"];
+        $colors=["red", "blue", "green", "yellow"];
             function cambiarColor($btn){ 
                 $color="black";
                 return $color;
