@@ -1,4 +1,4 @@
-<?php session_start(); $colors = ["red", "blue", "green", "yellow"]; ?>
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +11,8 @@
         Generar una combiacion de 1 color: <br>
         <?php
             function cambiarColor($btn){
+                $colors=["red", "blue", "green", "yellow"]; 
                 $color="black";
-
 
                 for($i=0;$i<4;$i++){
                     $_SESSION['color'.$i] = $_POST['color'.$i];
