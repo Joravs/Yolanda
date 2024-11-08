@@ -16,13 +16,12 @@
         }
         for($i=0;$i<4;$i++){
             $_SESSION['color'.$i] = $_POST['color'.$i];
-            echo "<fieldset style='border: none;'>";
+            echo "<form method='get' action='".$_SERVER['PHP_SELF']."'>";
             echo '<p id="id'.$i.'" style="height:100px; border-radius: 50%; width: 100px; background-color:'. cambiarColor("id".$i).'"></p>';
             for($j=0;$j<count($colors);$j++){
                 echo '<button name="boton'.$i.'" value="'.$colors[$j].'">'.$colors[$j].'</button>';
             }
-            echo "</fieldset>";
-            echo '<br>';
+            echo "</form>";
         }
     ?>
     <form action="verificar.php" method="post">
