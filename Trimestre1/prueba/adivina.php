@@ -16,9 +16,9 @@
             }
             for($i=0;$i<4;$i++){
                 $_SESSION['color'.$i] = $_POST['color'.$i];
-                echo '<p id="id" style="height:100px; border-radius: 50%; width: 100px; background-color: black;"></p>';
+                echo '<p id="id'.$i.'" style="height:100px; border-radius: 50%; width: 100px; background-color: black;"></p>';
                 for($j=0;$j<count($colors);$j++){
-                    echo '<button onclick="'. cambiarColor("p.id".$i).'"type="button" id="boton'.$j.'" value="'.$colors[$j].'">'.$colors[$j].'</button>';
+                    echo '<button onclick="'. cambiarColor("id".$i).'"type="button" id="boton'.$j.'" value="'.$colors[$j].'">'.$colors[$j].'</button>';
                 }
                 echo '<br>';
             }
