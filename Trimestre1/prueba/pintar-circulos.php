@@ -1,6 +1,9 @@
 <?php
     function pintar_cirulos($c1,$c2,$c3,$c4){
-        <button class="circulo" disabled="disabled"></button>
+        <button class="circulo" disabled="disabled" style="$c1"></button>
+        <button class="circulo" disabled="disabled" style="$c2"></button>
+        <button class="circulo" disabled="disabled" style="$c3"></button>
+        <button class="circulo" disabled="disabled" style="$c4"></button>
     }
 ?>
 <!DOCTYPE html>
