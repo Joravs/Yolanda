@@ -16,10 +16,12 @@
 </head>
 <body>
     <form action="jugar.php" method="post">
+        <h1>Memoriza los colores</h1>
         <?php
             $colors=["red","green","blue","yellow"];
-            pintar_cirulos(array_rand($colors),array_rand($colors),array_rand($colors),array_rand($colors));
+            pintar_cirulos($colors[array_rand($colors)],$colors[array_rand($colors)],$colors[array_rand($colors)],$colors[array_rand($colors)]);
         ?>
+        <input type="submit" value="Enviar" name='enviar'>
     </form>
 </body>
 </html>
