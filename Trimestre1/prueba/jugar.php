@@ -25,7 +25,7 @@
         }else{
             $_SESSION['resp'.$_SESSION['contador']]=$_POST['color'];
             $_SESSION['contador']++;
-?>
+            ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -36,7 +36,7 @@
     </head>
     <body>
         <h1>Adivina</h1>
-        <form action="<?php if($_SESSION['contador']==4){
+        <form action="<?php if($_SESSION['contador']==5){
             $acierto=0;
             for ($i=1;$i<=4;$i++){
                 if ($_SESSION['circulo'.$i]==$_SESSION['resp'.$i]){
