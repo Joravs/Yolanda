@@ -1,9 +1,9 @@
 <?php
     function pintar_cirulos($c1,$c2,$c3,$c4){
-        echo '<button class="circulo" disabled="disabled" style="background-color:'.$c1.';" name="'.$c1.'"></button>';
-        echo '<button class="circulo" disabled="disabled" style="background-color:'.$c2.';" name="'.$c2.'"></button>';
-        echo '<button class="circulo" disabled="disabled" style="background-color:'.$c3.';" name="'.$c3.'"></button>';
-        echo '<button class="circulo" disabled="disabled" style="background-color:'.$c4.';" name="'.$c4.'"></button>';
+        echo '<input class="circulo" style="background-color:'.$c1.';" name="'.$c1.'"></input>';
+        echo '<input class="circulo" style="background-color:'.$c2.';" name="'.$c2.'"></input>';
+        echo '<input class="circulo" style="background-color:'.$c3.';" name="'.$c3.'"></input>';
+        echo '<input class="circulo" style="background-color:'.$c4.';" name="'.$c4.'"></input>';
     }
 ?>
 <!DOCTYPE html>
