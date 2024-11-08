@@ -19,7 +19,7 @@
                 echo "<div>";
                 echo '<p id="id'.$i.'" style="height:100px; border-radius: 50%; width: 100px; background-color: black;"></p>';
                 for($j=0;$j<count($colors);$j++){
-                    echo '<button type="button" id="boton'.$j.'" value="'.$colors[$j].'">'.$colors[$j].'</button>';
+                    echo '<button onclick="cambiarColor('."id".$i.')"type="button" id="boton'.$j.'" value="'.$colors[$j].'">'.$colors[$j].'</button>';
                 }
                 echo "</div>";
                 echo '<br>';
