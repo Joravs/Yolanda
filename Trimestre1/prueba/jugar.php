@@ -19,12 +19,12 @@
     <form action="acierto.php" method="post">
         <?php
             pintar_circulos($colors[0],$colors[1],$colors[2],$colors[3]);
+        }else{
+            for($i=1;$i<=4;$i++){
+                pintar_circulos($_SESSION['resp1'],$_SESSION['resp2'],$_SESSION['resp3'],$_SESSION['resp4']);
+            }
         }
         ?>
-        <input type="button" value="red">
-        <input type="button" value="yellow">
-        <input type="button" value="green">
-        <input type="button" value="blue">
     </form>
 </body>
 </html>
