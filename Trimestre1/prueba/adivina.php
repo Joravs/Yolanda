@@ -12,17 +12,7 @@
         <?php
             function cambiarColor($btn){
                 $color="black";
-                
-                $ch = curl_init();
-                curl_setopt($ch, CURLOPT_URL, $_SERVER['PHP_SELF']);
-                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                $html = curl_exec($ch);
-                curl_close($ch);
-                
-                $dom = new DOMDocument();
-                @$dom->loadHTML($html);
-                $xpath = new DOMXPath($dom);
-                $elements = $xpath->query("//p[@$btn]");
+
 
                 for($i=0;$i<4;$i++){
                     $_SESSION['color'.$i] = $_POST['color'.$i];
