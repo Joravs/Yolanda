@@ -36,7 +36,7 @@
     </head>
     <body>
         <h1>Adivina</h1>
-        <form action="<?php if($_SESSION['contador']==5){
+        <form action="<?php if($_SESSION['contador']>=5){
             $acierto=0;
             for ($i=1;$i<=4;$i++){
                 if ($_SESSION['circulo'.$i]==$_SESSION['resp'.$i]){
