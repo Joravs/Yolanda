@@ -7,9 +7,8 @@
     <title>Simon Dice</title>
 </head>
 <body>
-    <form action="verificar.php" method='post'>
         Adivinar una combiacion de 4 color: <br>
-        <?php
+    <?php
             $colors=["red", "blue", "green", "yellow"];
             function cambiarColor($btn){ 
                 $color="black";
@@ -18,7 +17,7 @@
                 }
                 return $color;
             }
-
+        echo '<form action="verificar.php" method="post">';
             for($i=0;$i<4;$i++){
                 $_SESSION['color'.$i] = $_POST['color'.$i];
                 echo '<div>';
@@ -31,8 +30,8 @@
                 echo "</div>";
                 echo '<br>';
             }
-        ?>
+        echo '</form>';
+    ?>
         <input type="submit" value="Comprobar">
-    </form>
 </body>
 </html>
