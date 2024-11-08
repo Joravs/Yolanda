@@ -52,6 +52,9 @@
         }else{echo $_SERVER['PHP_SELF'];} ?>" method="post">
 <?php              
             pintar_circulos($_SESSION['resp1'],$_SESSION['resp2'],$_SESSION['resp3'],$_SESSION['resp4']);
+            if($_SESSION['contador']==4){
+                echo '<meta http-equiv="refresh" content="5; url=jugar.php?color=red">';
+            }
         }
         ?>
         <br>
