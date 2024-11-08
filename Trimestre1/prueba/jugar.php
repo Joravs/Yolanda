@@ -2,7 +2,7 @@
     session_start();
     include "pintar-circulos.php";
     if (isset($_POST['jugar'])){
-        $_SESSION['contador']=0;
+        $_SESSION['contador']=1;
         $color="black";
         for($i=1;$i<=count($_POST)-1;$i++){
             $_SESSION['circulo'.$i]=$_POST['circulo'.$i];
@@ -23,9 +23,8 @@
 <?php
             pintar_circulos($color,$color,$color,$color);
         }else{
-            $_SESSION['contador']++;
             $_SESSION['resp'.$_SESSION['contador']]=$_POST['color'];
-            pintar_circulos($_SESSION['resp1'],$_SESSION['resp2'],$_SESSION['resp3'],$_SESSION['resp4']);
+            $_SESSION['contador']++;
             ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +36,7 @@
     </head>
     <body>
         <h1>Adivina</h1>
-        <form action="<?php if($_SESSION['contador']==4){
+        <form action="<?php if($_SESSION['contador']==5){
             $acierto=0;
             for ($i=1;$i<=4;$i++){
                 if ($_SESSION['circulo'.$i]==$_SESSION['resp'.$i]){
@@ -51,7 +50,7 @@
             }
         }else{echo $_SERVER['PHP_SELF'];} ?>" method="post">
 <?php              
-            echo $_SESSION['contador'];
+            pintar_circulos($_SESSION['resp1'],$_SESSION['resp2'],$_SESSION['resp3'],$_SESSION['resp4']);    
         }
 ?>
         <button type="submit" name="color" value="red" style="background-color: red">Rojo</button>
