@@ -5,7 +5,7 @@
         for($i=1;$i<=count($_POST)-1;$i++){
             $_SESSION['circulo'.$i]=$_POST['circulo'.$i];
         }
-        $colors=["black","black","black","black"];
+        $color="black";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,9 +16,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="acierto.php" method="post">
+    <form action="<?php echo $_SERVER['PHP_SELF']?>" method="get">
         <?php
-            pintar_circulos($colors[0],$colors[1],$colors[2],$colors[3]);
+            pintar_circulos($color,$color,$color,$color);
         }else{
             for($i=1;$i<=4;$i++){
                 pintar_circulos($_SESSION['resp1'],$_SESSION['resp2'],$_SESSION['resp3'],$_SESSION['resp4']);
