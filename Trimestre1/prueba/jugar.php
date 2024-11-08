@@ -2,11 +2,13 @@
     session_start();
     include "pintar-circulos.php";   
     if (isset($_POST['enviar'])){
+        $color="black";
         for($i=1;$i<=count($_POST)-1;$i++){
             $_SESSION['circulo'.$i]=$_POST['circulo'.$i];
+            $_SESSION['resp'.$i]=$color;
         }
-        $color="black";
-        ?>
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -20,7 +22,7 @@
             <?php
             pintar_circulos($color,$color,$color,$color);
         }else{
-                
+            pintar_circulos($_SESSION['resp1'],$_SESSION['resp2'],$_SESSION['resp3'],$_SESSION['resp4']);    
         }
         ?>
         <button type="submit" name="color1" value="red" style="background-color: red">Rojo</button>
