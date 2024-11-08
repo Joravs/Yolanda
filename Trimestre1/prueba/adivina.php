@@ -13,9 +13,6 @@
             $colors=["red", "blue", "green", "yellow"];
             function cambiarColor($btn){ 
                 $color="black";
-                if(isset($_GET["boton3"])){
-                    $color=$_GET["boton3"];
-                }
                 return $color;
             }
             for($i=0;$i<4;$i++){
