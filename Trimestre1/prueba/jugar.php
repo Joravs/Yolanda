@@ -23,11 +23,11 @@
         ?>
         <?php
             $color="black";
+            $i=1;
             if(isset($_GET["color"])){
-                for($i=1;$i<=4;$i++){
                 $_SESSION['resp'.$i]=$_GET['color'.$i];
+                $i++;
                 pintar_circulos($_SESSION['resp1'],$_SESSION['resp2'],$_SESSION['resp3'],$_SESSION['resp4']);
-            }
         }
         ?>
         <input type="submit" name="color1" value="red" style="background-color: red">
