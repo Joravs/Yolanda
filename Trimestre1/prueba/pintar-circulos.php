@@ -21,7 +21,7 @@
             $colors=["red","green","blue","yellow"];
             pintar_cirulos($colors[array_rand($colors)],$colors[array_rand($colors)],$colors[array_rand($colors)],$colors[array_rand($colors)]);
         ?>
-        <input type="submit" value="Enviar" name='enviar'>
+        <input type="submit" value="Vamos a Jugar" name='enviar'>
     </form>
 </body>
 </html>
