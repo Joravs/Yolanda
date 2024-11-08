@@ -30,6 +30,7 @@
                 pintar_circulos($_SESSION['resp1'],$_SESSION['resp2'],$_SESSION['resp3'],$_SESSION['resp4']);
         }
         ?>
+        <input type="hidden" name="color" value="black">
         <input type="submit" name="color1" value="red" style="background-color: red">
         <input type="submit" name="color2" value="yellow" style="background-color: yellow">
         <input type="submit" name="color3" value="green" style="background-color: green">
