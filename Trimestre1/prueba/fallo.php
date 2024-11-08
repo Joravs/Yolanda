@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Simon</h1>
-    <h2>Has fallado todos los circulos</h2>
+    <h2>Has fallado</h2>
     <p>La combinacion era: </p>
     <?php
         include "pintar-circulos.php";
