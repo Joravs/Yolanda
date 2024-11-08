@@ -25,7 +25,7 @@
                 echo "<form method='get' action=".$_SERVER["PHP_SELF"].">";
                 echo '<p id="id'.$i.'" style="height:100px; border-radius: 50%; width: 100px; background-color:'. cambiarColor("id".$i).'"></p>';
                 for($j=0;$j<count($colors);$j++){
-                    echo '<button type="button" name="boton'.$i.'" value="'.$colors[$j].'">'.$colors[$j].'</button>';
+                    echo '<button name="boton'.$i.'" value="'.$colors[$j].'">'.$colors[$j].'</button>';
                 }
                 echo "</form>";
                 echo "</div>";
