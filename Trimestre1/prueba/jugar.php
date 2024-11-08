@@ -36,7 +36,7 @@
         <h1>Adivina</h1>
         <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
 <?php              
-
+            
             pintar_circulos($_SESSION['resp1'],$_SESSION['resp2'],$_SESSION['resp3'],$_SESSION['resp4']);    
         }
 ?>
