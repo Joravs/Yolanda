@@ -22,9 +22,9 @@
         }
         ?>
         <input type="button" value="red">
-        <input type="button" value="amarillo">
-        <input type="button" value="verde">
-        <input type="button" value="azul">
+        <input type="button" value="yellow">
+        <input type="button" value="green">
+        <input type="button" value="blue">
     </form>
 </body>
 </html>
