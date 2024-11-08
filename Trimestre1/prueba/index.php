@@ -7,7 +7,7 @@
 </head>
 <body>
     <form action="adivina.php" method='post'>
-    Generar una combiacion de 1 color: <br>
+    Generar una combiacion de 4 color: <br>
     <?php
         $colors = ["red", "blue", "green", "yellow"];
         for($i=0;$i<4;$i++){

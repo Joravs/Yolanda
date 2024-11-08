@@ -22,6 +22,7 @@
                 }
                 echo '<br>';
             }
+            var_dump($_SESSION);
         ?>
         <input type="submit" value="Comprobar">
     </form>
