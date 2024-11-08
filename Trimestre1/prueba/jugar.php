@@ -19,10 +19,13 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <h1>Adivina</h1>
         <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
             <?php
             pintar_circulos($color,$color,$color,$color);
         }else{
+            echo '<link rel="stylesheet" href="style.css">';
+                        
             pintar_circulos($_SESSION['resp1'],$_SESSION['resp2'],$_SESSION['resp3'],$_SESSION['resp4']);    
         }
         ?>
