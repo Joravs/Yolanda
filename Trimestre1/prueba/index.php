@@ -12,7 +12,7 @@
         <?php
             require_once "pintar-circulos.php";
             $colors=["red","green","blue","yellow"];
-            pintar_cirulos($colors[array_rand($colors)],$colors[array_rand($colors)],$colors[array_rand($colors)],$colors[array_rand($colors)]);
+            pintar_circulos($colors[array_rand($colors)],$colors[array_rand($colors)],$colors[array_rand($colors)],$colors[array_rand($colors)]);
         ?>
         <input type="submit" value="Vamos a Jugar" name='enviar'>
     </form>
