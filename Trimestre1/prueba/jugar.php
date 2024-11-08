@@ -51,8 +51,8 @@
             $_SESSION['resp'.$_SESSION['contador']]=$_POST['color'];
             pintar_circulos($_SESSION['resp1'],$_SESSION['resp2'],$_SESSION['resp3'],$_SESSION['resp4']);    
             $_SESSION['contador']++;
+            if($_SESSION['contador']==4){echo "<input type='hidden' value='exit'>";}
         }
-        if($_SESSION['contador']==4){echo "<input type='hidden' value='exit'>";}
 ?>
         <button type="submit" name="color" value="red" style="background-color: red">Rojo</button>
         <button type="submit" name="color" value="yellow" style="background-color: yellow">Amarillo</button>
