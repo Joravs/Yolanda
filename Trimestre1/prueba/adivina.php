@@ -10,20 +10,18 @@
     <form action="verificar.php" method='post'>
         Generar una combiacion de 1 color: <br>
         <?php
-            function cambiarColor($btn){
-                $colors=["red", "blue", "green", "yellow"]; 
+            $colors=["red", "blue", "green", "yellow"];
+            function cambiarColor($btn){ 
                 $color="black";
-
-                for($i=0;$i<4;$i++){
-                    $_SESSION['color'.$i] = $_POST['color'.$i];
-                    echo '<p id="id" style="height:100px; border-radius: 50%; width: 100px; background-color: black;"></p>';
-                    for($j=0;$j<count($colors);$j++){
-                        echo '<button onclick="'. cambiarColor("p.id".$i).'"type="button" id="boton'.$j.'" value="'.$colors[$j].'">'.$colors[$j].'</button>';
-                    }
-                    echo '<br>';
-                }
             }
-            cambiarColor('id0');
+            for($i=0;$i<4;$i++){
+                $_SESSION['color'.$i] = $_POST['color'.$i];
+                echo '<p id="id" style="height:100px; border-radius: 50%; width: 100px; background-color: black;"></p>';
+                for($j=0;$j<count($colors);$j++){
+                    echo '<button onclick="'. cambiarColor("p.id".$i).'"type="button" id="boton'.$j.'" value="'.$colors[$j].'">'.$colors[$j].'</button>';
+                }
+                echo '<br>';
+            }
         ?>
         <input type="submit" value="Comprobar">
     </form>
