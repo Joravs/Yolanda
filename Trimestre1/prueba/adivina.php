@@ -8,7 +8,7 @@
 </head>
 <body>
     <form action="verificar.php" method='post'>
-        Generar una combiacion de 1 color: <br>
+        Adivinar una combiacion de 4 color: <br>
         <?php
             $colors=["red", "blue", "green", "yellow"];
             function cambiarColor($btn){ 
@@ -18,15 +18,17 @@
                 }
                 return $color;
             }
-            
+
             for($i=0;$i<4;$i++){
                 $_SESSION['color'.$i] = $_POST['color'.$i];
+                echo '<div>';
                 echo "<form method='get' action=".$_SERVER["PHP_SELF"].">";
                 echo '<p id="id'.$i.'" style="height:100px; border-radius: 50%; width: 100px; background-color:'. cambiarColor("id".$i).'"></p>';
                 for($j=0;$j<count($colors);$j++){
                     echo '<button type="button" name="boton'.$i.'" value="'.$colors[$j].'">'.$colors[$j].'</button>';
                 }
                 echo "</form>";
+                echo "</div>";
                 echo '<br>';
             }
         ?>
