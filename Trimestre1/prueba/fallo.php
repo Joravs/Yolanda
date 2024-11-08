@@ -15,7 +15,7 @@
         include "pintar-circulos.php";
         pintar_circulos($_SESSION['circulo1'],$_SESSION['circulo2'],$_SESSION['circulo3'],$_SESSION['circulo4']);
     ?>
-    <p>Y tu conbinacion fue: </p>
+    <p>Y tu combinacion fue: </p>
     <?php
         pintar_circulos($_SESSION['resp1'],$_SESSION['resp2'],$_SESSION['resp3'],$_SESSION['resp4']);
     ?>
