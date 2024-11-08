@@ -42,7 +42,9 @@
                 }
             }
             if ($acierto==4){
-                echo "<h2>Has acertado todos los colores</h2>";
+                echo "acierto.php";
+            }else{
+                echo "fallo.php";
             }
         }else{echo $_SERVER['PHP_SELF']}?>" method="post">
 <?php              
