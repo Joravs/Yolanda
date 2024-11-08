@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="" method="post">
+    <form action="acierto.php" method="post">
         <?php
             pintar_circulos($colors[0],$colors[1],$colors[2],$colors[3]);
         }
