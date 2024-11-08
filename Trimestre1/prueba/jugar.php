@@ -34,7 +34,7 @@
     </head>
     <body>
         <h1>Adivina</h1>
-        <form action="<?php if($_SESSION['contador']==4){
+        <form action="<?php if($_SESSION['contador']>=4){
             $acierto=0;
             for ($i=1;$i<=4;$i++){
                 echo "circulo $i: ".$_SESSION['circulo'.$i]." respuesta: ".$_SESSION['resp'.$i]."<br>";
@@ -52,8 +52,9 @@
             $_SESSION['resp'.$_SESSION['contador']]=$_POST['color'];
             pintar_circulos($_SESSION['resp1'],$_SESSION['resp2'],$_SESSION['resp3'],$_SESSION['resp4']);    
             $_SESSION['contador']++;
-            if ($_SESSION['contador']==4){
+            if ($_SESSION['contador']>=4){
                 echo "<input type='hidden' name='adivinar' value='true'>";
+                echo $_SESSION['contador'];
             }
         }
 ?>
