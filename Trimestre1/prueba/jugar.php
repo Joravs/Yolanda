@@ -25,6 +25,7 @@
         }else{
             $_SESSION['contador']++;
             $_SESSION['resp'.$_SESSION['contador']]=$_POST['color'];
+            pintar_circulos($_SESSION['resp1'],$_SESSION['resp2'],$_SESSION['resp3'],$_SESSION['resp4']);
             ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,7 +51,6 @@
             }
         }else{echo $_SERVER['PHP_SELF'];} ?>" method="post">
 <?php              
-            pintar_circulos($_SESSION['resp1'],$_SESSION['resp2'],$_SESSION['resp3'],$_SESSION['resp4']);
             echo $_SESSION['contador'];
         }
 ?>
