@@ -18,6 +18,7 @@
                 }
                 return $color;
             }
+            
             for($i=0;$i<4;$i++){
                 $_SESSION['color'.$i] = $_POST['color'.$i];
                 echo "<form method='get' action=".$_SERVER["PHP_SELF"].">";
