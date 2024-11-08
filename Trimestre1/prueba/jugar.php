@@ -6,18 +6,18 @@
             $_SESSION['circulo'.$i]=$_POST['circulo'.$i];
         }
         $color="black";
-?>
+        ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jugar</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <form action="<?php echo $_SERVER['PHP_SELF']?>" method="get">
-        <?php
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jugar</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <form action="<?php echo $_SERVER['PHP_SELF']?>" method="get">
+            <?php
             pintar_circulos($color,$color,$color,$color);
         }
         ?>
@@ -26,11 +26,16 @@
         <input type="submit" name="color" value="green" style="background-color: green">
         <input type="submit" name="color" value="blue" style="background-color: blue">
         <?php
-            else{
+            $color="black";
+            $_SESSION['resp1']=$color;
+            $_SESSION['resp2']=$color;
+            $_SESSION['resp3']=$color;
+            $_SESSION['resp4']=$color;
+            if(isset($_GET["color"])){
             for($i=1;$i<=4;$i++){
                 $_SESSION['resp'.$i]=$_GET['color'];
-                pintar_circulos($_SESSION['resp1'],$_SESSION['resp2'],$_SESSION['resp3'],$_SESSION['resp4']);
             }
+            pintar_circulos($_SESSION['resp1'],$_SESSION['resp2'],$_SESSION['resp3'],$_SESSION['resp4']);
         }
         ?>
     </form>
