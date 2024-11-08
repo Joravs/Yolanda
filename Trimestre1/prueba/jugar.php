@@ -49,10 +49,10 @@
             }
         }else{echo $_SERVER['PHP_SELF'];} ?>" method="post">
 <?php              
-            $_SESSION['resp'.$_SESSION['contador']-1]=$_POST['color'];
+            $_SESSION['resp'.$_SESSION['contador']+1]=$_POST['color'];
             pintar_circulos($_SESSION['resp1'],$_SESSION['resp2'],$_SESSION['resp3'],$_SESSION['resp4']);    
             $_SESSION['contador']++;
-            if ($_SESSION['contador']>=4){
+            if ($_SESSION['contador']==4){
                 echo "<input type='hidden' name='adivinar' value='true'>";
                 echo $_SESSION['contador'];
             }
