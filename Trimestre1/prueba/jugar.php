@@ -37,7 +37,7 @@
     <body>
         <h1>Adivina</h1>
         <form action="<?php 
-            echo $_SESSION['contador'];
+            echo "<script>console.log(".$_SESSION['contador'].")</script>";
         if($_SESSION['contador']>=4){
             $acierto=0;
             for ($i=1;$i<=4;$i++){
