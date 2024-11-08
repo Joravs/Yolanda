@@ -46,7 +46,7 @@
             }else{
                 echo "fallo.php";
             }
-        }else{echo $_SERVER['PHP_SELF']}?>" method="post">
+        }else{echo $_SERVER['PHP_SELF'];} ?>" method="post">
 <?php              
             $_SESSION['resp'.$_SESSION['contador']]=$_POST['color'];
             pintar_circulos($_SESSION['resp1'],$_SESSION['resp2'],$_SESSION['resp3'],$_SESSION['resp4']);    
