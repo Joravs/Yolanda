@@ -34,7 +34,7 @@
     </head>
     <body>
         <h1>Adivina</h1>
-        <form action="<?php if($_SESSION['contador']>=4){
+        <form action="<?php if(isset($_POST['adivinar'])){
             $acierto=0;
             for ($i=1;$i<=4;$i++){
                 echo "circulo $i: ".$_SESSION['circulo'.$i]." respuesta: ".$_SESSION['resp'.$i]."<br>";
