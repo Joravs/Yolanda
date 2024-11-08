@@ -19,8 +19,12 @@
     <form action="<?php echo $_SERVER['PHP_SELF']?>" method="get">
         <?php
             pintar_circulos($color,$color,$color,$color);
-        }else{
+        }
+        ?>
+        <?php
+        else{
             for($i=1;$i<=4;$i++){
+                $_SESSION['resp'.$i]=$_GET['color'];
                 pintar_circulos($_SESSION['resp1'],$_SESSION['resp2'],$_SESSION['resp3'],$_SESSION['resp4']);
             }
         }
