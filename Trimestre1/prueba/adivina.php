@@ -13,13 +13,16 @@
             $colors=["red", "blue", "green", "yellow"];
             function cambiarColor(){ 
                 $color="black";
+                if(isset($_GET["boton3"])){
+                    
+                }
             }
             for($i=0;$i<4;$i++){
                 $_SESSION['color'.$i] = $_POST['color'.$i];
                 echo "<form method='get'>";
                 echo '<p id="id'.$i.'" style="height:100px; border-radius: 50%; width: 100px; background-color:'. cambiarColor().'"></p>';
                 for($j=0;$j<count($colors);$j++){
-                    echo '<button id="boton'.$j.'" value="'.$colors[$j].'">'.$colors[$j].'</button>';
+                    echo '<button name="boton'.$i.'" value="'.$colors[$j].'">'.$colors[$j].'</button>';
                 }
                 echo "</form>";
                 echo '<br>';
