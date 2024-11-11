@@ -56,7 +56,7 @@
             pintar_circulos($_SESSION['resp1'],$_SESSION['resp2'],$_SESSION['resp3'],$_SESSION['resp4']);
         }
         ?>
-        <br>
+        <br><br>
         <button type="submit" name="color" value="red" style="background-color: red">Rojo</button>
         <button type="submit" name="color" value="yellow" style="background-color: yellow">Amarillo</button>
         <button type="submit" name="color" value="green" style="background-color: green">Verde</button>

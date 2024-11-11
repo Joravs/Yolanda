@@ -14,6 +14,7 @@
             $colors=["red","green","blue","yellow"];
             pintar_circulos($colors[array_rand($colors)],$colors[array_rand($colors)],$colors[array_rand($colors)],$colors[array_rand($colors)]);
         ?>
+        <br><br>
         <input type="submit" value="Vamos a Jugar" name='jugar'>
     </form>
 </body>
