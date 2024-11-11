@@ -6,6 +6,9 @@
         }else if($_POST['valor']=='-'){
             $_SESSION['cont']--;
         }
+        if(isset($_POST['cerrar'])){
+            session_destroy();    
+        }
     }else{
         $_SESSION['cont']=0;
     }
@@ -28,6 +31,8 @@
         <input type="submit" name="valor" value="-">
         <?php echo "<p>".$_SESSION['cont']."</p>" ;?>
         <input type="submit" name="valor" value="+">
+        <br>
+        <input type="submit" name="cerrar" value="Cerrar">
     </form>
 </body>
 </html>

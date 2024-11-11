@@ -3,7 +3,6 @@
     include "pintar-circulos.php";
     function actionForm(){
         if($_SESSION['contador']==4){
-            $_SESSION['resp4']=$_POST['name'];
             $acierto=0;
             for ($i=1;$i<=4;$i++){
                 if ($_SESSION['circulo'.$i]==$_SESSION['resp'.$i]){
@@ -42,7 +41,6 @@
             $_SESSION['resp'.$_SESSION['contador']]=$_POST['color'];
             pintar_circulos($_SESSION['resp1'],$_SESSION['resp2'],$_SESSION['resp3'],$_SESSION['resp4']);
         }
-        echo $_SESSION['contador'];
         ?>
         <form action="<?php actionForm()?>" method="post">
         <br><br>
