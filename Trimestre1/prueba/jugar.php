@@ -16,6 +16,7 @@
             }
         }else{echo $_SERVER['PHP_SELF'];} 
     }
+    
     if (isset($_POST['jugar'])){
         $_SESSION['contador']=0;
         $color="black";
