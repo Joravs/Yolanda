@@ -1,7 +1,11 @@
 <?php
     session_start();
     if (isset($_POST['valor'])){
-        $_SESSION['cont']=parseInt($_POST['valor']).parseInt($_POST['valor']);
+        if ($_POST['valor']=='+'){
+            $_SESSION['cont']++;
+        }else if ($_POST['valor']=='-'){
+            $_SESSION['cont']--;
+        }
     }else{
         $_SESSION['cont']=0;
     }
@@ -12,6 +16,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONTADOR</title>
+    <style>
+        input,p{
+            display:inline-block;
+        }
+    </style>
 </head>
 <body>
     <h1>CONTADOR</h1>
