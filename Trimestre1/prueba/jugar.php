@@ -16,19 +16,7 @@
             }
         }else{echo $_SERVER['PHP_SELF'];} 
     }
-    
-    if (isset($_POST['jugar'])){
-        $_SESSION['contador']=0;
-        $color="black";
-        for($i=1;$i<=count($_POST)-1;$i++){
-            $_SESSION['circulo'.$i]=$_POST['circulo'.$i];
-            $_SESSION['resp'.$i]=$color;
-        }
-            pintar_circulos($color,$color,$color,$color);
-        }else{
-            $_SESSION['contador']++;
-            $_SESSION['resp'.$_SESSION['contador']]=$_POST['color'];
-            ?>
+?>   
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -41,6 +29,17 @@
         <h1>Adivina</h1>
         <form action="<?php actionForm()?>" method="post">
 <?php              
+    if (isset($_POST['jugar'])){
+        $_SESSION['contador']=0;
+        $color="black";
+        for($i=1;$i<=count($_POST)-1;$i++){
+            $_SESSION['circulo'.$i]=$_POST['circulo'.$i];
+            $_SESSION['resp'.$i]=$color;
+        }
+            pintar_circulos($color,$color,$color,$color);
+        }else{
+            $_SESSION['contador']++;
+            $_SESSION['resp'.$_SESSION['contador']]=$_POST['color'];
             pintar_circulos($_SESSION['resp1'],$_SESSION['resp2'],$_SESSION['resp3'],$_SESSION['resp4']);
         }
         ?>
