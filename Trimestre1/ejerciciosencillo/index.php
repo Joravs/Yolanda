@@ -20,6 +20,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONTADOR</title>
     <style>
+        body{
+            text-align: center;
+            font-size: 30px;
+        }
         input,p{
             display:inline-block;
         }
