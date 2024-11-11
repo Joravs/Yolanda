@@ -3,7 +3,7 @@
     if (isset($_POST['valor'])){
         if ($_POST['valor']=='+'){
             $_SESSION['cont']++;
-        }else if($_POST['valor']=='-'){
+        }else{
             $_SESSION['cont']--;
         }
         if(isset($_POST['cerrar'])){
