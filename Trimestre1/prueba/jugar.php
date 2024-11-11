@@ -28,7 +28,7 @@
     <body>
         <h1>Adivina</h1>
         <form action="<?php actionForm()?>" method="post">
-<?php
+        <?php
         if (isset($_POST['jugar'])){
             $_SESSION['contador']=0;
             $color="black";
