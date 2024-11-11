@@ -42,6 +42,7 @@
             $_SESSION['resp'.$_SESSION['contador']]=$_POST['color'];
             pintar_circulos($_SESSION['resp1'],$_SESSION['resp2'],$_SESSION['resp3'],$_SESSION['resp4']);
         }
+        echo $_SESSION['contador'];
         ?>
         <br><br>
         <button type="submit" name="color" value="red" style="background-color: red">Rojo</button>
