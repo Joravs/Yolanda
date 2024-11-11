@@ -24,19 +24,6 @@
             $_SESSION['circulo'.$i]=$_POST['circulo'.$i];
             $_SESSION['resp'.$i]=$color;
         }
-?>
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Jugar</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Adivina</h1>
-        <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
-<?php
             pintar_circulos($color,$color,$color,$color);
         }else{
             $_SESSION['contador']++;
