@@ -1,11 +1,8 @@
 <?php
     session_start();
     if (isset($_POST['valor'])){
-        if ($_POST['valor']=='+'){
-            $_SESSION['cont']++;
-        }else if ($_POST['valor']=='-'){
-            $_SESSION['cont']--;
-        }
+        $simbolo=$_POST['valor'].$_POST['valor'];
+        $_SESSION['cont']=$_SESSION['cont'].intval($simbolo);
     }else{
         $_SESSION['cont']=0;
     }
