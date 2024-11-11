@@ -27,7 +27,6 @@
     </head>
     <body>
         <h1>Adivina</h1>
-        <form action="<?php actionForm()?>" method="post">
         <?php
         if (isset($_POST['jugar'])){
             $_SESSION['contador']=0;
@@ -44,6 +43,7 @@
         }
         echo $_SESSION['contador'];
         ?>
+        <form action="<?php actionForm()?>" method="post">
         <br><br>
         <button type="submit" name="color" value="red" style="background-color: red">Rojo</button>
         <button type="submit" name="color" value="yellow" style="background-color: yellow">Amarillo</button>
