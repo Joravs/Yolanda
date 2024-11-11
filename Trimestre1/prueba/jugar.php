@@ -29,13 +29,13 @@
         <h1>Adivina</h1>
         <form action="<?php actionForm()?>" method="post">
 <?php
-    if (isset($_POST['jugar'])){
-        $_SESSION['contador']=0;
-        $color="black";
-        for($i=1;$i<=count($_POST)-1;$i++){
-            $_SESSION['circulo'.$i]=$_POST['circulo'.$i];
-            $_SESSION['resp'.$i]=$color;
-        }
+        if (isset($_POST['jugar'])){
+            $_SESSION['contador']=0;
+            $color="black";
+            for($i=1;$i<=count($_POST)-1;$i++){
+                $_SESSION['circulo'.$i]=$_POST['circulo'.$i];
+                $_SESSION['resp'.$i]=$color;
+            }
             pintar_circulos($color,$color,$color,$color);
         }else{
             $_SESSION['contador']++;
@@ -48,9 +48,6 @@
         <button type="submit" name="color" value="yellow" style="background-color: yellow">Amarillo</button>
         <button type="submit" name="color" value="green" style="background-color: green">Verde</button>
         <button type="submit" name="color" value="blue" style="background-color: blue">Azul</button>
-        <?php
-        
-        ?>
     </form>
 </body>
 </html>
