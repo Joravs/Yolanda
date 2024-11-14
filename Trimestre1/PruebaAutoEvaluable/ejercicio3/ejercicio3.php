@@ -25,11 +25,11 @@
 <body>
     <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
 <?php
-    if(!isset($_SESSION['enviar'])){
-        $_SESSION['cont']=0;
-        $_SESSION['numRand']=generarNumero();
-    }
     if(!isset($_POST['enviar'])){
+        if(!isset($_SESSION['enviar'])){
+            $_SESSION['cont']=0;
+            $_SESSION['numRand']=generarNumero();
+        }
         echo $_SESSION['numRand'];
         $_SESSION['cont']++;
         ?>
