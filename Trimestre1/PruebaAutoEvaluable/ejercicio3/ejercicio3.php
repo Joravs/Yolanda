@@ -1,6 +1,5 @@
 <?php
     session_start();
-    $_SESSION['cont']=0;
     function generarNumero(){
         return $numero=rand(1,100);
     }
@@ -31,6 +30,7 @@
         <?php
         if(!isset($_POST['enviar'])){
             $_SESSION['numRand']=generarNumero();
+            $_SESSION['cont']=0;
         }else{
             $numeroes=mayorMenor($_SESSION['numRand'],$_POST['num']);
             echo "<h3>Tu numero es:".$_POST['num']."</h3>";
@@ -42,7 +42,7 @@
                     break;
                 case "True":
                         echo "<h2>ENHORABUENA, HAS ACERTADO</h2>";
-                        echo '<h3>Has necesitado'.$_SESSION['cont'].'intentos</h3>';
+                        echo '<h3>Has necesitado '.$_SESSION['cont'].' intentos</h3>';
             }
         }
         ?>
