@@ -8,6 +8,15 @@ session_start();
         }
         return $binario;
     }
+    function obtenerDecimal($binario){
+        $decimal=0;
+        for($i=0;$i<=count($binario)-1;$i++){
+            if($binario[$i]==1){
+                $decimal+=2**(count($binario)-1-$i);
+            }
+        }
+        return $decimal;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +27,7 @@ session_start();
 </head>
 <body>
     <h1>Adivina el numero en decimal</h1>
-    <h2>El numero en BINARIO: <?php $binario=generarBinario();$_SESSION['binario']=$binario;?></h2>
+    <h2>El numero en BINARIO: <?php $binario=generarBinario();$_SESSION['decimalcorrecto']=obtenerDecimal($binario);?></h2>
     <?php
         if(isset($binario)){
             for($i=0;$i<4;$i++){
@@ -43,7 +52,7 @@ session_start();
             }
         }
     ?>
-    <form action="ejercicio21.ph" method="post">
+    <form action="ejercicio21.php" method="post">
         <label for="decimal">Numero decimal</label>
         <input type="number" name="decimal" id="decimal">
         <input type="submit" value="Enviar" name="enviar">
