@@ -21,7 +21,7 @@
             for($i=0;$i<3;$i++){
                 for($j=0;$j<2;$j++){
                     echo "<label for='$i$j'>E.$i.$j</label>";
-                    echo "<input id='$i$j' type='number' name='$i$j'></input>";
+                    echo "<input id='$i$j' type='number' name='$i$j' min='1' max='100'></input>";
                 }
                 echo "<br>";
             }
