@@ -28,9 +28,10 @@
     $_SESSION['enviar']=$_SESSION['enviar'].$_POST['enviar'];
     if(!isset($_SESSION['enviar'])){
         $_SESSION['cont']=0;
-        echo $_SESSION['numRand']=generarNumero();
+        $_SESSION['numRand']=generarNumero();
     }
     if(!isset($_POST['enviar'])){
+        echo $_SESSION['numRand'];
         $_SESSION['cont']++;
 ?>
         <label for="num">Adivina mi numero</label>
