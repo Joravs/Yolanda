@@ -27,6 +27,7 @@ session_start();
         <input type="submit" value="Enviar" name="enviar">
     </form>
     <?php
+        $_SESSION['numRand']=0;
         if(!isset($_POST['enviar'])){
             $_SESSION['numRand']=generarNumero();
         }else{
