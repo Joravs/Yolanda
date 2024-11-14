@@ -30,8 +30,6 @@
             $_SESSION['cont']=0;
             $_SESSION['numRand']=generarNumero();
         }
-        echo $_SESSION['numRand'];
-        $_SESSION['cont']++;
         ?>
         <label for="num">Adivina mi numero</label>
         <input type="number" name="num" id="num">
