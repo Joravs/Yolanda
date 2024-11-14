@@ -25,7 +25,7 @@
 <body>
     <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
 <?php
-    if(!isset($_POST['enviar'])){
+    if(!isset($_POST['enviar']) || $_SESSION['cont']>=1){
         echo $_SESSION['numRand']=generarNumero();
         $_SESSION['cont']=0;
 ?>
@@ -42,16 +42,17 @@
                 case "Menor":
                     echo "<h3>Mi numero es ".$numeroes."</h3>";
                     $_SESSION['cont']++;
+                    echo '<a href="'.$_SERVER['PHP_SELF'].'">Sigue jugando...</a>';
                     break;
                     case "True":
                         echo "<h2>ENHORABUENA, HAS ACERTADO</h2>";
                         echo '<h3>Has necesitado '.$_SESSION['cont'].' intentos</h3>';
                         session_destroy();
+                        echo '<a href="'.$_SERVER['PHP_SELF'].'">Sigue jugando...</a>';
                     }
                 }
 ?>
                 <br>
-<a href="<?php echo $_SERVER['PHP_SELF']?>">Sigue jugando...</a>
 </form>
 </body>
 </html>
