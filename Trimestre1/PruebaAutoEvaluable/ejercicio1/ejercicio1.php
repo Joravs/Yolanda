@@ -1,3 +1,14 @@
+<?php
+    if(isset($_POST['calcular'])){
+        for($i=0;$i<3;$i++){
+            for($j=0;$j<2;$j++){
+                if($_POST[$i.$j]>=1 && $_POST[$i.$j]<=100){
+                    echo "<p>".$_POST[$i.$j]." = ".decbin($_POST[$i.$j])."</p>";
+                }
+            }
+        }
+    }else{
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,16 +30,8 @@
         ?>
         <input type="submit" value="Calcular" name="calcular">
     </form>
-    <?php
-        if(isset($_POST['calcular'])){
-            for($i=0;$i<3;$i++){
-                for($j=0;$j<2;$j++){
-                    if($_POST[$i.$j]>=1 && $_POST[$i.$j]<=100){
-                        echo "<p>".$_POST[$i.$j]." = ".decbin($_POST[$i.$j])."</p>";
-                    }
-                }
-            }
-        }
-    ?>
 </body>
 </html>
+<?php
+    }
+?>
