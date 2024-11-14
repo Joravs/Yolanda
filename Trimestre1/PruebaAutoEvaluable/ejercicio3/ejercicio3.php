@@ -43,6 +43,7 @@
                 case "True":
                         echo "<h2>ENHORABUENA, HAS ACERTADO</h2>";
                         echo '<h3>Has necesitado '.$_SESSION['cont'].' intentos</h3>';
+                        session_destroy();
             }
         }
         ?>
