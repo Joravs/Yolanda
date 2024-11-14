@@ -5,6 +5,7 @@
         for($i=0;$i<4;$i++){
             echo $binario[$i]=array_rand($bin);
         }
+        return $binario;
     }
 ?>
 <!DOCTYPE html>
@@ -16,7 +17,16 @@
 </head>
 <body>
     <h1>Adivina el numero en decimal</h1>
-    <h2>El numero en BINARIO: <?php generarBinario();?></h2>
-    
+    <h2>El numero en BINARIO: <?php $binario=generarBinario();?></h2>
+    <?php
+        if(isset($binario)){
+            
+        }
+    ?>
+    <form action="ejercicio21.ph" method="post">
+        <label for="decimal">Numero decimal</label>
+        <input type="number" name="decimal" id="decimal">
+        <input type="submit" value="Enviar" name="enviar">
+    </form>
 </body>
 </html>
