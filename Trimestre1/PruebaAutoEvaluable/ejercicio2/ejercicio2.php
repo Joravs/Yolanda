@@ -1,4 +1,5 @@
 <?php
+session_start();
     function generarBinario(){
         $bin=[0,1];
         $binario=[];
@@ -17,7 +18,7 @@
 </head>
 <body>
     <h1>Adivina el numero en decimal</h1>
-    <h2>El numero en BINARIO: <?php $binario=generarBinario();?></h2>
+    <h2>El numero en BINARIO: <?php $binario=generarBinario();$_SESSION['binario']=$binario;?></h2>
     <?php
         if(isset($binario)){
             for($i=0;$i<4;$i++){
@@ -25,12 +26,16 @@
                     switch($i){
                         case 0:
                             echo "<img src='src/ocho.jpg'></img>";
+                            break;
                         case 1:
                             echo "<img src='src/cuatro.jpg'></img>";                            
+                            break;
                         case 2:
                             echo "<img src='src/dos.jpg'></img>";
+                            break;
                         case 3:
                             echo "<img src='src/Uno.jpg'></img>";
+                            break;
                     }
                 }else{
                     echo "<img src='src/blanco.jpg'></img>";
