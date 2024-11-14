@@ -25,7 +25,6 @@
 <body>
     <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
 <?php
-    $_SESSION['enviar']=$_SESSION['enviar'].$_POST['enviar'];
     if(!isset($_SESSION['enviar'])){
         $_SESSION['cont']=0;
         $_SESSION['numRand']=generarNumero();
@@ -33,12 +32,13 @@
     if(!isset($_POST['enviar'])){
         echo $_SESSION['numRand'];
         $_SESSION['cont']++;
-?>
+        ?>
         <label for="num">Adivina mi numero</label>
         <input type="number" name="num" id="num">
         <input type="submit" value="Enviar" name="enviar">
-<?php
+        <?php
     }else{
+        $_SESSION['enviar']=$_POST['enviar'];
         $_SESSION['num']=$_POST['num'];
         $numeroes=mayorMenor($_SESSION['numRand'],$_SESSION['num']);
         echo "<h3>Tu numero es:".$_POST['num']."</h3>";
