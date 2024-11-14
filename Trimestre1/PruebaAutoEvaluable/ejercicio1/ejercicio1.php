@@ -23,7 +23,9 @@
         if(isset($_POST['calcular'])){
             for($i=0;$i<3;$i++){
                 for($j=0;$j<2;$j++){
-                    echo "<p>".$_POST[$i.$j]." = ".decbin($_POST[$i.$j])."</p>";
+                    if($_POST[$i.$j]>=1 && $_POST[$i.$j]<=100){
+                        echo "<p>".$_POST[$i.$j]." = ".decbin($_POST[$i.$j])."</p>";
+                    }
                 }
             }
         }
