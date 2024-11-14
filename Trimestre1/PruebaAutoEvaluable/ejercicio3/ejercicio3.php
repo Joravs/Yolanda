@@ -1,5 +1,6 @@
 <?php
     session_start();
+    $_SESSION['cont']=0;
     function generarNumero(){
         return $numero=rand(1,100);
     }
@@ -37,9 +38,11 @@
                 case "Mayor":
                 case "Menor":
                     echo "<h3>Mi numero es ".$numeroes."</h3>";
+                    $_SESSION['cont']++;
                     break;
                 case "True":
                         echo "<h2>ENHORABUENA, HAS ACERTADO</h2>";
+                        echo '<h3>Has necesitado'.$_SESSION['cont'].'intentos</h3>';
             }
         }
         ?>
