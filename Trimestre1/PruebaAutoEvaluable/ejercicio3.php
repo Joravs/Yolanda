@@ -21,6 +21,11 @@
     <title>Ejercicio 3</title>
 </head> 
 <body>
+    <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+        <label for="num">Adivina mi numero</label>
+        <input type="number" name="num" id="num">
+        <input type="submit" value="Enviar" name="enviar">
+    </form>
     <?php
         if(!isset($_POST['enviar'])){
             $_SESSION['numRand']=generarNumero();
@@ -37,11 +42,6 @@
             }
         }
     ?>
-    <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
-        <label for="num">Adivina mi numero</label>
-        <input type="number" name="num" id="num">
-        <input type="submit" value="Enviar" name="enviar">
-    </form>
     <a href="<?php session_destroy(); echo $_SERVER['PHP_SELF']?>">Sigue jugando...</a>
 </body>
 </html>
