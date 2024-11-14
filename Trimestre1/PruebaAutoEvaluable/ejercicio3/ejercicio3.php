@@ -25,9 +25,11 @@
 <body>
     <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
 <?php
-    if(!isset($_POST['enviar']) && $_SESSION['cont']==0){
+    $_SESSION['enviar']=$_SESSION['enviar'].$_POST['enviar'];
+    if(!isset($_SESSION['enviar'])){
         echo $_SESSION['numRand']=generarNumero();
         $_SESSION['cont']=0;
+        $_SESSION['cont']++;
 ?>
         <label for="num">Adivina mi numero</label>
         <input type="number" name="num" id="num">
