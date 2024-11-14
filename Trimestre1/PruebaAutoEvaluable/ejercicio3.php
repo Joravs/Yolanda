@@ -31,7 +31,7 @@
         if(!isset($_POST['enviar'])){
             $_SESSION['numRand']=generarNumero();
         }else{
-            $numeroes=mayorMenor($_POST['num'],$_SESSION['numRand']);
+            $numeroes=mayorMenor($_SESSION['numRand'],$_POST['num']);
             echo "<h3>Tu numero es:".$_POST['num']."</h3>";
             switch($numeroes){
                 case "Mayor":
