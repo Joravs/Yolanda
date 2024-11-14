@@ -14,6 +14,10 @@
         }
         return $resp;
     }
+    if(!isset($_POST['enviar']) && $_SESSION['cont']==0){
+        echo $_SESSION['numRand']=generarNumero();
+        $_SESSION['cont']=0;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,27 +31,24 @@
         <label for="num">Adivina mi numero</label>
         <input type="number" name="num" id="num">
         <input type="submit" value="Enviar" name="enviar">
-        <?php
-        if(!isset($_POST['enviar'])){
-            $_SESSION['numRand']=generarNumero();
-            $_SESSION['cont']=0;
-        }else{
-            $numeroes=mayorMenor($_SESSION['numRand'],$_POST['num']);
-            echo "<h3>Tu numero es:".$_POST['num']."</h3>";
-            switch($numeroes){
-                case "Mayor":
-                case "Menor":
-                    echo "<h3>Mi numero es ".$numeroes."</h3>";
-                    $_SESSION['cont']++;
-                    break;
-                case "True":
-                        echo "<h2>ENHORABUENA, HAS ACERTADO</h2>";
-                        echo '<h3>Has necesitado '.$_SESSION['cont'].' intentos</h3>';
-                        session_destroy();
-            }
-        }
-        ?>
     </form>
-    <a href="<?php echo $_SERVER['PHP_SELF']?>">Sigue jugando...</a>
 </body>
 </html>
+<?php
+    }else{
+        $numeroes=mayorMenor($_SESSION['numRand'],$_POST['num']);
+        echo "<h3>Tu numero es:".$_POST['num']."</h3>";
+        switch($numeroes){
+            case "Mayor":
+            case "Menor":
+                echo "<h3>Mi numero es ".$numeroes."</h3>";
+                $_SESSION['cont']++;
+                echo '<a href="'.$_SERVER['PHP_SELF'].'">Sigue jugando...</a>';
+                break;
+            case "True":
+                    echo "<h2>ENHORABUENA, HAS ACERTADO</h2>";
+                    echo '<h3>Has necesitado '.$_SESSION['cont'].' intentos</h3>';
+                    session_destroy();
+        }
+    }
+?>
