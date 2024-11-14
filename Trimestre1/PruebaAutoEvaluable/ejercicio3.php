@@ -4,11 +4,14 @@
         return $numero=rand(1,100);
     }
     function mayorMenor($num1,$num2){
-        $resp="True";
         if($num1>$num2){
             $resp="Mayor";
-        }else{
+        }
+        if($num1<$num2){
             $resp="Menor";
+        }
+        if($num1==$num2){
+            $resp="True";
         }
         return $resp;
     }
@@ -33,14 +36,14 @@
             echo "<h3>Tu numero es:".$_POST['num']."</h3>";
             switch($numeroes){
                 case "Mayor":
-                    case "Menor":
-                        echo "<h3>Mi numero es ".$numeroes."</h3>";
-                        break;
-                        case "True":
-                            echo "<h2>ENHORABUENA, HAS ACERTADO</h2>";
-                        }
-                    }
-                    ?>
+                case "Menor":
+                    echo "<h3>Mi numero es ".$numeroes."</h3>";
+                    break;
+                case "True":
+                        echo "<h2>ENHORABUENA, HAS ACERTADO</h2>";
+            }
+        }
+        ?>
     </form>
     <a href="<?php session_destroy(); echo $_SERVER['PHP_SELF']?>">Sigue jugando...</a>
 </body>
