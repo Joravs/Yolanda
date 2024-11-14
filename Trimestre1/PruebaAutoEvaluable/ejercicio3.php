@@ -44,6 +44,6 @@
         }
         ?>
     </form>
-    <a href="<?php session_destroy(); echo $_SERVER['PHP_SELF']?>">Sigue jugando...</a>
+    <a href="<?php echo $_SERVER['PHP_SELF']?>">Sigue jugando...</a>
 </body>
 </html>
