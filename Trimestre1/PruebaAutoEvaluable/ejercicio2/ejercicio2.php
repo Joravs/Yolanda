@@ -20,7 +20,11 @@
     <h2>El numero en BINARIO: <?php $binario=generarBinario();?></h2>
     <?php
         if(isset($binario)){
-            
+            for($i=0;$i<4;$i++){
+                if($binario[$i]==1){
+                    
+                }
+            }
         }
     ?>
     <form action="ejercicio21.ph" method="post">
