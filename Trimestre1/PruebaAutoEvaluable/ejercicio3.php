@@ -6,8 +6,7 @@
     function mayorMenor($num1,$num2){
         if($num1>$num2){
             $resp="Mayor";
-        }
-        if($num1<$num2){
+        }else{
             $resp="Menor";
         }
         if($num1==$num2){
