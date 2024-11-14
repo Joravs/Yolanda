@@ -19,9 +19,12 @@
     ?>
     <input type="submit" value="Calcular" name="calcular">
     <?php
-        if(isset($_POST[calcular])){
-            for($i=0;$i<count($_POST)-1;$i++){
-                
+        if(isset($_POST['calcular'])){
+            for($i=0;$i<3;$i++){
+                for($j=0;$j<2;$j++){
+                    echo "<p>".$_POST[$i.$j]." = ".decbin($_POST[$i.$j])."</p>";
+                    echo "<br>";
+                }
             }
         }
     ?>
