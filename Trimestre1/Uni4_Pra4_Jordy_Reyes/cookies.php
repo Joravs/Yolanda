@@ -2,8 +2,8 @@
     if(isset($_COOKIE['color'])){$style = $_COOKIE['color'];} 
     if(isset($_POST['enviar'])){ 
         setcookie("color", $_POST["color"]);
-        echo "Se crea la cookie.";
-        echo "<a href=".$_SERVER['PHP_SELF'].">ir a la otra web</a>";
+        echo "<p>Se crea la cookie.</p>
+        <a href=".$_SERVER['PHP_SELF'].">ir a la otra web</a>";
     }else{
 ?>
 <!DOCTYPE html>
