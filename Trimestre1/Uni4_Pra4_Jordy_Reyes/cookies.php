@@ -1,5 +1,4 @@
-<?php  if(isset($_COOKIE['color'])){
-        $style = $_COOKIE['color'];} ?>
+<?php  if(isset($_COOKIE['color'])){ $style = $_COOKIE['color'];} ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +7,7 @@
     <title>Cookies</title>
     <style>
         body{
-            background-color: <?php echo $style?>;
+            background-color: <?php echo $style ?>;
         }
     </style>
 </head>
