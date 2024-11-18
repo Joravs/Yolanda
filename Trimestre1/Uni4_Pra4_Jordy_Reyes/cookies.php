@@ -1,4 +1,6 @@
-<?php  if(isset($_COOKIE['color'])){ $style = $_COOKIE['color'];} ?>
+<?php  
+    if(isset($_POST['enviar'])){ setcookie("color", $_POST["color"]);}
+    if(isset($_COOKIE['color'])){ $style = $_COOKIE['color'];} ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,10 +23,6 @@
         <label for="azul">Azul</label>
         <input type="radio" id='azul' name="color" value="blue"><br><br>
         <input type="submit" value="Crear Cookie" name="enviar">
-        <?php
-            if(isset($_POST['enviar']))
-                setcookie("color", $_POST["color"]);
-        ?>
         Se crea la cookie.
         <a href="<?php echo $_SERVER['PHP_SELF']?>">ir a la otra web</a>
     </form>
