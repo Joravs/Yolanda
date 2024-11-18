@@ -9,10 +9,11 @@ session_start();
         return $binario;
     }
     function obtenerDecimal($binario){
+        $vec2=[1,2,4,8];
         $decimal=0;
         for($i=0;$i<=count($binario)-1;$i++){
             if($binario[$i]==1){
-                $decimal+=2**(count($binario)-1-$i);
+                $decimal+=$vec2[$i];
             }
         }
         return $decimal;
