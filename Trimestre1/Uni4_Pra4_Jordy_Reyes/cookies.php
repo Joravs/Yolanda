@@ -23,7 +23,7 @@
         <input type="submit" value="Crear Cookie" name="enviar">
         <?php
             if(isset($_POST['enviar']))
-             setcookie("color", $_POST["color"]);
+                setcookie("color", $_POST["color"]);
         ?>
         Se crea la cookie.
         <a href="<?php echo $_SERVER['PHP_SELF']?>">ir a la otra web</a>
