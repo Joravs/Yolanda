@@ -17,7 +17,7 @@
     <form method="post">
         Seleccione de que color desea que sea la web de ahora en adelante: <br><br>
         <label for="green">Verde</label>
-        <input type="radio" id='green' name="color" value="green"><br>
+        <input type="radio" id='green' name="color" value="green" required><br>
         <label for="rojo">Rojo</label>
         <input type="radio" id='rojo' name="color" value="red"><br>
         <label for="azul">Azul</label>
