@@ -33,20 +33,7 @@ session_start();
         if(isset($binario)){
             for($i=0;$i<4;$i++){
                 if($binario[$i]==1){
-                    switch($i){
-                        case 0:
-                            echo "<img src='src/ocho.jpg'></img>";
-                            break;
-                        case 1:
-                            echo "<img src='src/cuatro.jpg'></img>";                            
-                            break;
-                        case 2:
-                            echo "<img src='src/dos.jpg'></img>";
-                            break;
-                        case 3:
-                            echo "<img src='src/Uno.jpg'></img>";
-                            break;
-                    }
+                    echo "<img src='src/$i.jpg'></img>";
                 }else{
                     echo "<img src='src/blanco.jpg'></img>";
                 }
