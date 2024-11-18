@@ -1,5 +1,5 @@
-<?php  
-    if(isset($_COOKIE['color'])){$style = $_COOKIE['color'];} 
+<?php
+    if(isset($_COOKIE['color'])){$style = $_COOKIE['color'];}
     if(isset($_POST['enviar'])){ 
         setcookie("color", $_POST["color"]);
         echo "<p>Se crea la cookie.</p>
