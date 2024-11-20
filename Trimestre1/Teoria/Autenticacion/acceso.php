@@ -11,6 +11,7 @@
         <input type="text" id="name" name="name"><br>
         <label for="password">Contraseña:</label>
         <input type="password" id="password" name="password">
+        <a href="registrarse.php">Resgistrarse</a>
         <input type="submit" value="Enviar" name="enviar">
     </form>
 </body>
