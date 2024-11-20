@@ -1,3 +1,15 @@
+<?php 
+    session_start();
+    $_SESSION['usu']="pepito";
+    $_SESSION['pass']="123";
+    $_SESSION['rol']="prime";
+
+    if(isset($_POST['registro'])){
+        $_SESSION['usu']=$_POST['usuario'];
+        $_SESSION['pass']=$_POST['password'];
+        $_SESSION['rol']=$_POST['rol'];
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

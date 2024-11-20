@@ -1,8 +1,8 @@
 <?php
     session_start();
-    $_SESSION['usu']="pepito";
-    $_SESSION['pass']="123";
-    $_SESSION['rol']="prime";
+    $usu=$_SESSION['usu'];
+    $pass=$_SESSION['pass'];
+    $rol=$_SESSION['rol'];
 
     if(isset($_POST['enviar'])){
         if($_POST['name'] == $usu && $_POST['password'] == $pass){
