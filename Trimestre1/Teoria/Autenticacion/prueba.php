@@ -1,7 +1,9 @@
 <?php
-    $usu="pepito";
-    $pass="123";
-
+    session_start();
+    $_SESSION['usu']="pepito";
+    $_SESSION['pass']="123";
+    $_SESSION['rol']="prime";
+    
     if(isset($_POST['enviar'])){
         if($_POST['name'] == $usu && $_POST['password'] == $pass){
             echo "Te has logeado";
