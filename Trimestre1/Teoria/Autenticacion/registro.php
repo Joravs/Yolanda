@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Registro</h1>
-    <form action="prueba" method="post">
+    <form action="prueba.php" method="post">
         <label for="usuario">Usuario: </label>
         <input type="text" name="usuario" id="usuario">
         <label for="password">Contraseña: </label>
