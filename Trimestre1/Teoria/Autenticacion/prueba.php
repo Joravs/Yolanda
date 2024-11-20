@@ -11,10 +11,4 @@
             echo "Usuario o contraseña incorrectos";
         }
     }
-    if(isset($_POST['registro'])){
-        $_SESSION['usu']=$_POST['usuario'];
-        $_SESSION['pass']=$_POST['password2'];
-        $_SESSION['rol']=$_POST['rol'];
-        echo "Registrado correctamente";
-    }
 ?>
