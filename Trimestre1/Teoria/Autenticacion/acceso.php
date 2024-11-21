@@ -8,6 +8,7 @@
         $_SESSION['usu']=$_POST['usuario'];
         $_SESSION['pass']=$_POST['password'];
         $_SESSION['rol']=$_POST['rol'];
+        echo "Te has registrado";
     }
 ?>
 <!DOCTYPE html>
