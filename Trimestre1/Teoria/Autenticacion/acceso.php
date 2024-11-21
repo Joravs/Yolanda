@@ -1,8 +1,8 @@
 <?php 
     session_start();
-    $_SESSION['usu']="pepito";
-    $_SESSION['pass']="123";
-    $_SESSION['rol']="prime";
+    $_SESSION['usu']=$_SESSION['usu']?$_SESSION['usu']:"pepito";
+    $_SESSION['pass']=$_SESSION['pass']?$_SESSION['pass']:"123";
+    $_SESSION['rol']=$_SESSION['rol']?$_SESSION['rol']:"prime";
 
     if(isset($_POST['registro'])){
         $_SESSION['usu']=$_POST['usuario'];
