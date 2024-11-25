@@ -8,6 +8,6 @@
         $result->data_seek($i);
         echo "Usuario: ". htmlspecialchars($result->fetch_assoc()['usu']);
         $result->data_seek($i);
-        echo "\tPassword ". htmlspecialchars($result->fetch_assoc()['contra'])."<br>";
+        echo "\t    Password ". htmlspecialchars($result->fetch_assoc()['contra'])."<br>";
     }
 ?>
