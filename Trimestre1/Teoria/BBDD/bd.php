@@ -1,6 +1,5 @@
 <?php
-    require_once 'login.php';
-    $ctbd = new mysqli($hn,$u,$pw,$db);
+    require_once './datbd.php';
     $query="Select usu,contra from usuarios";
     $result=$ctbd->query($query);
     if($ctbd->connect_error)die ("Fatal error: ".$ctbd->connect_error);
