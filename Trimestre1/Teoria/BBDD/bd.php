@@ -3,8 +3,9 @@
     $db = 'bdsimon';    
     $u = 'jugador';
     $pw ='';
-
     $ctbd = new mysqli($hn,$u,$pw,$db);
-    $salida=$ctbd->connect_error?"Fatal error: " . $ctbd->connect_error:"Coneection successfully connected";
-    echo $salida;
+    $query="Select usu,contra from usuarios";
+    $result=$ctbd->query($query);
+    if($ctbd->connect_error){die ("Fatal error: ".$ctbd->connect_error);}
+    else{if(!$result){die("Fatal error: ".$resul);}else{echo $result;}}
 ?>
