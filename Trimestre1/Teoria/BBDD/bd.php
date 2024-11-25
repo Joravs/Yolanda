@@ -1,8 +1,5 @@
 <?php
-    $hn = 'localhost';
-    $db = 'bdsimon';    
-    $u = 'jugador';
-    $pw ='';
+    require_once 'login.php';
     $ctbd = new mysqli($hn,$u,$pw,$db);
     $query="Select usu,contra from usuarios";
     $result=$ctbd->query($query);
