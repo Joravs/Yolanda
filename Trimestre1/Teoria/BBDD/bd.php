@@ -6,6 +6,8 @@
     $rows=$result->num_rows;
     for($i=0;$i<$rows;$i++){
         $result->data_seek($i);
-        echo "Usuario: ". htmlspecialchars($result->fetch_assoc()['usu'])."<br>";
+        echo "Usuario: ". htmlspecialchars($result->fetch_assoc()['usu']);
+        $result->data_seek($i);
+        echo "\tPassword ". htmlspecialchars($result->fetch_assoc()['contra'])."<br>";
     }
 ?>
