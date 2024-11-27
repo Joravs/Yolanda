@@ -1,7 +1,7 @@
 <?php
     $hn = 'localhost';
     $db = 'bdsimon';    
-    $u = 'jugador';
+    $u = 'root';
     $pw ='';
 
     $ctbd = new mysqli($hn,$u,$pw,$db);
