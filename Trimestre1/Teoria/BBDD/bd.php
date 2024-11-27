@@ -10,7 +10,7 @@
             $result->data_seek($i);
             echo "Usuario: ". htmlspecialchars($result->fetch_assoc()['usu']);
             $result->data_seek($i);
-            echo "\tPassword ". htmlspecialchars($result->fetch_assoc()['contra'])."<br>";
+            echo "\tPassword ". htmlspecialchars($result->fetch_assoc()['contra']);
             $result->data_seek($i);
             echo "\tRol ". htmlspecialchars($result->fetch_assoc()['rol'])."<br>";
         }
