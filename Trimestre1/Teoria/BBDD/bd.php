@@ -1,6 +1,6 @@
 <?php
     require_once './datbd.php';
-    $query="Select usu,contra from usuarios";
+    $query="Select * from usuarios";
     $result=$ctbd->query($query);
     if($ctbd->connect_error)die ("Fatal error: ".$ctbd->connect_error);
     $rows=$result->num_rows;
@@ -9,5 +9,7 @@
         echo "Usuario: ". htmlspecialchars($result->fetch_assoc()['usu']);
         $result->data_seek($i);
         echo "\tPassword ". htmlspecialchars($result->fetch_assoc()['contra'])."<br>";
+        $result->data_seek($i);
+        echo "\tRol ". htmlspecialchars($result->fetch_assoc()['rol'])."<br>";
     }
 ?>
