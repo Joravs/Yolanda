@@ -1,7 +1,7 @@
 <?php
     require_once './datbd.php';
     $query="Select * from usuarios";
-    $queryInsert="Insert into usuarios ('usu','contra') values ('yolanda','yolanda')";
+    $queryInsert="Insert into usuarios (usu,contra) values ('yolanda','yolanda')";
     $ctbd->query($queryInsert);
     $result=$ctbd->query($query);
     if($ctbd->connect_error)die ("Fatal error: ".$ctbd->connect_error);
