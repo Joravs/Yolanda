@@ -13,5 +13,5 @@
         $result->data_seek($i);
         echo "\tRol ". htmlspecialchars($result->fetch_assoc()['rol'])."<br>";
     }
-    $ctdb->close();
+    $ctbd->close();
 ?>
