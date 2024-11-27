@@ -7,4 +7,5 @@
         $ctbd->query($queryInsert);
         echo "Usuario Insertado";
     }
+    $ctdb->close();
 ?>
