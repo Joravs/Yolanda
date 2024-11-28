@@ -20,6 +20,7 @@
             if ($ctdb->query($qrySelect)){
                 if ($ctdb->num_rows($qrySelect)>0){
                     echo "El usuario ya existe";
+                    return;
                 }else{
                     $qryIns="Insert into usuarios (usu,contra,rol) values ('$u','$pass','$rol');";
                     if($ctdb->connect_error){die("Connection Error");}
