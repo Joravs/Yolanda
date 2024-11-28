@@ -2,7 +2,7 @@
     function validarContra(){
         if(isset($_POST['registro'])){
             if($_POST['passwordreg']==$_POST['passwordreg2']){
-                echo acceso.php;
+                echo 'acceso.php';
             }else{
                 echo $_SERVER['PHP_SELF'];
             }
