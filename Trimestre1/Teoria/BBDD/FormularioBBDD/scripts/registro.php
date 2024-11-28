@@ -22,13 +22,14 @@
 <body>
     <h1>Registro</h1>
     <form action="<?php validarContra();?>" method="post">
-        <?php if($_SESSION['incorrect']==1){echo 'Contraseñas no coinciden';}?>
+        <?php if($_SESSION['incorrect']==1){echo '<span style="color:red;">Contraseñas no coinciden</span><br>';}?>
         <label for="usuarioreg">Usuario: </label>
         <input type="text" name="usuarioreg" id="usuarioreg">
         <label for="passwordreg">Contraseña: </label>
         <input type="password" name="passwordreg" id="passwordreg" required>
         <label for="passwordreg2">Repite a contraseña: </label>
         <input type="password" name="passwordreg2" id="passwordreg2" required>
-        <input type="submit" value="Registrarse" name="registro">
+        <input type="submit" value="Registrarse" name="registro"><br>
+        <a href="acceso.php">Iniciar Sesion</a><br>
 </body>
 </html>
