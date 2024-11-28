@@ -4,7 +4,7 @@
     function validarContra(){
         if(isset($_POST['registro'])){
             if($_POST['passwordreg']==$_POST['passwordreg2']){
-                echo 'acceso.php';
+                echo 'index.php';
             }else{
                 $_SESSION['incorrect']=1;
                 echo $_SERVER['PHP_SELF'];
@@ -30,6 +30,6 @@
         <label for="passwordreg2">Repite a contraseña: </label>
         <input type="password" name="passwordreg2" id="passwordreg2" required>
         <input type="submit" value="Registrarse" name="registro"><br>
-        <a href="acceso.php">Iniciar Sesion</a><br>
+        <a href="index.php">Iniciar Sesion</a><br>
 </body>
 </html>

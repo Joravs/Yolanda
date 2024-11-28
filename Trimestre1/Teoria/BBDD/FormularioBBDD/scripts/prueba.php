@@ -18,10 +18,11 @@
             $passValido=htmlspecialchars($result->fetch_assoc()['contra']);
             if($uValido==$u && $passValido==$pass){
                 echo "Te has logeado";
-                echo '<a href="acceso.php">Vuelve al Inicio</a>';
+                echo '<a href="index.php">Vuelve al Inicio</a>';
             }else{
                 echo $resultado;
             }
         }
+        $ctdb->close();
     }
 ?>
