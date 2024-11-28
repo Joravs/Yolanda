@@ -11,7 +11,6 @@
             if ($resSelect){
                 if ($resSelect->num_rows>0){
                     $_SESSION['incorrect']=2;
-                    var_dump($resSelect);
                     echo $_SERVER['PHP_SELF'];
                 }else{
                     if($pass==$_POST['passwordreg2']){
