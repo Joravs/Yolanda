@@ -30,12 +30,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form method="post" action="prueba.php">
+    <form method="post" action="validacion.php">
         <label for="name">Nombre:</label>
         <input type="text" id="name" name="name" required><br>
         <label for="password">Contraseña:</label>
         <input type="password" id="password" name="password" required><br>
-        <a href="registro.php">Registrarse</a><br>
         <input type="submit" value="Enviar" name="enviar">
     </form>
 </body>
