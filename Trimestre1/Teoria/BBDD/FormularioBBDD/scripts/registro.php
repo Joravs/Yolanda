@@ -28,7 +28,9 @@
         <label for="passwordreg">Contraseña: </label>
         <input type="password" name="passwordreg" id="passwordreg" required>
         <label for="passwordreg2">Repite a contraseña: </label>
-        <input type="password" name="passwordreg2" id="passwordreg2" required>        <select name="rol" id="rol">
+        <input type="password" name="passwordreg2" id="passwordreg2" required>
+        <label for="rol">Rol: </label>
+        <select name="rol" id="rol">
             <option value="jugador">Jugador</option>
         </select>
         <input type="submit" value="Registrarse" name="registro"><br>
