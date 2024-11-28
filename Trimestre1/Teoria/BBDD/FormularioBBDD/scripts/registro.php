@@ -3,6 +3,7 @@
     $_SESSION['incorrect']=0;
     function validarContra(){
         if(isset($_POST['registro'])){
+            $ctdb=new mysqli($hn,$user,$pw,$db);
             $u=$_POST['usuarioreg'];
             $pass=$_POST['passwordreg'];
             $rol=$_POST['rol'];
@@ -14,13 +15,11 @@
                     echo $_SERVER['PHP_SELF'];
                 }else{
                     if($pass==$_POST['passwordreg2']){
-                    $qryIns="Insert into usuarios (usu,contra,rol) values ('$u','$pass','$rol');";
-                    if($ctdb->connect_error){die("Connection Error");}
-                    else{
+                        $qryIns="Insert into usuarios (usu,contra,rol) values ('$u','$pass','$rol');";
                         $ctdb->query($qryIns);
+                        $ctdb->close();
                         echo "index.php";
                     }
-                    $ctdb->close();}
                 }
             }
         }

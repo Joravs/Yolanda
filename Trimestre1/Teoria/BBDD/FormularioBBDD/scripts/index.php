@@ -1,7 +1,4 @@
 <?php 
-    require_once 'datdb.php';
-    $ctdb=new mysqli($hn,$user,$pw,$db);
-
     if(isset($_POST['registro'])){
         echo "Te has registrado";
     }
