@@ -3,5 +3,4 @@
     $db = 'bdsimon';    
     $u = 'root';
     $pw ='';
-    phpinfo();
 ?>

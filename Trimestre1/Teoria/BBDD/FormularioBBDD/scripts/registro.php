@@ -1,3 +1,14 @@
+<?php
+    function validarContra(){
+        if(isset($_POST['registro'])){
+            if($_POST['passwordreg']==$_POST['passwordreg2']){
+                echo acceso.php;
+            }else{
+                echo $_SERVER['PHP_SELF'];
+            }
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +18,7 @@
 </head>
 <body>
     <h1>Registro</h1>
-    <form action="acceso.php" method="post">
+    <form action="<?php validarContra();?>" method="post">
         <label for="usuarioreg">Usuarioreg: </label>
         <input type="text" name="usuarioreg" id="usuarioreg">
         <label for="passwordreg">Contraseña: </label>
