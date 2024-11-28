@@ -24,7 +24,7 @@
     <form action="<?php validarContra();?>" method="post">
         <?php if($_SESSION['incorrect']==1){echo '<span style="color:red;">Contraseñas no coinciden</span><br>';}?>
         <label for="usuarioreg">Usuario: </label>
-        <input type="text" name="usuarioreg" id="usuarioreg">
+        <input type="text" name="usuarioreg" id="usuarioreg" required>
         <label for="passwordreg">Contraseña: </label>
         <input type="password" name="passwordreg" id="passwordreg" required>
         <label for="passwordreg2">Repite a contraseña: </label>

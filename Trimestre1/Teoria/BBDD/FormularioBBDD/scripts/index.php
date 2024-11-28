@@ -24,9 +24,9 @@
 <body>
     <form method="post" action="prueba.php">
         <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name"><br>
+        <input type="text" id="name" name="name" required><br>
         <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password"><br>
+        <input type="password" id="password" name="password" required><br>
         <a href="registro.php">Registrarse</a><br>
         <input type="submit" value="Enviar" name="enviar">
     </form>
