@@ -8,8 +8,8 @@
             $pass=$_POST['password'];
             $qury="Select usu,contra from usuarios where usu='$u' AND contra='$pass'";
             $result=$ctdb->query($qury);
-            echo $result->fetch_assoc()['usu'];
-            echo $result->fetch_assoc()['contra'];
+            echo "Usuario: ".$result->fetch_assoc()['usu'];
+            echo "Password: ".$result->fetch_assoc()['contra'];
             $uValido=htmlspecialchars($result->fetch_assoc()['usu']);
             $passValido=htmlspecialchars($result->fetch_assoc()['contra']);
             if($uValido==$u && $passValido==$pass){
