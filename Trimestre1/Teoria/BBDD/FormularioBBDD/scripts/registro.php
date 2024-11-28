@@ -19,7 +19,7 @@
 <body>
     <h1>Registro</h1>
     <form action="<?php validarContra();?>" method="post">
-        <label for="usuarioreg">Usuarioreg: </label>
+        <label for="usuarioreg">Usuario: </label>
         <input type="text" name="usuarioreg" id="usuarioreg">
         <label for="passwordreg">Contraseña: </label>
         <input type="password" name="passwordreg" id="passwordreg" required>
