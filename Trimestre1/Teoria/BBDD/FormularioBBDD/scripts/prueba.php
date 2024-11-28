@@ -6,8 +6,7 @@
         else{
             $u=$_POST['name'];
             $pass=$_POST['password'];
-            var_dump($_POST);
-            $qury="Select usu,contra from usuarios where usu=$u AND contra=$pass;";
+            $qury="Select usu,contra from usuarios where usu='$u' AND contra='$pass';";
             $result=$ctdb->query($qury);
             $uValido=htmlspecialchars($result->fetch_assoc()["usu"]);
             $passValido=htmlspecialchars($result->fetch_assoc()["contra"]);
