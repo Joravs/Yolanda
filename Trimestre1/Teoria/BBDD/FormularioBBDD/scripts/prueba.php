@@ -1,7 +1,7 @@
 <?php
     require_once 'datdb.php';
     $ctdb=new mysqli($hn,$user,$pw,$db);
-    $resultado="Usuario o contraseña incorrectos<br><a href='acceso.php'>Volver a Intentarlo</a>";
+    $resultado="Usuario o contraseña incorrectos<br><a href='registro.php'>Registrarse</a><br><br><a href='acceso.php'>Volver a Intentarlo</a>";
     if(isset($_POST['enviar'])){
         if($ctdb->connect_error){die("Connection Error");}
         else{
