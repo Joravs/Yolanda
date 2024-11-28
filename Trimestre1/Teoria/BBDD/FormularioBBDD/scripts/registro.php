@@ -4,14 +4,6 @@
     function validarContra(){
         if(isset($_POST['registro'])){
             if($_POST['passwordreg']==$_POST['passwordreg2']){
-                $u=$_POST['usuarioreg'];
-                $pass=$_POST['passwordreg'];
-                $qryIns="Insert into usuarios (usu,contra) values ('$u','$pass');";
-                if($ctdb->connect_error){die("Connection Error");}
-                else{
-                    $ctdb->query($qryIns);
-                    echo "Te has registrado";
-                }
                 echo 'index.php';
             }else{
                 $_SESSION['incorrect']=1;
@@ -36,7 +28,9 @@
         <label for="passwordreg">Contraseña: </label>
         <input type="password" name="passwordreg" id="passwordreg" required>
         <label for="passwordreg2">Repite a contraseña: </label>
-        <input type="password" name="passwordreg2" id="passwordreg2" required>
+        <input type="password" name="passwordreg2" id="passwordreg2" required>        <select name="rol" id="rol">
+            <option value="jugador">Jugador</option>
+        </select>
         <input type="submit" value="Registrarse" name="registro"><br>
         <a href="index.php">Iniciar Sesion</a><br>
 </body>
