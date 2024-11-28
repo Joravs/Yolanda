@@ -20,6 +20,10 @@
         }
         $ctdb->close();
     }
+    function errores(){
+        if($_SESSION['incorrect']==1){echo '<span style="color:red;">Contraseñas no coinciden</span><br>';}
+            elseif($_SESSION['incorrect']==2){echo '<span style="color:red;">El usuario ya existe</span><br>';}
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,8 +35,7 @@
 <body>
     <h1>Registro</h1>
     <form action="<?php validarContra();?>" method="post">
-        <?php if($_SESSION['incorrect']==1){echo '<span style="color:red;">Contraseñas no coinciden</span><br>';}
-            elseif($_SESSION['incorrect']==2){echo '<span style="color:red;">El usuario ya existe</span><br>';}?>
+        <?php errores()?>
         <label for="usuarioreg">Usuario: </label>
         <input type="text" name="usuarioreg" id="usuarioreg" required>
         <label for="passwordreg">Contraseña: </label>
