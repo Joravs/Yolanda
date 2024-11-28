@@ -8,9 +8,12 @@
             $pass=$_POST['password'];
             $qury="Select usu,contra from usuarios where usu='$u' AND contra='$pass'";
             $result=$ctdb->query($qury);
-            $uValido=htmlspecialchars($result->fetch_assoc()['usu']);
-            $result->data_seek(0);
-            $passValido=htmlspecialchars($result->fetch_assoc()['contra']);
+            if($result->error()){}
+            else{
+                $uValido=htmlspecialchars($result->fetch_assoc()['usu']);
+                $result->data_seek(0);
+                $passValido=htmlspecialchars($result->fetch_assoc()['contra']);
+            }
             if($uValido==$u && $passValido==$pass){
                 echo "Te has logeado";
                 echo '<a href="acceso.php">Vuelve al Inicio</a>';
