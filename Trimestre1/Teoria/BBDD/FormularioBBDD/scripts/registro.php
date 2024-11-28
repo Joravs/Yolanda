@@ -4,6 +4,14 @@
     function validarContra(){
         if(isset($_POST['registro'])){
             if($_POST['passwordreg']==$_POST['passwordreg2']){
+                $u=$_POST['usuarioreg'];
+                $pass=$_POST['passwordreg'];
+                $qryIns="Insert into usuarios (usu,contra) values ('$u','$pass');";
+                if($ctdb->connect_error){die("Connection Error");}
+                else{
+                    $ctdb->query($qryIns);
+                    echo "Te has registrado";
+                }
                 echo 'index.php';
             }else{
                 $_SESSION['incorrect']=1;
