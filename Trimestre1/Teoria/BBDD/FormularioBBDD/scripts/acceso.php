@@ -5,7 +5,7 @@
     if(isset($_POST['registro'])){
         $u=$_POST['usuarioreg'];
         $pass=$_POST['passwordreg'];
-        $qryIns="Insert into usuarios (usu,contra) values ($u,$pass);";
+        $qryIns="Insert into usuarios (usu,contra) values ('$u','$pass');";
         if($ctdb->connect_error){die("Connection Error");}
         else{
             $ctdb->query($qryIns);
