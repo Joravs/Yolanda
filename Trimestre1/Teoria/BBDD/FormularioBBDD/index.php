@@ -1,4 +1,4 @@
-<?php require_once 'datdb.php';?>
+<?php require_once './scripts/datdb.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
