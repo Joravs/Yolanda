@@ -1,8 +1,13 @@
 <?php 
-    require_once 'datdb.php';
-    $ctdb=new mysqli($hn,$db,$user,$pw);
+    session_start();
+    $_SESSION['usu']=$_SESSION['usu']?$_SESSION['usu']:"pepito";
+    $_SESSION['pass']=$_SESSION['pass']?$_SESSION['pass']:"123";
+    $_SESSION['rol']=$_SESSION['rol']?$_SESSION['rol']:"prime";
 
     if(isset($_POST['registro'])){
+        $_SESSION['usu']=$_POST['usuario'];
+        $_SESSION['pass']=$_POST['password'];
+        $_SESSION['rol']=$_POST['rol'];
         echo "Te has registrado";
     }
 ?>

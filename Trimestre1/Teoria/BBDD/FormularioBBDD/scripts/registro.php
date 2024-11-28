@@ -8,15 +8,12 @@
 <body>
     <h1>Registro</h1>
     <form action="acceso.php" method="post">
-        <label for="usuario">Usuario: </label>
-        <input type="text" name="usuario" id="usuario">
-        <label for="password">Contraseña: </label>
-        <input type="password" name="password" id="password" required>
-        <label for="password2">Repite a contraseña: </label>
-        <input type="password" name="password2" id="password2" required>
-        <p>Rol</p>
-        <input type="radio" name="rol" value="prime"> Prime</input>
-        <input type="radio" name="rol" value="estandar">Estandar</input>
+        <label for="usuarioreg">Usuarioreg: </label>
+        <input type="text" name="usuarioreg" id="usuarioreg">
+        <label for="passwordreg">Contraseña: </label>
+        <input type="password" name="passwordreg" id="passwordreg" required>
+        <label for="passwordreg2">Repite a contraseña: </label>
+        <input type="password" name="passwordreg2" id="passwordreg2" required>
         <input type="submit" value="Registrarse" name="registro">
 </body>
 </html>
