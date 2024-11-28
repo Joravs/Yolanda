@@ -1,6 +1,6 @@
 <?php 
     require_once 'datdb.php';
-    $ctdb=new mysqli($hn,$db,$user,$pw);
+    $ctdb=new mysqli($hn,$user,$pw,$db);
 
     if(isset($_POST['registro'])){
         $u=$_POST['usuarioreg'];

@@ -1,6 +1,6 @@
 <?php
     require_once 'datdb.php';
-    $ctdb=new mysqli($hn,$db,$user,$pw);
+    $ctdb=new mysqli($hn,$user,$pw,$db);
     if(isset($_POST['enviar'])){
         if($ctdb->connect_error){die("Connection Error");}
         else{
