@@ -12,7 +12,7 @@
         }
     }
     function validacion(){
-        if(isset($_POST['registro'])){
+        if($_SESSION['incorrect']==1){
             $u=$_POST['usuarioreg'];
             $pass=$_POST['passwordreg'];
             $rol=$_POST['rol'];
