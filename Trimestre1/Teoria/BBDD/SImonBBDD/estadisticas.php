@@ -28,11 +28,12 @@
             for($i=0;$i<$rows;$i++){
                 $resultStats->data_seek($i);
                 $row=$resultStats->fetch_assoc();
+                $rect=$row['count(acierto)'];
                 echo "<tr>";
                 echo "<td>{$row['Codigo']}</td>";
                 echo "<td>{$row['Nombre']}</td>";
                 echo "<td>{$row['count(acierto)']}</td>";
-                echo "<td><rect style='width:{$row['count(acierto)']}*10px;'></rect></td>";
+                echo "<td><div style='width:{$rect}px; height:10px;background-color:blue;'></div></td>";
             }
        ?>
     </table>
