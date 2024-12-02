@@ -18,7 +18,7 @@
         require_once 'datdb.php';
         $ctdb=new mysqli($hn,$user,$pw,$db);
         if($ctdb->connect_error)die("Error connecting");
-        $qryInsert="INSERT INTO jugadas (codigousu,acierto) VALUES ((SELECT Codigo FROM usuarios where Nombre='ur'),1);";
+        $qryInsert="INSERT INTO jugadas (codigousu,acierto) VALUES ((SELECT Codigo FROM usuarios where Nombre='$ur'),1);";
         $ctdb->query($qryInsert);
         $ctdb->close();
     ?>
