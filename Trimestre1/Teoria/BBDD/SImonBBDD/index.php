@@ -10,7 +10,7 @@
 </head>
 <body>
     <h1>VAMOS A JUGAR AL SIMÓN!!!</h1>
-    <form method="post" action="<?php validarUsuario()?>">
+    <form method="post" action="<?php validarUsuario();?>">
         <label for="usuario">Usuario:</label>
         <input type="text" id="usuario" name="usuario" required><br>
         <label for="clave">Clave:</label>

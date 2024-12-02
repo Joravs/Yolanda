@@ -1,8 +1,10 @@
 <?php
     session_start();
+    function validarUsuario(){
     require_once 'datdb.php';
+
     $ctdb=new mysqli($hn,$user,$pw,$db);
-    if($ctdb->connect_error)die("Error connecting to");
+    if($ctdb->connect_error)die("Error connecting");
     else{
     if(isset($_POST['enviar'])){
         $usuarioValidar=$_POST['usuario'];
@@ -17,4 +19,5 @@
         }
     }
     }
+}
 ?>
