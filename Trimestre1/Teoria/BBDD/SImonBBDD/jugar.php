@@ -1,18 +1,35 @@
 <?php
     session_start();
-    function circulos(){
-        
-    }
     function juegoPulsar(){
         require_once 'pintar-circulos.php';
-        if(!isset($_POST['comprobar'])){
+        if(!isset($_POST['color'])){
             $_SESSION['cont']=0;
             for($i=0;$i<count($colores);$i++){
                 $_SESSION['coloresPulsados'][$i]=$colorBlack;
             }
             pintar_circulos($_SESSION['coloresPulsados']);
         }else{
+            $_SESSION['cont']++;
+            $_SESSION['coloresPulsados'][$_SESSION['cont']]=$_POST['color'];
             pintar_circulos($_SESSION['coloresPulsados']);
+        }
+        var_dump($_SESSION['coloresPulsados']);
+    }
+    function nextPage(){
+        if($_SESSION['cont']==4){
+            $aciertos=0;
+            for($i=0;$i<count($colores);$i++){
+                if($_SESSION['coloresPulsados'][$i]==$_SESSION['coloresValidos'][$i]){
+                    $aciertos++;
+                }
+            }
+            if($aciertos==4){
+                echo "acierto.php";
+            }else{
+                echo "fallo.php";
+            }
+        }else{
+            echo $_SERVER['PHP_SELF'];
         }
     }
 ?>
@@ -27,11 +44,11 @@
     <h1>SIMON</h1>
     <h2><?php echo $_SESSION['usuario'];?> pulsa los botones en el orden correspondiente.</h2>
     <?php juegoPulsar();?>
-    <form action="post" method="post">
-        <button type="submit" name="red" style="background-color:red;">Rojo</button>
-        <button type="submit" name="yellow"style="background-color:yellow;">Amarillo</button>
-        <button type="submit" name="green"style="background-color:green;">Verde</button>
-        <button type="submit" name="blue"style="background-color:blue;">Azul</button>
+    <form action="<?php nextPage()?>" method="post">
+        <button type="submit" name="color" value="red" style="background-color:red;">Rojo</button>
+        <button type="submit" name="color" value="yellow"style="background-color:yellow;">Amarillo</button>
+        <button type="submit" name="color" value="green"style="background-color:green;">Verde</button>
+        <button type="submit" name="color" value="blue"style="background-color:blue;">Azul</button>
     </form>
 </body>
 </html>
