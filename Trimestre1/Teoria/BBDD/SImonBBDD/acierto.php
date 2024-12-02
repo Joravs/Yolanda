@@ -13,7 +13,7 @@
 <body>
     <h1>SIMON</h1>
     <h2><?php echo $ur; ?> enhorabuena, has acertado</h2>
-    <?php pintar_circulos($_SESSION['circulosValidos']);?>
+    <?php pintar_circulos($_SESSION['coloresValidos']);?>
     <?php
         require_once 'datdb.php';
         $ctdb=new mysqli($hn,$user,$pw,$db);
