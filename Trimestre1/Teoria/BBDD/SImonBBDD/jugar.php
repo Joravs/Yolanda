@@ -4,16 +4,16 @@
         require_once 'pintar-circulos.php';
         if(!isset($_POST['color'])){
             $_SESSION['cont']=0;
+            $_SESSION['coloresPulsados']=[];
             for($i=0;$i<count($colores);$i++){
                 $_SESSION['coloresPulsados'][$i]=$colorBlack;
             }
             pintar_circulos($_SESSION['coloresPulsados']);
         }else{
-            $_SESSION['cont']++;
             $_SESSION['coloresPulsados'][$_SESSION['cont']]=$_POST['color'];
+            $_SESSION['cont']++;
             pintar_circulos($_SESSION['coloresPulsados']);
         }
-        var_dump($_SESSION['coloresPulsados']);
     }
     function nextPage(){
         if($_SESSION['cont']==4){
