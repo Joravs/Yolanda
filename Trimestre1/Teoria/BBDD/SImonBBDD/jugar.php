@@ -1,5 +1,8 @@
 <?php
     session_start();
+    function circulos(){
+        
+    }
     function juegoPulsar(){
         require_once 'pintar-circulos.php';
         if(!isset($_POST['comprobar'])){
@@ -24,11 +27,11 @@
     <h1>SIMON</h1>
     <h2><?php echo $_SESSION['usuario'];?> pulsa los botones en el orden correspondiente.</h2>
     <?php juegoPulsar();?>
-    <form action="post">
-        <button type="submit" name="red">Rojo</button>
-        <button type="submit" name="yellow">Amarillo</button>
-        <button type="submit" name="green">Verde</button>
-        <button type="submit" name="blue">Azul</button>
+    <form action="post" method="post">
+        <button type="submit" name="red" style="background-color:red;">Rojo</button>
+        <button type="submit" name="yellow"style="background-color:yellow;">Amarillo</button>
+        <button type="submit" name="green"style="background-color:green;">Verde</button>
+        <button type="submit" name="blue"style="background-color:blue;">Azul</button>
     </form>
 </body>
 </html>
