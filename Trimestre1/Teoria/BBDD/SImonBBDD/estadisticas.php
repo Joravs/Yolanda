@@ -14,6 +14,8 @@
     <title>Estadisticas</title>
 </head>
 <body>
+    <h1>SIMON</h1>
+    <h2><?php echo $_SESSION['usuario'];?>, los resultados son: </h2>
     <table>
         <tr>
             <th>Código usuario</th>
