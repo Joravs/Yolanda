@@ -9,7 +9,7 @@
     if(isset($_POST['enviar'])){
         $usuarioValidar=$_POST['usuario'];
         $claveValidar=$_POST['clave'];
-        $qrySelect="select Nombre,Clave from usuarios where Nombre: '$usuarioValidar' and Clave: '$claveValidar'";
+        $qrySelect="select Nombre,Clave from usuarios where Nombre= '$usuarioValidar' and Clave= '$claveValidar'";
         $result=$ctdb->query($qrySelect);
         if($result->num_rows>0){
             $_SESSION['usuario']=$usuarioValidar;
