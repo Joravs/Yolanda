@@ -19,15 +19,13 @@
             <th>Código usuario</th>
             <th>Nombre</th>
             <th>Número de aciertos</th>
-            <th>Grafica</th>
+            <th>Gráfica</th>
         </tr>
         <?php
-            while($row=$resultStats->fetch_assoc()){
-                echo "<tr>";
-                echo "<td>".$row['Codigo']."</td>";
-                echo "<td>".$row['Nombre']."</td>";
-                echo "<td>".$row['count(acierto)']."</td>";
-                echo "</tr>";
+            $rows=$resultStats->num_rows;
+            for($i=0;$i<$rows;$i++){
+                $resultStats->data_seek($i);
+                $row=$resultStats->fetch_assoc();
             }
        ?>
     </table>
