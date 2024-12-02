@@ -12,6 +12,9 @@
 <body>
     <h1>SIMON</h1>
     <h2><?php echo $_SESSION['usuario']; ?> enhorabuena, has acertado</h2>
-
+    <?php pintar_circulos($_SESSION['circulosValidos']);?>
+    <p>Se ha guardado en la base de datos</p>
+    <a href="inicio.php">Volver a jugar</a>
+    <a href="estadisticas.php">Estadisticas</a>
 </body>
 </html>
