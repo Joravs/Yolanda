@@ -14,7 +14,7 @@
     <h1>SIMON</h1>
     <h2>Hola, <?php echo $_SESSION['usuario']?>, memoriza la combinacion</h2>
     <?php pintar_circulos($_SESSION['coloresValidos']);?>
-    <form action="" method="post">
+    <form action="jugar.php" method="post">
         <BR>
         <button type="submit" value="jugar">VAMOS A JUGAR</button>
     </form>
