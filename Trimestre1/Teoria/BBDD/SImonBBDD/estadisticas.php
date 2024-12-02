@@ -3,7 +3,7 @@
     require_once 'datdb.php';
     $ctdb=new mysqli($hn,$user,$pw,$db);
     if($ctdb->connect_error) die("Error connecting");
-    $qryStats="SELECT Codigo, Nombre, count(acierto) from usuarios,jugadas where Codigo=codigousu group by Codigo,Nombre";
+    $qryStats="SELECT Codigo, Nombre, count(acierto) from usuarios,jugadas where (Codigo=codigousu and acierto=1) group by Codigo,Nombre";
     $resultStats=$ctdb->query($qryStats);
 ?>
 <!DOCTYPE html>
