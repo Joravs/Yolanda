@@ -17,7 +17,7 @@
             $result->data_seek(0);
             $passValido=htmlspecialchars($result->fetch_assoc()['contra']);
             if($uValido==$u && $passValido==$pass){
-                echo "Te has logeado $u";
+                echo "Bienvenido $u";
                 echo '<a href="index.php">Vuelve al Inicio</a>';
             }else{
                 echo $resultado;
