@@ -14,6 +14,22 @@
     <title>Estadisticas</title>
 </head>
 <body>
-    
+    <table>
+        <tr>
+            <th>Código usuario</th>
+            <th>Nombre</th>
+            <th>Número de aciertos</th>
+            <th>Grafica</th>
+        </tr>
+        <?php
+            while($row=$resultStats->fetch_assoc()){
+                echo "<tr>";
+                echo "<td>".$row['Codigo']."</td>";
+                echo "<td>".$row['Nombre']."</td>";
+                echo "<td>".$row['count(acierto)']."</td>";
+                echo "</tr>";
+            }
+       ?>
+    </table>
 </body>
 </html>
