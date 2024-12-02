@@ -32,7 +32,7 @@
                 echo "<td>{$row['Codigo']}</td>";
                 echo "<td>{$row['Nombre']}</td>";
                 echo "<td>{$row['count(acierto)']}</td>";
-                echo "<td>{}</td>";
+                echo "<td><button style='width:{$row['count(acierto)']}*10px;'></button></td>";
             }
        ?>
     </table>
