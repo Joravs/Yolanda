@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require_once 'pintar-circulos.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
