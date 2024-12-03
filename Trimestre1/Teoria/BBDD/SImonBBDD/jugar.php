@@ -16,9 +16,9 @@
         }
     }
     function nextPage(){
-        if($_SESSION['cont']==4){
+        if($_SESSION['cont']>=4){
             $aciertos=0;
-            for($i=0;$i<count($colores);$i++){
+            for($i=0;$i<4;$i++){
                 if($_SESSION['coloresPulsados'][$i]==$_SESSION['coloresValidos'][$i]){
                     $aciertos++;
                 }
