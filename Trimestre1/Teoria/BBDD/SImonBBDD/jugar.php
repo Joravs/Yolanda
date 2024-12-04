@@ -15,23 +15,6 @@
             pintar_circulos($_SESSION['coloresPulsados']);
         }
     }
-    function nextPage(){
-        if($_SESSION['cont']>=4){
-            $aciertos=0;
-            for($i=0;$i<4;$i++){
-                if($_SESSION['coloresPulsados'][$i]==$_SESSION['coloresValidos'][$i]){
-                    $aciertos++;
-                }
-            }
-            if($aciertos==4){
-                echo "acierto.php";
-            }else{
-                echo "fallo.php";
-            }
-        }else{
-            echo $_SERVER['PHP_SELF'];
-        }
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,7 +27,7 @@
     <h1>SIMON</h1>
     <h2><?php echo $_SESSION['usuario'];?> pulsa los botones en el orden correspondiente.</h2>
     <?php juegoPulsar();?>
-    <form action="<?php nextPage()?>" method="post">
+    <form action="comprobar.php" method="post">
         <button type="submit" name="color" value="red" style="background-color:red;">Rojo</button>
         <button type="submit" name="color" value="yellow"style="background-color:yellow;">Amarillo</button>
         <button type="submit" name="color" value="green"style="background-color:green;">Verde</button>
