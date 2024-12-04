@@ -1,5 +1,6 @@
 <?php
     session_start();
+    
     function juegoPulsar(){
         require_once 'pintar-circulos.php';
         if(!isset($_POST['color'])){
