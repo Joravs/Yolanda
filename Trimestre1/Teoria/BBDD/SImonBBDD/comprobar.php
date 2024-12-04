@@ -1,5 +1,7 @@
 <?php 
     session_start();
+    $_SESSION['coloresPulsados'][$_SESSION['cont']]=$_POST['color'];
+    $_SESSION['cont']++;
     if($_SESSION['cont']>=4){
         $aciertos=0;
         for($i=0;$i<4;$i++){

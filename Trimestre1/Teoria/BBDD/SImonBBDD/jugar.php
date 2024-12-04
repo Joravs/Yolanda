@@ -10,8 +10,6 @@
             }
             pintar_circulos($_SESSION['coloresPulsados']);
         }else{
-            $_SESSION['coloresPulsados'][$_SESSION['cont']]=$_POST['color'];
-            $_SESSION['cont']++;
             pintar_circulos($_SESSION['coloresPulsados']);
         }
     }
