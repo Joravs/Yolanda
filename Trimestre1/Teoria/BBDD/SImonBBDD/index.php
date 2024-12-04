@@ -11,11 +11,7 @@
 <body>
     <h1>VAMOS A JUGAR AL SIMÓN!!!</h1>
     <form method="post" action="<?php validarUsuario();?>">
-        <?php
-            if(isset($_POST['enviar'])){
-                echo "<spans style='color:red;>Datos Erroneos</spans>";
-            }
-        ?>
+        <?php if(isset($_SESSION['error'])){if($_SESSION['error']==1){echo "<span style='color:red;'>Datos Incorrectos</span><br>";}} ?>
         <label for="usuario">Usuario:</label>
         <input type="text" id="usuario" name="usuario" required><br>
         <label for="clave">Clave:</label>
