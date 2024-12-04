@@ -1,7 +1,6 @@
 <?php
     session_start();
     $_SESSION['error']=0;
-    var_dump($_POST);
     
     function validarUsuario(){
         require_once 'datdb.php';
@@ -16,10 +15,10 @@
             $ctdb->close();
             if($result->num_rows>0){
                 $_SESSION['usuario']=$usuarioValidar;
-                echo "inicio.php";
+                header('inicio.php');
             }else{
                 $_SESSION['error']=1;
-                echo $_SERVER['PHP_SELF'];
+                header($_SERVER['PHP_SELF']);
             }
         }
     }

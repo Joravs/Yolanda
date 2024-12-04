@@ -1,4 +1,4 @@
-<?php var_dump($_POST)?>
+<?php require_once 'validacion.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>VAMOS A JUGAR AL SIMÓN!!!</h1>
-    <form method="post" action="validacion.php">
+    <form method="post" action="<?php validarUsuario();?>">
         <?php if(isset($_SESSION['error'])){if($_SESSION['error']==1){echo "<span style='color:red;'>Datos Incorrectos</span><br>";}} ?>
         <label for="usuario">Usuario:</label>
         <input type="text" id="usuario" name="usuario" required><br>
