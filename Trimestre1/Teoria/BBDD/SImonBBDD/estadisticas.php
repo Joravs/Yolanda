@@ -37,5 +37,6 @@
             }
        ?>
     </table>
+    <a href="inicio.php">Jugar</a>
 </body>
 </html>
