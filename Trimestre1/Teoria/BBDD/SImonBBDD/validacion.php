@@ -1,6 +1,7 @@
 <?php
     session_start();
     $_SESSION['error']=0;
+    var_dump($_POST);
     
     function validarUsuario(){
         require_once 'datdb.php';
