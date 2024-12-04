@@ -3,7 +3,7 @@
     
     function juegoPulsar(){
         require_once 'pintar-circulos.php';
-        if(!isset($_POST['color'])){
+        if(!isset($_SESSION['cont'])){
             $_SESSION['cont']=0;
             $_SESSION['coloresPulsados']=[];
             for($i=0;$i<count($colores);$i++){
