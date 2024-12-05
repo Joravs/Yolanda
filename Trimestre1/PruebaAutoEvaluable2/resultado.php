@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require_once 'conexion.php';
     $index1=$_POST['num1']-1;
     $index2=$_POST['num2']-1;
     $carta1=$_SESSION['cartas'][$index1];
@@ -16,6 +17,7 @@
     <h1>Bienvenid@,<?php echo $_SESSION['login']?></h1>
     <?php 
         if($carta1==$carta2){
+            $qryUpdate='UPDATE';
     ?>
     <h1>Acierto posiciones <?php echo $index1." y ".$index2;?> despues de <?php echo $_SESSION['contCartas']?> intentos</h1>
     <h3>Se le sumara 1 punto, asi como <?php echo $_SESSION['contCartas']?> intentos</h3>
@@ -34,8 +36,6 @@
         <th>Extra</th>
     <?php
         $_SESSION['contCartas']=0;
-        require_once 'conexion.php';
-        
         $qrySelectAll='Select nombre,puntos,extra from jugador';
         $result=$conn->query($qrySelectAll);
         $row=$result->num_rows;
