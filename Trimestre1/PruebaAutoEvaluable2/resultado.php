@@ -4,6 +4,7 @@
     $index2=$_POST['num2'];
     $carta1=$_SESSION['cartas'][$index1];
     $carta2=$_SESSION['cartas'][$index2];
+    echo $carta1." ".$carta2;
 ?>
 <!DOCTYPE html>
 <html lang="en">
