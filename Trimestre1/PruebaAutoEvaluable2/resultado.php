@@ -33,6 +33,7 @@
         require_once 'conexion.php';
         
         $qrySelectAll='Select nombre,puntos,extra from jugador';
+        $result=$conn->query($qrySelectAll);
     ?>
     <a href="mostrarcartas.php">Volver a jugar</a>
 </body>
