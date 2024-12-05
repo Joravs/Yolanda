@@ -14,15 +14,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego</title>
+    <style>
+        img{
+            
+        }
+    </style>
 </head>
 <body>
     <h1>Bienvenid@,<?php echo $_SESSION['login']?></h1>
     <h1>Cartas Levantadas:</h1>
     <?php
-        for($i=0;$i<count($cartas);$i++){
-            echo `<img src='img/boca_abajo.jpg}'>`;    
+        for($i=0;$i<5;$i++){
+            echo "<img src='img/copas_02.jpg'>";    
         }
     ?>
-    <img src='img/boca_abajo.jpg}'>
 </body>
 </html>
