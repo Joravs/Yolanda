@@ -6,5 +6,4 @@
     $index=$_POST['levantar'];
     $_SESSION['contCartas'];
     $_SESSION['cartasOcultas'][$index]=$_SESSION['cartas'][$index];
-    
 ?>
