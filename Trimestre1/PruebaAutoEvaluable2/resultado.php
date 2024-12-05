@@ -40,11 +40,12 @@
         $result=$conn->query($qrySelectAll);
         $row=$result->num_rows;
         for($i=0;$i<$row;$i++){
+            $result->data_seek($i);
+            $fila=$result->fetch_assoc();
             echo "<tr>
-                    <td>{$result->fetch_assoc['nombre']}</td>
-                    $result->data_seek()
-                    <td>{}</td>
-                    <td>{}</td>
+                    <td>{$fila['nombre']}</td>
+                    <td>{$fila['puntos']}</td>
+                    <td>{$fila['extra']}</td>
                 ";
         }
     ?>
