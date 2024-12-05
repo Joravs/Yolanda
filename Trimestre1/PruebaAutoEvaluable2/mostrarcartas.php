@@ -5,7 +5,8 @@
     for($i=0;$i<3;$i++){
         shuffle($cartas);
     }
-    
+    $_SESSION['cartas'] = $cartas;
+    $_SESSION['contCartas']=0;
 ?>
 <!DOCTYPE html>
 <html lang="en">
