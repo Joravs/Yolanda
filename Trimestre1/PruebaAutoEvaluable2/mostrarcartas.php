@@ -10,7 +10,6 @@
         $_SESSION['contCartas']=0;
         $_SESSION['cartasOcultas']=$oculta;
     }
-    $oculta=$_SESSION['cartasOcultas'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +32,7 @@
 <body>
     <h1>Bienvenid@,<?php echo $_SESSION['login']?></h1>
     <h1>Cartas Levantadas: <?php echo $_SESSION['contCartas']?></h1>
-    <form action="comprobar.php">
+    <form action="comprobar.php" method="post">
         <button type="submit" value="0" name="levantar">Levantar carta 1</button>
         <button type="submit" value="1" name="levantar">Levantar carta 2</button>
         <button type="submit" value="2" name="levantar">Levantar carta 3</button>
@@ -49,8 +48,8 @@
     </form>
     <br>
     <?php
-        for($i=0;$i<count($oculta);$i++){
-            echo "<img src='img/{$oculta[$i]}'>";
+        for($i=0;$i<count($_SESSION['cartasOcultas']);$i++){
+            echo "<img src='img/{$_SESSION['cartasOcultas'][$i]}'>";
         }
     ?>
 </body>
