@@ -38,7 +38,10 @@
         
         $qrySelectAll='Select nombre,puntos,extra from jugador';
         $result=$conn->query($qrySelectAll);
-        
+        $row=$result->num_rows;
+        for($i=0;$i<$row;$i++){
+            
+        }
     ?>
     </table>
     <a href="mostrarcartas.php">Volver a jugar</a>
