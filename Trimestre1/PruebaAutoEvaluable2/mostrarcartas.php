@@ -1,6 +1,10 @@
 <?php
+    session_start();
     $oculta='boca_abajo';
-    $cartas=['copas_02.jpg','copas_03.jpg','copas_05.jpg'];
+    $cartas=['copas_02.jpg','copas_03.jpg','copas_05.jpg','copas_02.jpg','copas_03.jpg','copas_05.jpg'];
+    for($i=0;$i<3;$i++){
+        shuffle($cartas);
+    }
     
 ?>
 <!DOCTYPE html>
@@ -12,5 +16,6 @@
 </head>
 <body>
     <h1>Bienvenid@,<?php echo $_SESSION['login']?></h1>
+    <h1>Cartas Levantadas:</h1>
 </body>
 </html>
