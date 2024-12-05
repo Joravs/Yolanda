@@ -40,7 +40,12 @@
         $result=$conn->query($qrySelectAll);
         $row=$result->num_rows;
         for($i=0;$i<$row;$i++){
-            
+            echo "<tr>
+                    <td>{$result->fetch_assoc['nombre']}</td>
+                    $result->data_seek()
+                    <td>{}</td>
+                    <td>{}</td>
+                ";
         }
     ?>
     </table>
