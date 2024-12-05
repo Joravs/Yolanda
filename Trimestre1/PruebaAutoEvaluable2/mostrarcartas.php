@@ -18,5 +18,11 @@
 <body>
     <h1>Bienvenid@,<?php echo $_SESSION['login']?></h1>
     <h1>Cartas Levantadas:</h1>
+    <?php
+        for($i=0;$i<count($cartas);$i++){
+            echo `<img src='img/boca_abajo.jpg}'>`;    
+        }
+    ?>
+    <img src='img/boca_abajo.jpg}'>
 </body>
 </html>
