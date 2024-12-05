@@ -2,10 +2,8 @@
     session_start();
     $index1=$_POST['num1']-1;
     $index2=$_POST['num2']-1;
-    echo $index1." ".$index2;
     $carta1=$_SESSION['cartas'][$index1];
     $carta2=$_SESSION['cartas'][$index2];
-    echo $carta1." ".$carta2;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +26,13 @@
     <h3>Se le restara 1 punto, asi como <?php echo $_SESSION['contCartas']?> intentos</h3>
     <?php
         }
+    ?>
+    <h2>Puntos por jugador</h2>
+    <?php
         $_SESSION['contCartas']=0;
+        require_once 'conexion.php';
+        
+        $qrySelectAll='Select nombre,puntos,extra from jugador';
     ?>
     <a href="mostrarcartas.php">Volver a jugar</a>
 </body>
