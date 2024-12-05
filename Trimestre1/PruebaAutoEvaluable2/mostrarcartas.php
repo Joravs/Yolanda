@@ -1,14 +1,16 @@
 <?php
     session_start();
     if(!isset($_SESSION['contCartas'])){
-        $oculta='boca_abajo';
+        $oculta=['boca_abajo.jpg','boca_abajo.jpg','boca_abajo.jpg','boca_abajo.jpg','boca_abajo.jpg','boca_abajo.jpg'];
         $cartas=['copas_02.jpg','copas_03.jpg','copas_05.jpg','copas_02.jpg','copas_03.jpg','copas_05.jpg'];
         for($i=0;$i<3;$i++){
             shuffle($cartas);
         }
         $_SESSION['cartas'] = $cartas;
         $_SESSION['contCartas']=0;
+        $_SESSION['cartasOcultas']=$oculta;
     }
+    $oculta=$_SESSION['cartasOcultas'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,8 +40,8 @@
         <input type="submit" value="Comprobar" name='comprobar'>
     </form>
     <?php
-        for($i=0;$i<5;$i++){
-            echo "<img src='img/boca_abajo.jpg'>";
+        for($i=0;$i<count($oculta);$i++){
+            echo "<img src='img/{$oculta[$i]}'>";
         }
     ?>
 </body>
