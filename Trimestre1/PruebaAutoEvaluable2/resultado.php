@@ -17,7 +17,7 @@
     <h1>Bienvenid@,<?php echo $_SESSION['login']?></h1>
     <?php 
         if($carta1==$carta2){
-            $qryUpdate="UPDATE jugador SET puntos=+1,extra=+{$_SESSION['contCartas']} WHERE login={$_SESSION['login']}";
+            $qryUpdate="UPDATE jugador SET puntos=+1,extra=+{$_SESSION['contCartas']} WHERE login='{$_SESSION['login']}'";
             $conn->query($qryUpdate);
     ?>
     <h1>Acierto posiciones <?php echo $index1." y ".$index2;?> despues de <?php echo $_SESSION['contCartas']?> intentos</h1>
