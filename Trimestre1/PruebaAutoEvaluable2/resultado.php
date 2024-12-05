@@ -28,13 +28,19 @@
         }
     ?>
     <h2>Puntos por jugador</h2>
+    <table>
+        <th>Nombre</th>
+        <th>Puntos</th>
+        <th>Extra</th>
     <?php
         $_SESSION['contCartas']=0;
         require_once 'conexion.php';
         
         $qrySelectAll='Select nombre,puntos,extra from jugador';
         $result=$conn->query($qrySelectAll);
+        
     ?>
+    </table>
     <a href="mostrarcartas.php">Volver a jugar</a>
 </body>
 </html>
