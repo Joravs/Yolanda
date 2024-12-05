@@ -4,5 +4,7 @@
         $_SESSION['cartasOcultas'][$i]='boca_abajo.jpg';
     }
     $index=$_POST['levantar'];
-    $_SESSION['cartas'];
+    $_SESSION['contCartas'];
+    $_SESSION['cartasOcultas'][$index]=$_SESSION['cartas'][$index];
+    
 ?>
