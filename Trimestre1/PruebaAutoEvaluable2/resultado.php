@@ -1,7 +1,7 @@
 <?php
     session_start();
-    $index1=$_POST['num1'];
-    $index2=$_POST['num2'];
+    $index1=$_POST['num1']-1;
+    $index2=$_POST['num2']-1;
     echo $index1." ".$index2;
     $carta1=$_SESSION['cartas'][$index1];
     $carta2=$_SESSION['cartas'][$index2];
