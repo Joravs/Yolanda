@@ -16,16 +16,19 @@
     <title>Juego</title>
     <style>
         img{
-            
+            aspect_ratio:13/20;
+            width:150px;
+            height:245px;
+            margin:0px 5px;
         }
     </style>
 </head>
 <body>
     <h1>Bienvenid@,<?php echo $_SESSION['login']?></h1>
-    <h1>Cartas Levantadas:</h1>
+    <h1>Cartas Levantadas: </h1>
     <?php
         for($i=0;$i<5;$i++){
-            echo "<img src='img/copas_02.jpg'>";    
+            echo "<img src='img/boca_abajo.jpg'>";
         }
     ?>
 </body>
