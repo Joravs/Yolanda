@@ -22,11 +22,12 @@
     <?php
         }else{
             ?>
-    <h1>Fallo posiciones<?php echo $index1." y ".$index2;?> despues de <?php echo $_SESSION['contCartas']?> intentos</h1>
+    <h1>Fallo posiciones <?php echo $index1." y ".$index2;?> despues de <?php echo $_SESSION['contCartas']?> intentos</h1>
     <h3>Se le restara 1 punto, asi como <?php echo $_SESSION['contCartas']?> intentos</h3>
     <?php
         }
-        session_destroy();
+        $_SESSION['contCartas']=0;
     ?>
+    <a href="mostrarcartas.php">Volver a jugar</a>
 </body>
 </html>
