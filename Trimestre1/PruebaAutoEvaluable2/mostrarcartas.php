@@ -40,7 +40,7 @@
         <button type="submit" value="4" name="levantar">Levantar carta 5</button>
         <button type="submit" value="5" name="levantar">Levantar carta 6</button>
     </form>
-    <form action="" method="post">
+    <form action="resultado.php" method="post">
         <h2>Pareja: </h2>
         <input type="number" name="num1" id="num1">
         <input type="number" name="num2" id="num2">
