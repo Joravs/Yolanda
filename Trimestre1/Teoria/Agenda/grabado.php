@@ -11,3 +11,15 @@
         $ctdb->query($qryInsert);
     };
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+</head>
+<body>
+    <h1>Hola <?php echo $_SESSION['usuario']?></h1>    
+    <p>Se han grabado <?php echo $_SESSION['cont']?> contactos de <?php echo $_SESSION['usuario']?></p>
+</body>
+</html>

@@ -9,7 +9,7 @@
     <title>Agenda</title>
 </head>
 <body>
-    <h1>Hola </h1>
+    <h1>Hola <?php echo $_SESSION['usuario']?></h1>
     <?php
     echo '<form action="grabado.php" method="post">';
         for($i=0;$i<$_SESSION['cont'];$i++){
