@@ -13,15 +13,17 @@
     <form action="" method="post">
     <?php
         for($i=0;$i<$_SESSION['cont'];$i++){
-            echo `
-            <fieldset>Contacto {$_SESSION['cont']}</fieldset>
-            <label for="nombre{$i}">Nombre {$i}:</label>
-            <input type="text" name="nombre{$i}" id="nombre{$i}" required>
-            <label for="email1">Email {$i}</label>
-            <input type="email" name="email{$i}" id="email{$i}" required>
-            <label for="telefono{$i}">Teléfono {$i}:</label>
-            <input type="tel" name="telefono{$i}" id="telefono{$i}" required>
-        `;
+            $j=$i+1;
+            echo "
+            <fieldset>Contacto {$j}<br>
+            <label for='nombre{$j}'>Nombre {$j}:</label>
+            <input type='text' name='nombre{$j}' id='nombre{$j}' required><br>
+            <label for='email1'>Email {$j}</label>
+            <input type='email' name='email{$j}' id='email{$j}' required><br>
+            <label for='telefono{$j}'>Teléfono {$j}:</label>
+            <input type='tel' name='telefono{$j}' id='telefono{$j}'' required><br>
+            </fieldset>
+        ";
         }
     ?>
     <input type="submit" value="grabar" name='grabar'>
