@@ -1,8 +1,10 @@
 <?php
     session_start();
     $img=['OIP0.jfif','OIP1.jfif','OIP2.jfif','OIP3.jfif','OIP4.jfif'];
-    $_SESSION['imgs']=[$img[array_rand($img)],$img[array_rand($img)],$img[array_rand($img)],$img[array_rand($img)],$img[array_rand($img)]];
-    $_SESSION['cont']=1;
+    if(!isset($_SESSION['cont'])){
+        $_SESSION['imgs']=[$img[array_rand($img)],$img[array_rand($img)],$img[array_rand($img)],$img[array_rand($img)],$img[array_rand($img)]];
+        $_SESSION['cont']=1;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
