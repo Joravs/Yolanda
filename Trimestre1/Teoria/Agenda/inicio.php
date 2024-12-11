@@ -14,9 +14,12 @@
     <p>Hola<?php echo $_SESSION['usuario']?>, cuantos contactos deseas grabar?</p>
     <p>puedes grabar entre 1 y 5. Por cada posicion en INCREMENTAR grabaras un usuario mas</p>
     <p>Cuando el numero sea el deseado pulsa GRABAR</p>
-
+    <?php
+        
+    ?>
     <form action="comprobar.php" method="post">
-
+        <input type="submit" value="incrementar" name="incrementar">
+        <input type="submit" value="grabar" name="grabar">
     </form>
 </body>
 </html>
