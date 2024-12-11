@@ -11,6 +11,7 @@
 </head>
 <body>
     <h1>Agenda</h1>
-    <p>Hola<?php echo $_SESSION['login']?></p>
+    <p>Hola<?php echo $_SESSION['usuario']?>, cuantos contactos deseas grabar?</p>
+    <p>puedes grabar entre 1 y 5. Por cada posicion en INCREMENTAR grabaras un usuario mas</p>
 </body>
 </html>
