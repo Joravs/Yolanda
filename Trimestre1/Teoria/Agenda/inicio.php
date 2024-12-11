@@ -1,7 +1,7 @@
 <?php
     session_start();
-    $img=['<img src="img/OIP0.jfif">','OIP1.jfif','OIP2.jfif','OIP3.jfif','OIP4.jfif'];
-    if(!isset($_SESSION['cont'])){
+    $img=['<img src="img/OIP0.jfif">','<img src="img/OIP1.jfif">','<img src="img/OIP2.jfif">','<img src="img/OIP3.jfif">','<img src="img/OIP4.jfif">'];
+    if(!isset($_SESSION['cont']) || $_SESSION['cont']==1){
         $_SESSION['imgs']=[$img[array_rand($img)],$img[array_rand($img)],$img[array_rand($img)],$img[array_rand($img)],$img[array_rand($img)]];
         $_SESSION['cont']=1;
     }
@@ -20,10 +20,9 @@
     <p>Cuando el numero sea el deseado pulsa GRABAR</p>
     <?php
         for($i=0;$i<$_SESSION['cont'];$i++){
-            echo `<img src='img/{$_SESSION['imgs'][$i]}'>`;
+            echo $_SESSION['imgs'][$i];
         }
     ?>
-    <img src="img/OIP0.jfif" alt="">
     <form action="comprobar.php" method="post">
         <input type="submit" value="Incrementar" name="incrementar">
         <input type="submit" value="Grabar" name="grabar">
