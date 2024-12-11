@@ -21,5 +21,8 @@
 <body>
     <h1>Hola <?php echo $_SESSION['usuario']?></h1>    
     <p>Se han grabado <?php echo $_SESSION['cont']?> contactos de <?php echo $_SESSION['usuario']?></p>
+    <a href="index.php">Volver a logearse</a>
+    <a href="inicio.php">introducir mas contactos para <?php echo $_SESSION['usuario']?></a>
+    <a href="totales.php">Total de contactos guardados</a>
 </body>
 </html>
