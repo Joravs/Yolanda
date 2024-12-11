@@ -13,8 +13,7 @@
     <form action="" method="post">
     <?php
         for($i=0;$i<$_SESSION['cont'];$i++){
-            echo $_SESSION['cont'];
-        echo `
+            echo `
             <fieldset>Contacto {$_SESSION['cont']}</fieldset>
             <label for="nombre{$i}">Nombre {$i}:</label>
             <input type="text" name="nombre{$i}" id="nombre{$i}" required>
