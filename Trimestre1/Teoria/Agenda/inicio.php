@@ -15,7 +15,9 @@
     <p>puedes grabar entre 1 y 5. Por cada posicion en INCREMENTAR grabaras un usuario mas</p>
     <p>Cuando el numero sea el deseado pulsa GRABAR</p>
     <?php
-        
+        for($i=0;$i<5;$i++){
+            
+        }
     ?>
     <form action="comprobar.php" method="post">
         <input type="submit" value="incrementar" name="incrementar">
