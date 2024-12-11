@@ -23,6 +23,7 @@
             echo `<img src='img/{$_SESSION['imgs'][$i]}'>`;
         }
     ?>
+    <img src="img/OIP0.jfif" alt="">
     <form action="comprobar.php" method="post">
         <input type="submit" value="Incrementar" name="incrementar">
         <input type="submit" value="Grabar" name="grabar">
