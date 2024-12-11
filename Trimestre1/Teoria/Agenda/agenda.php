@@ -12,7 +12,11 @@
     <h1>Hola <?php $_SESSION['usuario']?></h1>
     <?php
         for($i=0;$i<$_SESSION['cont'];$i++){
-
+    ?>
+    <form action="" method="post">
+        <legend>Contacto $_SESSION['cont']</legend>
+    </form>
+    <?php
         }
     ?>
 </body>
