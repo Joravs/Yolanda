@@ -5,6 +5,6 @@
     if($ctdb->connect_error) die("Error connecting"); */
     $qryInsert="INSERT INTO contactos (nombre,email,telefono,codusuario) values ".
     for($i=1;$i<=$_SESSION['cont'];$i++){
-        echo "({$_POST['nombre'.$i]})";
+        echo "({$_POST['nombre'.$i]},${$_POST['email'.$i]},${$_POST['telefono'.$i]})";
     };
 ?>
