@@ -10,8 +10,8 @@
 </head>
 <body>
     <h1>Hola </h1>
-    <form action="" method="post">
     <?php
+    echo '<form action="grabado.php" method="post">';
         for($i=0;$i<$_SESSION['cont'];$i++){
             $j=$i+1;
             echo "
@@ -25,8 +25,8 @@
             </fieldset>
         ";
         }
+        echo '<input type="submit" value="grabar" name="grabar">';
+        echo '</form>';
     ?>
-    <input type="submit" value="grabar" name='grabar'>
-    </form>
 </body>
 </html>
