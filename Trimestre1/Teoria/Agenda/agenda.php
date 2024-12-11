@@ -9,10 +9,11 @@
     <title>Agenda</title>
 </head>
 <body>
-    <h1>Hola <?php $_SESSION['usuario']?></h1>
+    <h1>Hola </h1>
     <form action="" method="post">
     <?php
         for($i=0;$i<$_SESSION['cont'];$i++){
+            echo $_SESSION['cont'];
         echo `
             <fieldset>Contacto {$_SESSION['cont']}</fieldset>
             <label for="nombre{$i}">Nombre {$i}:</label>
