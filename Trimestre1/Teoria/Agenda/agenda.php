@@ -10,21 +10,21 @@
 </head>
 <body>
     <h1>Hola <?php $_SESSION['usuario']?></h1>
+    <form action="" method="post">
     <?php
         for($i=0;$i<$_SESSION['cont'];$i++){
-    ?>
-    <form action="" method="post">
-        <legend>Contacto $_SESSION['cont']</legend>
-        <label for="nombre{$i}">Nombre {$i}:</label>
-        <input type="text" name="nombre{$i}" id="nombre{$i}" required>
-        <label for="email1">Email {$i}</label>
-        <input type="email" name="email{$i}" id="email{$i}">
-        <label for="telefono{$i}">Teléfono {$i}:</label>
-        <input type="tel" name="telefono{$i}" id="telefono{$i}" required>
-        <input type="submit" value="Enviar" name="enviar">
-    </form>
-    <?php
+        echo `
+            <fieldset>Contacto {$_SESSION['cont']}</fieldset>
+            <label for="nombre{$i}">Nombre {$i}:</label>
+            <input type="text" name="nombre{$i}" id="nombre{$i}" required>
+            <label for="email1">Email {$i}</label>
+            <input type="email" name="email{$i}" id="email{$i}" required>
+            <label for="telefono{$i}">Teléfono {$i}:</label>
+            <input type="tel" name="telefono{$i}" id="telefono{$i}" required>
+        `;
         }
     ?>
+    <input type="submit" value="grabar" name='grabar'>
+    </form>
 </body>
 </html>
