@@ -3,11 +3,11 @@
     session_start();
     $ctdb=new mysqli($hn,$user,$pw,$db);
     if($ctdb->connect_error) die("Error connecting");
-    $qryUsuario="Select codigo from usuarios where Nombre='{$_SESSION['usuario']}'";
+    $qryUsuario="Select Codigo from usuarios where Nombre='{$_SESSION['usuario']}'";
     $us=$ctdb->query($qryUsuario);
-    $codigousu=$us->fetch_assoc()['codigo'];
+    $codigousu=$us->fetch_assoc()['Codigo'];
     for($i=1;$i<=$_SESSION['cont'];$i++){
-        $qryInsert="INSERT INTO contactos (nombre,email,telefono,codusuario) values ({$_POST['nombre'.$i]},{$_POST['email'.$i]},{$_POST['telefono'.$i]},$codigousu)";
+        $qryInsert="INSERT INTO contactos (nombre,email,telefono,codusuario) values ('{$_POST['nombre'.$i]}','{$_POST['email'.$i]}','{$_POST['telefono'.$i]}',$codigousu)";
         $ctdb->query($qryInsert);
     };
 ?>
