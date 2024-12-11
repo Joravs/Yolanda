@@ -7,9 +7,8 @@
     $us=$ctdb->query($qryUsuario);
     $codigousu=$us->fetch_assoc()['codigo']; */
     $codigousu=1;
-    $qryInsert="INSERT INTO contactos (nombre,email,telefono,codusuario) values ".
     for($i=1;$i<=$_SESSION['cont'];$i++){
-        echo "({$_POST['nombre'.$i]},${$_POST['email'.$i]},${$_POST['telefono'.$i]},$codigousu)";
+        echo $qryInsert="INSERT INTO contactos (nombre,email,telefono,codusuario) values ({$_POST['nombre'.$i]},{$_POST['email'.$i]},{$_POST['telefono'.$i]},$codigousu)";
     };
     echo $qryInsert;
 ?>
