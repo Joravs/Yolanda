@@ -16,7 +16,7 @@
     <p>Cuando el numero sea el deseado pulsa GRABAR</p>
     <?php
         for($i=0;$i<5;$i++){
-            
+            echo `<img src='img/$img'></img>`;
         }
     ?>
     <form action="comprobar.php" method="post">
