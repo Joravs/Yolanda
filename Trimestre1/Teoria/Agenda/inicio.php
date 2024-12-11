@@ -1,6 +1,8 @@
 <?php
     session_start();
     $img=['OIP0.jfif','OIP1.jfif','OIP2.jfif','OIP3.jfif','OIP4.jfif'];
+    $_SESSION['imgs']=[$img[array_rand($img)],$img[array_rand($img)],$img[array_rand($img)],$img[array_rand($img)],$img[array_rand($img)]];
+    $_SESSION['cont']=1;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,8 +17,8 @@
     <p>puedes grabar entre 1 y 5. Por cada posicion en INCREMENTAR grabaras un usuario mas</p>
     <p>Cuando el numero sea el deseado pulsa GRABAR</p>
     <?php
-        for($i=0;$i<5;$i++){
-            echo `<img src='img/{$img[array_rand($img)]}'></img>`;
+        for($i=0;$i<$_SESSION['cont'];$i++){
+            echo `<img src='img/{$_SESSION['imgs']}'></img>`;
         }
     ?>
     <form action="comprobar.php" method="post">
