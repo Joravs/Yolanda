@@ -1,5 +1,5 @@
 <?php
     require_once 'datdb.php';
     session_start();
-    var_dump($_POST);
+    $ctdb=new mysqli($hn,$user,$pw,$db);
 ?>
