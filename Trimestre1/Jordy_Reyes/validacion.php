@@ -12,6 +12,7 @@
         $ctdb->close();
         if($result->num_rows>0){
             $_SESSION['usuario']=$usuarioValido;
+            $_SESSION['uName']=$usuarioValidar;
             header('Location: inicio.php');
             exit;
         }else{
