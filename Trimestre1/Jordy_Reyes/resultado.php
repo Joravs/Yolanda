@@ -1,14 +1,17 @@
 <?php
+session_start();
     require_once 'db.php';
     $fecha=date('Y-m-d',time());
     $hora=date('h:i:s',time());
-    $qryInsert="insert into respuestas(fecha,login,hora,respuesta) values($fecha,'{$_SESSION['uName']}',$hora,'{$_POST['respuesta']}')";
+    $qryInsert="insert into respuestas(fecha,login,hora,respuesta) values('$fecha','{$_SESSION['uName']}','$hora','{$_POST['respuesta']}')";
     $ctdb->query($qryInsert);
 
-    $qryAciertos="select login,respuesta from respuestas,solucion where respuesta=(select solucion from solucion where fecha='2024-12-12') group by login";
-    $qryAciertos="select login,respuesta from respuestas,solucion where respuesta!=(select solucion from solucion where fecha='2024-12-12') group by login";
+    $qryAciertos="select login,respuesta from respuestas,solucion where respuesta=(select solucion from solucion where fecha='{$fecha}') group by login";
     $result=$ctdb->query($qryAciertos);
     $rows=$result->num_rows;
+    $qryFallos="select login,respuesta from respuestas,solucion where respuesta!=(select solucion from solucion where fecha='{$fecha}') and respuestas.fecha='{$fecha}' group by login";
+    $resultFa=$ctdb->query($qryFallos);
+    $rows2=$resultFa->num_rows;
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -37,6 +40,21 @@
     ?>
     </table>
     <h2>Jugadores que han fallado</h2>
-
+    <table>
+        <tr>
+            <th>Login</th>
+            <th>Hora</th>
+        </tr>
+    <?php 
+        for($i=0;$i<$rows2;$i++){
+            $resultFa->data_seek($i);
+            $row=$resultFa->fetch_assoc();
+            echo "<tr>";
+            echo "<td>{$row['login']}</td>";
+            echo "<td>{$row['hora']}</td>";
+            echo "</tr>";
+        }
+    ?>
+    </table>
 </body>
 </html>
