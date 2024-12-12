@@ -9,7 +9,7 @@
 <body>
     <h1>Iniciar Sesion</h1>
     <form method="post" action="validacion.php">
-        <?php if(isset($_SESSION['error'])){if($_SESSION['error']==1){echo "<span style='color:red;'>Credenciales Incorrestos.Intentalo de Nuevo.</span><br>";}} ?>
+        <?php if(isset($_SESSION['error'])){if($_SESSION['error']==1){echo "<span style='color:red;'>Credenciales Incorrectos.Intentalo de Nuevo.</span><br>";}} ?>
         <label for="usuario">Usuario:</label>
         <input type="text" id="usuario" name="usuario" required><br>
         <label for="clave">Clave:</label>
