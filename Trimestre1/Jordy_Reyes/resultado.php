@@ -1,4 +1,8 @@
+<?php
+    require_once 'db.php';
 
+    $qryInsert="insert into respuestas()";
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
