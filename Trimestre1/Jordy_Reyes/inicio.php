@@ -14,7 +14,7 @@
         <input type="text" name="respuesta" id="respuesta">
         <input type="submit" value="enviar" name="enviar">
     </form>
-    <a href="">Ver puntos por Jugador</a>
-    <a href="">Resultados del dia</a>
+    <a href="puntos.php">Ver puntos por Jugador</a>
+    <a href="resultado.php">Resultados del dia</a>
 </body>
 </html>
