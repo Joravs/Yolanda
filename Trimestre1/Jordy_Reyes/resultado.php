@@ -9,7 +9,7 @@ session_start();
         $select="select login,hora from respuestas,solucion where respuesta=(select solucion from solucion where fecha='{$fecha}') and login='{$_SESSION['uName']}'";
         $se=$ctdb->query($select);
         if($se->num_rows>0){
-            $qryPuntoMas="UPDATE jugador SET puntos=+1 WHERE login='{$row['login']}'";
+            $qryPuntoMas="UPDATE jugador SET puntos=puntos+1 WHERE login='{$_SESSION['uName']}'";
             $ctdb->query($qryPuntoMas);
         }
     }
