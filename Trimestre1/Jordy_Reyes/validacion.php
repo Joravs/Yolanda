@@ -6,7 +6,7 @@
     if(isset($_POST['enviar'])){
         $usuarioValidar=$_POST['usuario'];
         $claveValidar=$_POST['clave'];
-        $qrySelect="select nombre,login,clave from usuarios where Nombre= '$usuarioValidar' and Clave= '$claveValidar'";
+        $qrySelect="select nombre,login,clave from jugador where login= '$usuarioValidar' and clave= '$claveValidar'";
         $result=$ctdb->query($qrySelect);
         $usuarioValido=$result->fetch_assoc()['nombre'];
         $ctdb->close();

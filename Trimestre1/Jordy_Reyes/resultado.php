@@ -1,9 +1,11 @@
 <?php
     require_once 'db.php';
-    $diafinal=mktime(0,0,0,(int)$_POST['mes']+1,0,(int)$_POST['anio']);
-    $inicio=date("N",$diainicial);
+    $fecha=date('Y-m-d',time());
+    $hora=date('h:i:s',time());
     $qryInsert="insert into respuestas(fecha,login,hora,respuesta) values($fecha,'{$_SESSION['uName']}',$hora,'{$_POST['respuesta']}')";
     $ctdb->query($qryInsert);
+
+    $qryAciertos="select login from jugador where (select respuesta from respuestas)=(select solucion from solucion) group by login";
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -13,6 +15,7 @@
     <title>Prueba Evaluable</title>
 </head>
 <body>
-    
+    <h1>Fecha: <?php echo $fecha;?></h1>
+    Jugadores acertantes:
 </body>
 </html>

@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Bienvenido, <?php echo $_SESSION['usuario'];?>!</h1>
-    <img src="imagen/20241212.png">
+    <img src="imagen/20241212.jpg" height="300px">
     <form action="resultado.php" method="post">
         <label for="respuesta">Solucion al jeroglifico</label>
         <input type="text" name="respuesta" id="respuesta">
