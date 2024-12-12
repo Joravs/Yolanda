@@ -62,6 +62,6 @@ session_start();
         $ctdb->close();
     ?>
     </table>
-    <a href=""></a>
+    <a href="puntos.php">Ver puntos por Jugador</a>
 </body>
 </html>

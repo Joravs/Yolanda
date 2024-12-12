@@ -30,6 +30,7 @@
                 echo "<td><div style='width:{$row['puntos']}px; height:10px;background-color:lightblue;'></div></td>";
                 echo "</tr>";
             }
+            $ctdb->close();
         ?>
     </table>
 </body>
