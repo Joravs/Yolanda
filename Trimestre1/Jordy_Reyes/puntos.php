@@ -11,11 +11,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prueba Evaluable</title>
-    <style>
-        div{
-            background-color: blue;
-        }
-    </style>
 </head>
 <body>
     <h1>Puntos por Jugador</h1>
@@ -32,7 +27,7 @@
                 echo "<tr>";
                 echo "<td>{$row['login']}</td>";
                 echo "<td>{$row['puntos']}</td>";
-                echo "<td><div width='{$row['puntos']}px' height=2px></div></td>";
+                echo "<td><div style='width:{$row['puntos']}px; height:10px;background-color:lightblue;'></div></td>";
                 echo "</tr>";
             }
         ?>
