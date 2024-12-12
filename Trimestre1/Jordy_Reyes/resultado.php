@@ -5,7 +5,7 @@
     $qryInsert="insert into respuestas(fecha,login,hora,respuesta) values($fecha,'{$_SESSION['uName']}',$hora,'{$_POST['respuesta']}')";
     $ctdb->query($qryInsert);
 
-    $qryAciertos="select login from jugador where (select respuesta from respuestas)=(select solucion from solucion) group by login";
+    $qryAciertos="select login from jugador where (select respuesta from respuestas)in(select solucion from solucion) group by login";
 ?>
 <!DOCTYPE html>
 <html lang="es">
