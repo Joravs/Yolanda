@@ -6,11 +6,12 @@
     if(isset($_POST['enviar'])){
         $usuarioValidar=$_POST['usuario'];
         $claveValidar=$_POST['clave'];
-        $qrySelect="select Nombre,Clave from usuarios where Nombre= '$usuarioValidar' and Clave= '$claveValidar'";
+        $qrySelect="select nombre,login,clave from usuarios where Nombre= '$usuarioValidar' and Clave= '$claveValidar'";
         $result=$ctdb->query($qrySelect);
+        $usuarioValido=$result->fetch_assoc()['nombre'];
         $ctdb->close();
         if($result->num_rows>0){
-            $_SESSION['usuario']=$usuarioValidar;
+            $_SESSION['usuario']=$usuarioValido;
             header('Location: inicio.php');
             exit;
         }else{
