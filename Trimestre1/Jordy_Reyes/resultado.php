@@ -57,7 +57,9 @@ session_start();
             echo "<td>{$row['hora']}</td>";
             echo "</tr>";
         }
+        $ctdb->close();
     ?>
     </table>
+    <a href=""></a>
 </body>
 </html>
