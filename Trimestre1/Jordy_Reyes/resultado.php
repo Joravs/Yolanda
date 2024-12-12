@@ -5,7 +5,6 @@ session_start();
     $hora=date('h:i:s',time());
     $qryInsert="insert into respuestas(fecha,login,hora,respuesta) values('$fecha','{$_SESSION['uName']}','$hora','{$_POST['respuesta']}')";
     $ctdb->query($qryInsert);
-    
 
     $qryAciertos="select login,hora from respuestas,solucion where respuesta=(select solucion from solucion where fecha='{$fecha}') group by login";
     $result=$ctdb->query($qryAciertos);
@@ -37,6 +36,9 @@ session_start();
             echo "<td>{$row['login']}</td>";
             echo "<td>{$row['hora']}</td>";
             echo "</tr>";
+            if($row['login']==$_SESSION['uName']){
+                $qryPuntoMas="Insert into jugador (puntos) values (+1) where login='{$row['login']}'";
+            }
         }
     ?>
     </table>
