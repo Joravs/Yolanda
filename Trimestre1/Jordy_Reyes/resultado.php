@@ -3,8 +3,10 @@ session_start();
     require_once 'db.php';
     $fecha=date('Y-m-d',time());
     $hora=date('h:i:s',time());
-    $qryInsert="insert into respuestas(fecha,login,hora,respuesta) values('$fecha','{$_SESSION['uName']}','$hora','{$_POST['respuesta']}')";
-    $ctdb->query($qryInsert);
+    if(isset($_POST['enviar'])){
+        $qryInsert="insert into respuestas(fecha,login,hora,respuesta) values('$fecha','{$_SESSION['uName']}','$hora','{$_POST['respuesta']}')";
+        $ctdb->query($qryInsert);
+    }
 
     $qryAciertos="select login,hora from respuestas,solucion where respuesta=(select solucion from solucion where fecha='{$fecha}') group by login";
     $result=$ctdb->query($qryAciertos);
