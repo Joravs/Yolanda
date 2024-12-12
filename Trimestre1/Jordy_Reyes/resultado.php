@@ -37,7 +37,7 @@ session_start();
             echo "<td>{$row['hora']}</td>";
             echo "</tr>";
             if($row['login']==$_SESSION['uName']){
-                $qryPuntoMas="Insert into jugador (puntos) values (+1) where login='{$row['login']}'";
+                $qryPuntoMas="UPDATE jugador SET puntos=+1 WHERE login='{$row['login']}'";
             }
         }
     ?>
