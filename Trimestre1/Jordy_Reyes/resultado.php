@@ -5,11 +5,12 @@ session_start();
     $hora=date('h:i:s',time());
     $qryInsert="insert into respuestas(fecha,login,hora,respuesta) values('$fecha','{$_SESSION['uName']}','$hora','{$_POST['respuesta']}')";
     $ctdb->query($qryInsert);
+    
 
-    $qryAciertos="select login,respuesta from respuestas,solucion where respuesta=(select solucion from solucion where fecha='{$fecha}') group by login";
+    $qryAciertos="select login,hora from respuestas,solucion where respuesta=(select solucion from solucion where fecha='{$fecha}') group by login";
     $result=$ctdb->query($qryAciertos);
     $rows=$result->num_rows;
-    $qryFallos="select login,respuesta from respuestas,solucion where respuesta!=(select solucion from solucion where fecha='{$fecha}') and respuestas.fecha='{$fecha}' group by login";
+    $qryFallos="select login,hora from respuestas,solucion where respuesta!=(select solucion from solucion where fecha='{$fecha}') and respuestas.fecha='{$fecha}' group by login";
     $resultFa=$ctdb->query($qryFallos);
     $rows2=$resultFa->num_rows;
 ?>
