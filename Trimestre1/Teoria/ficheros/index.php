@@ -18,6 +18,7 @@
         .fila5{
             position:absolute;
             z-index:-100;
+            width: 1050px;
             height:750px;
         }
 	</style>
@@ -36,22 +37,22 @@
             echo<<<_END
             <div id="tabla">
                 <div class="fila1">
-                <td><img src="{$_SESSION['arbol'][0]}"></td>
+                <img src="{$_SESSION['arbol'][0]}">
                 </div>
                 <div class="fila2">
-                <td><img src="{$_SESSION['arbol'][1]}"></td>
-                <td><img src="{$_SESSION['arbol'][2]}"></td>
+                <img src="{$_SESSION['arbol'][1]}">
+                <img src="{$_SESSION['arbol'][2]}">
                 </div>
                 <div class="fila3">
-                <td><img src="{$_SESSION['arbol'][3]}"></td>
-                <td><img src="{$_SESSION['arbol'][4]}"></td>
-                <td><img src="{$_SESSION['arbol'][5]}"></td>
+                <img src="{$_SESSION['arbol'][3]}">
+                <img src="{$_SESSION['arbol'][4]}">
+                <img src="{$_SESSION['arbol'][5]}">
                 </div>
                 <div class="fila4">
-                <td><img src="{$_SESSION['arbol'][6]}"></td>
-                <td><img src="{$_SESSION['arbol'][7]}"></td>
-                <td><img src="{$_SESSION['arbol'][8]}"></td>
-                <td><img src="{$_SESSION['arbol'][9]}"></td>
+                <img src="{$_SESSION['arbol'][6]}">
+                <img src="{$_SESSION['arbol'][7]}">
+                <img src="{$_SESSION['arbol'][8]}">
+                <img src="{$_SESSION['arbol'][9]}">
                 </div>
                 <img class="fila5" src="uploads/stump_12888237.png">
                 </div>
