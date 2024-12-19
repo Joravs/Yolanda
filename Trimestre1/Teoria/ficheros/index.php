@@ -13,6 +13,12 @@
             display: flex;
             flex-direction: column;
             align-items:center;
+            position:relative;
+        }
+        .fila5{
+            position:absolute;
+            z-index:-100;
+            height:750px;
         }
 	</style>
 </head>
@@ -47,7 +53,8 @@
                 <td><img src="{$_SESSION['arbol'][8]}"></td>
                 <td><img src="{$_SESSION['arbol'][9]}"></td>
                 </div>
-            </div>
+                <img class="fila5" src="uploads/stump_12888237.png">
+                </div>
         _END;
         }
     ?>
