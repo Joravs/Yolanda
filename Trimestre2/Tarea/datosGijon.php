@@ -14,7 +14,7 @@
 
     $datos=$clCalles->find();
     foreach($datos as $dat){
-        $conn->query("INSERT INTO calles (nombre,calle,tipo,numeroaccesos) VALUES ('{$dat['nombre']}', '{$dat['calle']}', '{$dat['tipo']}', '{$dat['nÚmeroaccesos']}'");
+        $conn->query("INSERT INTO calles (nombre,calle,tipo,numeroaccesos) VALUES ('{$dat['nombre']}', '{$dat['calle']}', '{$dat['tipo']}', '{$dat['nÚmeroaccesos']}')");
         echo "Dato insertado: ".$dat['nombre']."<br>";
     }
 ?>
