@@ -7,8 +7,8 @@
     if($result->num_rows>0){
         $c=1;
         foreach($result as $r){
-            $c++;
             $dato=array("_id"=>$c,$r);
+            $c++;
             $clTest->insertOne($dato);
         }
         echo "Datos introducidos";
