@@ -6,4 +6,9 @@
     $datos=array("ID"=>1,"Nombre"=>"Jordy");
     $clTest->insertOne($datos);
     
+    $mys="localhost";
+    $user="root";
+    $pw="";
+    $db="cartas";
+    $cnn=new mysqli($mys,$user,$pw,$db);
 ?>
