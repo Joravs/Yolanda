@@ -2,7 +2,7 @@
     $mys="localhost";
     $user="root";
     $pw="";
-    $bd="empresa";
+    $bd="Gijon";
 
     $conn=new mysqli($mys,$user,$pw,$bd);
 ?>
