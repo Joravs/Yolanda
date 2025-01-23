@@ -1,5 +1,6 @@
 <?php
     require_once "../ctdbMongo.php";
+    require_once "../ctdbMysql.php";
 
     $json=file_get_contents("callesgijon.json");
     $datos=json_decode($json,true);
@@ -10,5 +11,6 @@
             }
         }
     }
+
     
 ?>
