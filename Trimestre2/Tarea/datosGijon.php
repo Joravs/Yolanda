@@ -1,6 +1,13 @@
 <?php
     require_once "../ctdbMongo.php";
 
-    $JSONtoBSON=MongoDB\BSON\fromJSON(file_get_contents("callesgijon.json"));
-    $clCalles->insertOne($JSONtoBSON);
+    $json=file_get_contents("callesgijon.json");
+    $datos=json_decode($json,true);
+    foreach($datos as $dat){
+        foreach($dat as $k){
+            foreach($k as $v){
+                $clCalles->insertOne($v);
+            }
+        }
+    }
 ?>
