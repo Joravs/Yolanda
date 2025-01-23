@@ -6,8 +6,7 @@
     $result=$conn->query($selectUsers);
     if($result->num_rows>0){
         foreach($result as $r){
-            $dato=array("nombre"=>$r["nombre"],"apellido1"=>$r["apellido1"],"apellido2"=>$r["apellido2"],"departamento"=>$r["departamento"]);
-            $clTest->insertOne($dato);
+            $clTest->insertOne($r);
         }
         echo "Datos introducidos";
     }
