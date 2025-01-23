@@ -2,7 +2,7 @@
     require_once "../ctdbMongo.php";
     require_once "../ctdbMysql.php";
 
-    /* $json=file_get_contents("callesgijon.json");
+    $json=file_get_contents("callesgijon.json");
     $datos=json_decode($json,true);
     foreach($datos as $dat){
         foreach($dat as $k){
@@ -10,7 +10,7 @@
                 $clCalles->insertOne($v);
             }
         }
-    } */
+    }
 
     $datos=$clCalles->find();
     foreach($datos as $dat){
