@@ -11,4 +11,5 @@
     $pw="";
     $db="cartas";
     $cnn=new mysqli($mys,$user,$pw,$db);
+    
 ?>
