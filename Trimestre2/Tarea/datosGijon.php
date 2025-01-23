@@ -2,5 +2,5 @@
     require_once "../ctdbMongo.php";
 
     $JSONtoBSON=MongoDB\BSON\fromJSON(file_get_contents("callesgijon.json"));
-    $clCalles->insertOne($JSONtoBSON);
+    $clCalles->insert($JSONtoBSON);
 ?>
