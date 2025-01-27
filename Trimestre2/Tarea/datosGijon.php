@@ -18,7 +18,7 @@
         $conn->query("INSERT INTO calles (nombre,calle,tipo,numeroaccesos) VALUES ('{$dat['nombre']}', '{$dat['calle']}', '{$dat['tipo']}', '{$dat['nÚmeroaccesos']}')");
         $cont++;
     }
-    echo "Datos introducidos".$cont;
+    echo "Datos introducidos:".$cont;
 
     $conn->close;
     $ctdb->close;
