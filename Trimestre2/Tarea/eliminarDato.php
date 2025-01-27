@@ -1,10 +1,12 @@
 <?php
     if(isset($_POST)){
         require_once "../ctdbMongo.php";
-        if ($_POST['submit']=="eliminar"){
-            $dato=["calle"=>$_POST["calle"]];
-            $clCalles->find($dato);
-            
+        $dato=["calle"=>$_POST["calle"]];
+        $result=$clCalles->find($dato);
+        if($result->count()>0){
+            $bol=TRUE;
+        }
+        if ($_POST['submit']=="eliminar" && $bol){
         }else{
 
         }
