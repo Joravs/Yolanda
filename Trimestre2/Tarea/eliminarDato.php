@@ -2,5 +2,10 @@
     require_once "../ctdbMongo.php";
 
     $dato=["calle"=>"LLOREU"];
-    $clCalles->deleteOne($dato);
+    $result=$clCalles->find($dato);
+
+    foreach($result as $calle){
+        echo $calle;
+    }
+    /* $clCalles->deleteOne($dato); */
 ?>
