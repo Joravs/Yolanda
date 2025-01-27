@@ -19,4 +19,7 @@
         $cont++;
     }
     echo "Datos introducidos".$cont;
+
+    $conn->close;
+    $ctdb->close;
 ?>

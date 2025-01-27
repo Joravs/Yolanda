@@ -11,4 +11,7 @@
         }
         echo "Datos introducidos";
     }
+
+    $conn->close;
+    $ctdb->close;
 ?>
