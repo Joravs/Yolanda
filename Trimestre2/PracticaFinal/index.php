@@ -1,5 +1,5 @@
 <?php
-    
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -31,7 +31,9 @@
                         </tr>
                     </thead>
                     <tbody class="table-group-divider">
-                        
+                        <?php
+                            $diasMes=mktime(0,0,0,)
+                        ?>
                     </tbody>
                     <tfoot>
                         
