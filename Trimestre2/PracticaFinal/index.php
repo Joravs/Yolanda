@@ -12,12 +12,10 @@
             <div class="row text-center">
                 <h1>Gestor de Administracion de Insulina</h1>
             </div>
-            <div
-                class="table-responsive"
-            >
+            <div class="table-responsive">
                 <table class="table table-striped table-bordered table-primary align-middle">
                     <thead class="table-light">
-                        <caption></caption>
+                    <caption></caption>
                         <tr>
                             <th class="table-light"></th>
                             <th colspan="9">Desayuno</th>
