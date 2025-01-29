@@ -31,9 +31,10 @@
                         </tr>
                     </thead>
                     <tbody class="table-group-divider">
-                        <?php
-                            echo $diasMes=date("m");
-                        ?>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                        </tr>
                     </tbody>
                     <tfoot>
                         
