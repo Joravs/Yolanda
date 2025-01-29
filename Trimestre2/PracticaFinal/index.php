@@ -15,7 +15,7 @@
             <div
                 class="table-responsive"
             >
-                <table class="table table-striped table-borderless table-primary align-middle">
+                <table class="table table-striped table-bordered table-primary align-middle">
                     <thead class="table-light">
                         <caption></caption>
                         <tr>
@@ -44,36 +44,33 @@
                         </tr>
                         <tr>
                             <th></th>
-                            <th>GL/1h</th>
-                            <th>Rac.</th>
-                            <th>Insu.</th>
-                            <th>GL/2h</th>
-                            <th>Glu.</th>
-                            <th>Hora</th>
-                            <th>Glu.</th>
-                            <th>Hora</th>
-                            <th>Corr.</th>
-                            <th>GL/1h</th>
-                            <th>Rac.</th>
-                            <th>Insu.</th>
-                            <th>GL/2h</th>
-                            <th>Glu.</th>
-                            <th>Hora</th>
-                            <th>Glu.</th>
-                            <th>Hora</th>
-                            <th>Corr.</th>
-                            <th>GL/1h</th>
-                            <th>Rac.</th>
-                            <th>Insu.</th>
-                            <th>GL/2h</th>
-                            <th>Glu.</th>
-                            <th>Hora</th>
-                            <th>Glu.</th>
-                            <th>Hora</th>
-                            <th>Corr.</th>
+                            <?php 
+                            for($i=0;$i<3;$i++){
+                                echo "
+                                <th>GL/1h</th>
+                                <th>Rac.</th>
+                                <th>Insu.</th>
+                                <th>GL/2h</th>
+                                <th>Glu.</th>
+                                <th>Hora</th>
+                                <th>Glu.</th>
+                                <th>Hora</th>
+                                <th>Corr.</th>";
+                            }?>
                             <th></th>
-                            <th></th>
+                            <th>Lenta</th>
                         </tr>
+                        <?php
+                            $diaMes=date("t");
+                            for($i=1;$i<=$diaMes;$i++){
+                                echo "<tr>";
+                                echo "<td>Dia $i</td>";
+                                for($j=0;$j<29;$j++){
+                                    echo "<td></td>";
+                                }
+                                echo "</tr>";
+                            }
+                        ?>
                     </tbody>
                     <tfoot>
                         
