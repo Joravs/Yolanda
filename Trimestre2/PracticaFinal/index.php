@@ -32,7 +32,7 @@
                     </thead>
                     <tbody class="table-group-divider">
                         <?php
-                            $diasMes=mktime(0,0,0,)
+                            echo $diasMes=date("m");
                         ?>
                     </tbody>
                     <tfoot>
