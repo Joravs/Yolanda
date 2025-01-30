@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div id="login" class="d-flex justify-content-center align-item-center">
+        <div id="login" class="d-flex flex-row justify-content-center align-item-center">
             
             <div class="mb-3 row-12">
                 <label for="" class="form-label">Usuario</label>
