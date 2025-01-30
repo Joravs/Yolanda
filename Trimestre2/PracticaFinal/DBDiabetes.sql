@@ -22,11 +22,10 @@ CREATE TABLE comidas (
 CREATE TABLE controlGlucosa (
     idUsuario INT,
     fecha DATE NOT NULL,
-    tipoComida ENUM('Desayuno', 'Comida', 'Cena') NOT NULL,
     lenta FLOAT NOT NULL,
     deporte BOOLEAN NOT NULL,
     idComidas INT,
-    PRIMARY KEY (idUsuario, fecha, tipoComida),
+    PRIMARY KEY (idUsuario, fecha),
     FOREIGN KEY (idUsuario) REFERENCES usuario(idUsuario) ON DELETE CASCADE,
     FOREIGN KEY (idComidas) REFERENCES comidas(idComidas) ON DELETE SET NULL
 );
@@ -38,8 +37,9 @@ CREATE TABLE hipo (
     hora TIME NOT NULL,
     glucosa FLOAT NOT NULL,
     PRIMARY KEY (idUsuario, fecha, tipoComida, hora),
-    FOREIGN KEY (idUsuario, fecha, tipoComida) 
-        REFERENCES controlGlucosa(idUsuario, fecha, tipoComida) ON DELETE CASCADE
+    FOREIGN KEY (idUsuario, fecha) 
+        REFERENCES controlGlucosa(idUsuario, fecha) ON DELETE CASCADE,
+    FOREIGN KEY (tipoComida) REFERENCES comidas(tipoComida) ON DELETE CASCADE
 );
 
 CREATE TABLE hiper (
@@ -50,6 +50,7 @@ CREATE TABLE hiper (
     glucosa FLOAT NOT NULL,
     correccion FLOAT NOT NULL,
     PRIMARY KEY (idUsuario, fecha, tipoComida, hora),
-    FOREIGN KEY (idUsuario, fecha, tipoComida) 
-        REFERENCES controlGlucosa(idUsuario, fecha, tipoComida) ON DELETE CASCADE
+    FOREIGN KEY (idUsuario, fecha) 
+        REFERENCES controlGlucosa(idUsuario, fecha) ON DELETE CASCADE,
+    FOREIGN KEY (tipoComida) REFERENCES comidas(tipoComida) ON DELETE CASCADE
 );
