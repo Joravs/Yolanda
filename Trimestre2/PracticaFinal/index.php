@@ -21,8 +21,7 @@
                             <th colspan="9">Desayuno</th>
                             <th colspan="9">Comida</th>
                             <th colspan="9">Cena</th>
-                            <th>Deporte</th>
-                            <th class="table-light"></th>
+                            <th class="table-light" colspan='2'></th>
                         </tr>
                     </thead>
                     <tbody class="table-group-divider">
@@ -55,7 +54,7 @@
                                 <th>Hora</th>
                                 <th>Corr.</th>";
                             }?>
-                            <th></th>
+                            <th>Deporte</th>
                             <th>Lenta</th>
                         </tr>
                         <?php
