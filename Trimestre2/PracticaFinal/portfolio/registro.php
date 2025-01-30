@@ -11,67 +11,25 @@
     <div class="container-fluid">
         <div id="login" class="rounded bg-light d-flex flex-column justify-content-center align-item-center mx-auto p-4" style="width: 22rem; margin-top:35vh;">
             <form class="row g-3 needs-validation" novalidate>
-              <div class="col-md-4">
-                <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre" required>
-                <div class="valid-feedback">
-                  Looks good!
+                <div class="mb-3 row-12 text-center">
+                    <label for="name" class="form-label text-primary">Nombre</label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Nombre" required/>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <label for="apellido" class="form-label">Apellido</label>
-                <input type="text" class="form-control" id="apellido" required>
-                <div class="valid-feedback">
-                  Looks good!
+                <div class="mb-3 row-12 text-center">
+                    <label for="apellidos" class="form-label text-primary">Apellidos</label>
+                    <input type="text" class="form-control" name="apellidos" id="apellidos" placeholder="Apellidos" required/>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <label for="validationCustomUsername" class="form-label">Username</label>
-                <div class="input-group">
-                  <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-                  <div class="invalid-feedback">
-                    Please choose a username.
-                  </div>
+                <div class="mb-3 col-6 text-center">
+                    <label for="username" class="form-label text-primary">Usuario</label>
+                    <input type="text" class="form-control" name="username" id="username" placeholder="Username" required/>
                 </div>
-              </div>
-              <div class="col-md-6">
-                <label for="validationCustom03" class="form-label">City</label>
-                <input type="text" class="form-control" id="validationCustom03" required>
-                <div class="invalid-feedback">
-                  Please provide a valid city.
+                <div class="mb-3 col-6 text-center">
+                    <label for="passwd" class="form-label text-primary">Contraseña</label>
+                    <input type="password" class="form-control" name="passwd" id="passwd" placeholder="Password" required/>
                 </div>
-              </div>
-              <div class="col-md-3">
-                <label for="validationCustom04" class="form-label">State</label>
-                <select class="form-select" id="validationCustom04" required>
-                  <option selected disabled value="">Choose...</option>
-                  <option>...</option>
-                </select>
-                <div class="invalid-feedback">
-                  Please select a valid state.
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
                 </div>
-              </div>
-              <div class="col-md-3">
-                <label for="validationCustom05" class="form-label">Zip</label>
-                <input type="text" class="form-control" id="validationCustom05" required>
-                <div class="invalid-feedback">
-                  Please provide a valid zip.
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                  <label class="form-check-label" for="invalidCheck">
-                    Agree to terms and conditions
-                  </label>
-                  <div class="invalid-feedback">
-                    You must agree before submitting.
-                  </div>
-                </div>
-              </div>
-              <div class="col-12">
-                <button class="btn btn-primary" type="submit">Submit form</button>
-              </div>
             </form>
         </div>
     </div>
