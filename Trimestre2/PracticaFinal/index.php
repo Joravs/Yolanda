@@ -9,7 +9,7 @@
 </head>
 <body class="bg-secondary">
     <div class="container-fluid">
-        <div id="login" class="rounded bg-light d-flex flex-column justify-content-center align-item-center m-auto" style="width:20rem; height:80vh">
+        <div id="login" class="rounded bg-light d-flex flex-column justify-content-center align-item-center mt-5 p-4">
             <div class="mb-3 row-12 text-center">
                 <label for="username" class="form-label text-info">Usuario</label>
                 <input type="text" class="form-control" name="username" id="username" placeholder="Username"/>
