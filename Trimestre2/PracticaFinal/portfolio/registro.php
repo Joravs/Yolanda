@@ -10,7 +10,7 @@
 <body class="bg-secondary">
     <div class="container-fluid">
         <div id="login" class="rounded bg-light d-flex flex-column justify-content-center align-item-center mx-auto p-4" style="width: 22rem; margin-top:35vh;">
-            <form class="row g-3 needs-validation" autocomplete="no">
+            <form class="row g-3 needs-validation" autocomplete="off">
                 <div class="mb-3 row-12 text-center">
                     <label for="name" class="form-label text-primary">Nombre</label>
                     <input type="text" class="form-control" name="name" id="name" placeholder="Nombre" required/>
