@@ -7,7 +7,7 @@ CREATE TABLE usuario (
     apellido VARCHAR(15),
     fechaNac DATE,
     username VARCHAR(15),
-    password VARCHAR(15)
+    password VARCHAR(25)
 );
 
 CREATE TABLE controlGlucosa (
