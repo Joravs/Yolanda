@@ -1,7 +1,7 @@
 usuario( idUsuario, nombre, apellido, fechaNac, username, password)
 	PK idUsuario;
 
-controlGlucosa(idUsuario, fecha, lenta, deporte, idComidas)
+controlGlucosa(idUsuario, fecha, lenta, deporte)
 	FK idUsuario REFERENCES usuario(idUsuario), PK (idUsuario, fecha);
 
 comidas(idUsuario, fecha, glucosa1, glucosa2, racion, insulina, tipoComida ENUM('Desayuno', 'Comida', 'Cena'))
