@@ -1,46 +1,14 @@
-usuario(
-    idUsuario (PK),
-    nombre,
-    apellido,
-    fechaNac,
-    username,
-    password
-)
-controlGlucosa(
-    idUsuario (FK) REFERENCES usuario(idUsuario),
-    fecha,
-    tipoComida ENUM('Desayuno', 'Comida', 'Cena'),
-    lenta,
-    deporte,
-    idComidas (FK) REFERENCES comidas(idComidas),
-    PRIMARY KEY (idUsuario, fecha, tipoComida)
-)
-comidas(
-    idComidas (PK),
-    glucosa1,
-    glucosa2,
-    racion,
-    insulina,
-    tipoComida ENUM('Desayuno', 'Comida', 'Cena')
-)
-hipo(
-    idUsuario (FK) REFERENCES usuario(idUsuario),
-    fecha,
-    tipoComida ENUM('Desayuno', 'Comida', 'Cena'),
-    hora,
-    glucosa,
-    PRIMARY KEY (idUsuario, fecha, tipoComida, hora),
-    FOREIGN KEY (idUsuario, fecha, tipoComida) 
-        REFERENCES controlGlucosa(idUsuario, fecha, tipoComida)
-)
-hiper(
-    idUsuario (FK) REFERENCES usuario(idUsuario),
-    fecha,
-    tipoComida ENUM('Desayuno', 'Comida', 'Cena'),
-    hora,
-    glucosa,
-    correccion,
-    PRIMARY KEY (idUsuario, fecha, tipoComida, hora),
-    FOREIGN KEY (idUsuario, fecha, tipoComida) 
-        REFERENCES controlGlucosa(idUsuario, fecha, tipoComida)
-)
+usuario( idUsuario, nombre, apellido, fechaNac, username, password)
+	PK idUsuario;
+
+controlGlucosa( idUsuario, fecha, lenta, deporte, idComidas)
+	FK idUsuario REFERENCES usuario(idUsuario), FK idComidas REFERENCES comidas(idComidas), PK (idUsuario, fecha, tipoComida);
+
+comidas( idComidas, glucosa1, glucosa2, racion, insulina, tipoComida ENUM('Desayuno', 'Comida', 'Cena'))
+	PK idComidas;
+
+hipo( idUsuario, fecha, tipoComida ENUM('Desayuno', 'Comida', 'Cena'), hora, glucosa)
+	FK (idUsuario, fecha) REFERENCES controlGlucosa(idUsuario, fecha), FK(tipoComida) REFERENCES comidas(tipoComida), PK (idUsuario, fecha, tipoComida, hora);
+
+hipo( idUsuario, fecha, tipoComida ENUM('Desayuno', 'Comida', 'Cena'), hora, glucosa, correccion)
+	FK (idUsuario, fecha) REFERENCES controlGlucosa(idUsuario, fecha), FK(tipoComida) REFERENCES comidas(tipoComida), PK (idUsuario, fecha, tipoComida, hora);
