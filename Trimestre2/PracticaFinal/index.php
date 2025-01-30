@@ -18,8 +18,7 @@
                 <label for="passwd" class="form-label text-primary">Contraseña</label>
                 <input type="password" class="form-control" name="passwd" id="passwd" placeholder="Password"/>
             </div>
-            <button type="button" class="btn btn-primary btn-md">Iniciar Sesion</button>
-            
+            <button type="submit" class="btn btn-primary btn-md">Iniciar Sesion</button>
         </div>
     </div>
 </body>
