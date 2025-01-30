@@ -27,6 +27,10 @@
                     <label for="passwd" class="form-label text-primary">Contraseña</label>
                     <input type="password" class="form-control" name="passwd" id="passwd" placeholder="Contraseña" required/>
                 </div>
+                <div class="mb-3 row-12 text-center">
+                    <label for="fechaNac" class="form-label text-primary">Fecha de Nacimiento</label>
+                    <input type="date" name="fechaNac" id="fechaNac">
+                </div>
                 <button type="submit" class="btn btn-primary btn-md">Registrarse</button>
             </form>
         </div>
