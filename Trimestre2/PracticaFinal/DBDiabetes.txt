@@ -1,0 +1,46 @@
+usuario(
+    idUsuario (PK),
+    nombre,
+    apellido,
+    fechaNac,
+    username,
+    password
+)
+controlGlucosa(
+    idUsuario (FK) REFERENCES usuario(idUsuario),
+    fecha,
+    tipoComida ENUM('Desayuno', 'Comida', 'Cena'),
+    lenta,
+    deporte,
+    idComidas (FK) REFERENCES comidas(idComidas),
+    PRIMARY KEY (idUsuario, fecha, tipoComida)
+)
+comidas(
+    idComidas (PK),
+    glucosa1,
+    glucosa2,
+    racion,
+    insulina,
+    tipoComida ENUM('Desayuno', 'Comida', 'Cena')
+)
+hipo(
+    idUsuario (FK) REFERENCES usuario(idUsuario),
+    fecha,
+    tipoComida ENUM('Desayuno', 'Comida', 'Cena'),
+    hora,
+    glucosa,
+    PRIMARY KEY (idUsuario, fecha, tipoComida, hora),
+    FOREIGN KEY (idUsuario, fecha, tipoComida) 
+        REFERENCES controlGlucosa(idUsuario, fecha, tipoComida)
+)
+hiper(
+    idUsuario (FK) REFERENCES usuario(idUsuario),
+    fecha,
+    tipoComida ENUM('Desayuno', 'Comida', 'Cena'),
+    hora,
+    glucosa,
+    correccion,
+    PRIMARY KEY (idUsuario, fecha, tipoComida, hora),
+    FOREIGN KEY (idUsuario, fecha, tipoComida) 
+        REFERENCES controlGlucosa(idUsuario, fecha, tipoComida)
+)
