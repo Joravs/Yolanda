@@ -12,7 +12,7 @@
         <div id="login" class="d-flex flex-column justify-content-center align-item-center">
             <div class="mb-3 row-12 text-center">
                 <label for="username" class="form-label text-info">Usuario</label>
-                <input type="text" class="form-control" name="username" id="username" placeholder="UserName"/>
+                <input type="text" class="form-control" name="username" id="username" placeholder="Username"/>
             </div>
             <div class="mb-3 row-12 text-center">
                 <label for="passwd" class="form-label">Contraseña</label>
