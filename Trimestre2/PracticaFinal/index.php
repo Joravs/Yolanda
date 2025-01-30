@@ -9,10 +9,10 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div id="login" class="d-flex justify-content-center align-item-center">
+        <div id="login" class="d-flex flex-column justify-content-center align-item-center">
             <div class="mb-3 row-12 text-center">
                 <label for="username" class="form-label text-info">Usuario</label>
-                <input type="text" class="form-control" name="username" id="uasername" placeholder="UserName"/>
+                <input type="text" class="form-control" name="username" id="username" placeholder="UserName"/>
             </div>
             <div class="mb-3 row-12 text-center">
                 <label for="passwd" class="form-label">Contraseña</label>
