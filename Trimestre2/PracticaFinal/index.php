@@ -10,11 +10,15 @@
 <body>
     <div class="container-fluid">
         <div id="login" class="d-flex justify-content-center ialign-item-center">
-            <div class="mb-3">
-                <label for="" class="form-label">Password</label>
-                <input type="password" class="form-control" name="" id="" placeholder=""/>
-            </div>
             
+            <div class="mb-3">
+                <label for="" class="form-label">Usuario</label>
+                <input type="text" class="form-control" name="username" id="uasername" placeholder="UserName"/>
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" name="passwd" id="passwd" placeholder="Password"/>
+            </div>
         </div>
     </div>
 </body>
