@@ -10,18 +10,18 @@
 <body class="bg-secondary">
     <div class="container-fluid">
         <div id="login" class="rounded bg-light d-flex flex-column justify-content-center align-item-center mx-auto p-4" style="width: 22rem; margin-top:35vh;">
-            <form class="row g-3 needs-validation" method="post" action="validar.php">
+            <form class="row g-3 needs-validation" method="post" action="portfolio/validar.php">
               <div class="mb-3 row-12 text-center">
                 <label for="username" class="form-label text-primary">Usuario</label>
-                <input type="text" class="form-control" name="username" id="username" placeholder="Username"/>
+                <input type="text" class="form-control" name="username" id="username" placeholder="Username" required/>
             </div>
             <div class="mb-3 row-12 text-center">
                 <label for="passwd" class="form-label text-primary">Contraseña</label>
-                <input type="password" class="form-control" name="passwd" id="passwd" placeholder="Password"/>
+                <input type="password" class="form-control" name="passwd" id="passwd" placeholder="Password" required/>
             </div>
             <button type="submit" class="btn btn-primary btn-md">Iniciar Sesion</button>
             </form>
-            <form class="row mt-3 needs-validation p-1" method="post" action="registro.php">
+            <form class="row mt-3 needs-validation p-1" method="post" action="portfolio/registro.php">
                 <button type="submit" class="btn btn-primary btn-md">Registrarse</button>
             </form>
         </div>
