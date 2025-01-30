@@ -7,15 +7,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
+<body class="bg-secondary">
     <div class="container-fluid">
-        <div id="login" class="d-flex flex-column justify-content-center align-item-center">
+        <div id="login" class="rounded bg-light d-flex flex-column justify-content-center align-item-center m-auto" style="width:20rem; height:80vh">
             <div class="mb-3 row-12 text-center">
                 <label for="username" class="form-label text-info">Usuario</label>
                 <input type="text" class="form-control" name="username" id="username" placeholder="Username"/>
             </div>
             <div class="mb-3 row-12 text-center">
-                <label for="passwd" class="form-label">Contraseña</label>
+                <label for="passwd" class="form-label text-info">Contraseña</label>
                 <input type="password" class="form-control" name="passwd" id="passwd" placeholder="Password"/>
             </div>
         </div>
