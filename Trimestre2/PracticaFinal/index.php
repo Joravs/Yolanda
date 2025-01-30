@@ -10,7 +10,8 @@
 <body class="bg-secondary">
     <div class="container-fluid">
         <div id="login" class="rounded bg-light d-flex flex-column justify-content-center align-item-center mx-auto p-4" style="width: 22rem; margin-top:35vh;">
-            <div class="mb-3 row-12 text-center">
+            <form class="row g-3 needs-validation" novalidate>
+              <div class="mb-3 row-12 text-center">
                 <label for="username" class="form-label text-primary">Usuario</label>
                 <input type="text" class="form-control" name="username" id="username" placeholder="Username"/>
             </div>
@@ -19,6 +20,9 @@
                 <input type="password" class="form-control" name="passwd" id="passwd" placeholder="Password"/>
             </div>
             <button type="submit" class="btn btn-primary btn-md">Iniciar Sesion</button>
+            </form>
+            <button type="submit" class="btn btn-primary btn-md">Iniciar Sesion</button>
+            
         </div>
     </div>
 </body>
