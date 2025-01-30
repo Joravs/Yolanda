@@ -8,7 +8,7 @@ comidas(idUsuario, fecha, glucosa1, glucosa2, racion, insulina, tipoComida ENUM(
 	PK (idUsuario, fecha,tipoComida), FK (idUsuario, fecha) REFERENCES controlGlucosa(idUsuario, fecha);
 
 hipo( idUsuario, fecha, tipoComida ENUM('Desayuno', 'Comida', 'Cena'), hora, glucosa)
-	FK (idUsuario, fecha) REFERENCES controlGlucosa(idUsuario, fecha), FK(tipoComida) REFERENCES comidas(tipoComida), PK (idUsuario, fecha, tipoComida, hora);
+	FK (idUsuario, fecha,tipoComida) REFERENCES comidas(idUsuario, fecha, tipoComida), PK (idUsuario, fecha, tipoComida);
 
-hiper( idUsuario, fecha, tipoComida ENUM('Desayuno', 'Comida', 'Cena'), hora, glucosa, correccion)
-	FK (idUsuario, fecha) REFERENCES controlGlucosa(idUsuario, fecha), FK(tipoComida) REFERENCES comidas(tipoComida), PK (idUsuario, fecha, tipoComida, hora);
+hiper( idUsuario, fecha, tipoComida ENUM('Desayuno', 'Comida', 'Cena'), hora, glucosa,correccion)
+	FK (idUsuario, fecha,tipoComida) REFERENCES comidas(idUsuario, fecha, tipoComida), PK (idUsuario, fecha, tipoComida);
