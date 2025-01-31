@@ -15,21 +15,36 @@
                     <label for="name" class="form-label text-primary">Nombre</label>
                     <input type="text" class="form-control" name="name" id="name" placeholder="Nombre" required/>
                 </div>
+                <div class="invalid-feedback">
+                    Por favor, introduce tu nombre.
+                </div>
                 <div class="mb-3 row-12 text-center">
                     <label for="apellidos" class="form-label text-primary">Apellidos</label>
                     <input type="text" class="form-control" name="apellidos" id="apellidos" placeholder="Apellidos" required/>
+                </div>
+                <div class="invalid-feedback">
+                    Por favor, introduce tus apellidos.
                 </div>
                 <div class="mb-3 col-6 text-center">
                     <label for="username" class="form-label text-primary">Usuario</label>
                     <input type="text" class="form-control" name="username" id="username" placeholder="Nombre de Usuario" required/>
                 </div>
+                <div class="invalid-feedback">
+                    Por favor, introduce tu nombre de usuario.
+                </div>
                 <div class="mb-3 col-6 text-center">
                     <label for="passwd" class="form-label text-primary">Contraseña</label>
                     <input type="password" class="form-control" name="passwd" id="passwd" placeholder="Contraseña" required/>
                 </div>
+                <div class="invalid-feedback">
+                    Por favor, introduce tu contraseña.
+                </div>
                 <div class="mb-3 row-12 text-center">
                     <label for="fechaNac" class="form-label text-primary">Fecha de Nacimiento</label>
                     <input type="date" name="fechaNac" id="fechaNac">
+                </div>
+                <div class="invalid-feedback">
+                    Por favor, introduce tu fecha de nacimiento.
                 </div>
                 <button type="submit" class="btn btn-primary btn-md">Registrarse</button>
             </form>
