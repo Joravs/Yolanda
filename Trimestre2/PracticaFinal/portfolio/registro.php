@@ -36,13 +36,6 @@
                     <label for="passwd" class="form-label text-primary">Contraseña</label>
                     <input type="password" class="form-control" name="passwd" id="passwd" placeholder="Contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required/>
                 </div>
-                <div id="message">
-                    <h5>Password must contain the following:</h5>
-                    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-                    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-                    <p id="number" class="invalid">A <b>number</b></p>
-                    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
-                </div>
                 <div class="invalid-feedback">
                     Por favor, introduce tu contraseña.
                 </div>
