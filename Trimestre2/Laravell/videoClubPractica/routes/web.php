@@ -17,7 +17,7 @@ Route::get('catalog', function () {
 Route::get('catalog/show/{id}', function ($id) {
     return "Vista detalle pelicula {$id}";
 });
-Route::get('/', function () {
+Route::get('', function () {
     return "Pantalla Principal";
 });
 Route::get('/', function () {
