@@ -8,6 +8,9 @@ Route::get('/', function () {
 Route::get('login', function ($username) {
     return view('auth.login',array('username'=>$username));
 });
+Route::get('logout', function () {
+    return 'Logout';
+});
 Route::get('catalog', function () {
     return view('catalog.index');
 });
