@@ -5,8 +5,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
-Route::get('login', function () {
-    return view('auth.login');
+Route::get('login', function ($username) {
+    return view('auth.login',array('username'=>$username));
 });
 Route::get('catalog', function () {
     return view('catalog.index');
