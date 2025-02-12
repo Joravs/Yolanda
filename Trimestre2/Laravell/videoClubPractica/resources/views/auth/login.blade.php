@@ -1,3 +1,3 @@
 @extends('layouts.master')
-    @section('content')Pantalla principal
+    @section('content')Login Usuario
 @stop
