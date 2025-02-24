@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MoviesController;
 
 Route::get('/', function () {
     return view('home');
@@ -11,15 +12,7 @@ Route::get('login', function ($username) {
 Route::get('logout', function () {
     return 'Logout';
 });
-Route::get('catalog', function () {
-    return view('catalog.index');
-});
-Route::get('catalog/show/{id}', function ($id) {
-    return view('catalog.show',array('id'=>$id));
-});
-Route::get('catalog/create', function () {
-    return view('catalog.create');
-});
-Route::get('catalog/edit/{id}', function ($id) {
-    return view('catalog.edit',array('id'=>$id));
-});
+Route::get('catalog', [MoviesController::class, 'index'])->name('index');
+Route::get('catalog/show/{id}', [MoviesController::class, 'show'])->name('show');
+Route::get('catalog/create', [MoviesController::class, 'create'])->name('create');
+Route::get('catalog/edit/{id}', [MoviesController::class, 'edit'])->name('edit');
