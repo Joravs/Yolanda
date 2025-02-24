@@ -4,21 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class MoviesController extends Controller
+class CatalogController extends Controller
 {
-    public function index()
+    public function getIndex()
     {
         return view('catalog.index');
     }
-    public function show($id)
+    public function getShow($id)
     {
         return view('catalog.show',array('id'=>$id)); 
     }
-    public function create()
+    public function getCreate()
     {
         return view('catalog.create');
     }
-    public function edit($id)
+    public function getEdit($id)
     {
         return view('catalog.edit',array('id'=>$id));
     }

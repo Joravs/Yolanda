@@ -1,18 +1,17 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MoviesController;
+use App\Http\Controllers\CatalogController;
+use App\Http\Controllers\HomeController;
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/',[HomeController::class, 'getHome']);
 Route::get('login', function ($username) {
     return view('auth.login',array('username'=>$username));
 });
 Route::get('logout', function () {
     return 'Logout';
 });
-Route::get('catalog', [MoviesController::class, 'index'])->name('index');
-Route::get('catalog/show/{id}', [MoviesController::class, 'show'])->name('show');
-Route::get('catalog/create', [MoviesController::class, 'create'])->name('create');
-Route::get('catalog/edit/{id}', [MoviesController::class, 'edit'])->name('edit');
+Route::get('catalog', [CatalogController::class, 'getIndex']);
+Route::get('catalog/show/{id}', [CatalogController::class, 'getShow']);
+Route::get('catalog/create', [CatalogController::class, 'getCreate']);
+Route::get('catalog/edit/{id}', [CatalogController::class, 'getEdit']);
