@@ -5,7 +5,7 @@
     @foreach($peliculas as $key=>$pelicula)
         <div class='col'>
             </a><img src="{{$pelicula['poster']}}" style="width:300px;height:auto;"></img>
-            <a href="/catalog/show/{{$key}}"><h3>Titulo: {{$pelicula['title']}}</h3></a>
+            <a href="/Yolanda/Trimestre2/Laravell/videoClubPractica/public/catalog/show/{{$key}}"><h3>Titulo: {{$pelicula['title']}}</h3></a>
         </div>
         @endforeach
     </div>
