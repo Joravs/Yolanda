@@ -4,8 +4,8 @@
     <div class="row my-1 fs-5">
     @foreach($peliculas as $key=>$pelicula)
         <div class='col'>
-            <h3>Titulo: {{$pelicula['title']}}</h3>
-            <img src="{{$pelicula['poster']}}" style="width:300px;height:auto;"></img>
+            </a><img src="{{$pelicula['poster']}}" style="width:300px;height:auto;"></img>
+            <a href="/catalog/show/{{$key}}"><h3>Titulo: {{$pelicula['title']}}</h3></a>
         </div>
         @endforeach
     </div>
