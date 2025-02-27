@@ -12,23 +12,19 @@
 
     $slct = $conn -> prepare ('SELECT imagen from imagenes');
     $slct-> execute();
-    $slct->store_result();
-    $slct->bind_param($img);
+    $slct->bind_result($img);
 
     if($slct->num_rows > 0) {
-        $rows=$slct->num_rows;
         echo '<table>';
         $saltoLinea=0;
-        for($i=0;$i<$rows;$i++){
-            $slct->data_seek($i);
-            $img=$slct->fetch_assoc();
+        while($slct->fetch()){
             if($saltoLinea<3){
                 echo '<tr>';
             }
             $saltoLinea++;
             echo "<td>
-                    <div class='row'><img src'{$img[$i]}'></div>
-                    <div class='row'>{$img[$i]}</div>
+                    <div class='row'><img src'{$img}'></div>
+                    <div class='row'>{$img}</div>
                   </td>";
             if($saltoLinea==4){
                 $saltoLinea=0;
