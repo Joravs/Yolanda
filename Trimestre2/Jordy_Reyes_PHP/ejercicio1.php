@@ -19,15 +19,16 @@
         echo '<table>';
         $saltoLinea=0;
         for($i=0;$i<$rows;$i++){
+            $slct->data_seek($i);
             if($saltoLinea<3){
                 echo '<tr>';
             }
             $saltoLinea++;
-            $img=$slct->fetch();
-            echo '<td>
-                    <div class="row"><img src"{$img[$i}"></div>
-                    <div class="row">{$img[$i}</div>
-                  </td>';
+            $img=$slct->fetch_assocc();
+            echo "<td>
+                    <div class='row'><img src'{$img[$i]}'></div>
+                    <div class='row'>{$img[$i]}</div>
+                  </td>";
             if($saltoLinea==4){
                 $saltoLinea=0;
                 echo '</tr>';
