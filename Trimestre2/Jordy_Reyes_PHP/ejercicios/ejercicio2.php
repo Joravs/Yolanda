@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once './ctdb.php';
+    require_once '../BBDD/ctdb.php';
     $fechaHoy=date('Y-m-d');
     $hora=date('H:i');
     if(isset($_POST['enviar'])){
@@ -23,7 +23,7 @@
             }
             $saltoLinea++;
             echo "<td>
-                    <div><input type='radio' class='mostrarInput' name='actividad' value='{$idimagen}' id='actividad'><img src='{$img}'><p>Imagen: {$idimagen}</p></input></div>
+                    <div><input type='radio' class='mostrarInput' name='actividad' value='{$idimagen}' id='actividad'><img src='../{$img}'><p>Imagen: {$idimagen}</p></input></div>
                     <div>{$img}</div>
                 </td>";
             if($saltoLinea==4){

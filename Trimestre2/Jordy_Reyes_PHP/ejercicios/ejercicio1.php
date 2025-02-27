@@ -18,7 +18,7 @@
 <body>
     <div class="container-fluid">
 <?php
-    require_once './ctdb.php';
+    require_once '../BBDD/ctdb.php';
     $slct = $conn -> prepare ('SELECT imagen from imagenes');
     $slct-> execute();
     $slct->bind_result($img);
@@ -31,7 +31,7 @@
         }
         $saltoLinea++;
         echo "<td>
-                <div><img src='{$img}'></div>
+                <div><img src='../{$img}'></div>
                 <div>{$img}</div>
               </td>";
         if($saltoLinea==4){
