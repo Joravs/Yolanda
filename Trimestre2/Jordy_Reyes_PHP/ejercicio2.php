@@ -1,7 +1,7 @@
 <?php
     require_once './ctdb.php';
 
-
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,14 +29,36 @@
                 <label for="hora" class="form-label">Hora</label>
                 <input type="time" class="form-control" name="hora" id="hora"/>
             </div>
-            <div class="mb-3 col-4">
-                <label for="persona" class="form-label">Persona</label>
-                <input type="text" class="form-control" name="persona" id="persona"/>
+            <div class="mb-3">
+                <label for="" class="form-label">Persona</label>
+                <select class="form-select form-select-lg" name="persona" id="persona">
+                    
+                </select>
             </div>
+            
             <?php
-                require_once 'tablaPicto.php'; 
-
-                obtenerImagenes();
+                require_once './ctdb.php';
+                $slct = $conn -> prepare ('SELECT imagen from imagenes');
+                $slct-> execute();
+                $slct->bind_result($img);
+            
+                echo '<table>';
+                $saltoLinea=0;
+                while($slct->fetch()){
+                    if($saltoLinea==0){
+                        echo '<tr>';
+                    }
+                    $saltoLinea++;
+                    echo "<td>
+                            <div><input type='radio' class='mostrarInput' name='actividad' id='actividad'><img value='{$img}' src='{$img}'></input></div>
+                            <div>{$img}</div>
+                          </td>";
+                    if($saltoLinea==4){
+                        $saltoLinea=0;
+                        echo '</tr>';
+                    }
+                }
+                echo '</table>';
             ?>
             <input type="submit" value="enviar" name="enviar">
         </form>
