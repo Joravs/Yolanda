@@ -2,6 +2,12 @@
     session_start();
     require_once './ctdb.php';
     $fechaHoy=date('Y-m-d');
+    if(isset($_POST['enviar'])){
+        $insert=$conn->prepare('INSERT INTO agenda(fecha,hora,idpersona,idimagen) VALUES (?,?,?,?);');
+        $insert=$bind_param('ssii',$_POST['fecha'],$_POST['hora'],$_POST['persona'],$_POST['actividad']);
+        $insert->execute();
+        $_SESSION['log']='Dato agendado';
+    }
     function obtenerImagenes(){
         global $conn;
         $slct = $conn -> prepare ('SELECT imagen,idimagen from imagenes');
@@ -25,13 +31,6 @@
             }
         }
         echo '</table>';
-    }
-
-    if(isset($_POST['enviar'])){
-        $insert=$conn->prepare('INSERT INTO agenda(fecha,hora,idpersona,idimagen) VALUES (?,?,?,?);');
-        $insert=$bind_param('ssii',$_POST['fecha'],$_POST['hora'],$_POST['persona'],$_POST['actividad']);
-        $insert->execute();
-        $_SESSION['log']='Dato agendado';
     }
     $log=isset($_SESSION['log']) ? $_SESSION['log'] :'';
     unset($_SESSION['log']);
@@ -79,7 +78,7 @@
             <?php
                 obtenerImagenes();
             ?>
-            <input type="submit" value="enviar" name="enviar">
+            <input type="submit" value="Enviar" name="enviar">
         </form>
     </div>    
 </body>
