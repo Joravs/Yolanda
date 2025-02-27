@@ -19,7 +19,9 @@
         echo '<table>';
         for($i=0;$i<$rows;$i++){
             $img=$slct->fetch_assoc();
-            echo '<tr>{$img[$i}</td>';
+            echo '<tr>
+                <td>{$img[$i}</td>
+                </tr>';
         }
         echo '</table>';
     }else{
