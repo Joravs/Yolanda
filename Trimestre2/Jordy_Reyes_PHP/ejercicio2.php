@@ -2,6 +2,7 @@
     session_start();
     require_once './ctdb.php';
     $fechaHoy=date('Y-m-d');
+    $hora=date('H:i');
     if(isset($_POST['enviar'])){
         $insert=$conn->prepare('INSERT INTO agenda(fecha,hora,idpersona,idimagen) VALUES (?,?,?,?);');
         $insert->bind_param('ssii',$_POST['fecha'],$_POST['hora'],$_POST['persona'],$_POST['actividad']);
@@ -63,7 +64,7 @@
             </div>
             <div class="mb-3 col-4">
                 <label for="hora" class="form-label">Hora</label>
-                <input type="time" class="form-control" name="hora" id="hora"/>
+                <input type="time" class="form-control" name="hora" id="hora" value="<?=$hora;?>"/>
             </div>
             <div class="mb-3 col-4">
                 <label for="" class="form-label">Persona</label>
