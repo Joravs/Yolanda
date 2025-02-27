@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pictograma</title>
     <style>
+        td{
+        align-items:baseline; 
+        }
         img{
-            width: 300px;
+            width: 200px;
             height: auto;
         }
     </style>
@@ -23,7 +26,7 @@
     echo '<table>';
     $saltoLinea=0;
     while($slct->fetch()){
-        if($saltoLinea<3){
+        if($saltoLinea==0){
             echo '<tr>';
         }
         $saltoLinea++;
