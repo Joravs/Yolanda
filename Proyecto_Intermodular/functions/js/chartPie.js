@@ -9,7 +9,7 @@ var ctx = document.getElementById('myPieChart').getContext('2d');
             labels: ['Hipoglucemia', 'Hiperglucemia'], // Etiquetas para cada sección
             datasets: [{
                 label: 'Episodios',
-                data: [dat[0], dat[1]], // Datos para cada sección del gráfico
+                data: dat, // Datos para cada sección del gráfico
                 backgroundColor: ['red', 'blue'], // Colores de cada sección
                 borderColor: ['darkred', 'darkblue'], // Colores de borde de las secciones
                 borderWidth: 1

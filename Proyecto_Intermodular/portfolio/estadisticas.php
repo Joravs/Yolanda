@@ -25,6 +25,8 @@
                         </div>
                         <button type="submit" class="btn btn-secondary btn-md">Buscar</button>
                     </form>
+                    <h1><?=isset($_POST['fecha'])?$_POST['fecha']:'';?></h1>
+                    <canvas id="chartCanvas" class="w-100 mx-auto"></canvas>
                 </div>
                 <?php
                     if(isset($_POST['fecha'])){
@@ -32,25 +34,12 @@
                         $stats1->execute();
                         $stats1->store_result();
                         $stats1->bind_result($suma,$hipo,$hiper,$tc,$f);
-                        echo '<div class="row gap-3 d-flex align-items-baseline">';
-                        echo "<h1>Fecha: {$_POST['fecha']}</h1>";
-                        echo '<div class="row ">';
                         while($stats1->fetch()){
-                            if($hipo!=null){$suma+=$hipo;}
-                            if($hiper!=null){$suma+=$hiper;}
-                            echo sprintf('
-                            <div class="col-1">
-                                <div class="row-6">
-                                    <p id="%s" class="grafica1 p-1" style="height:%dpx;">%dmg/dL</p>
-                                </div>
-                                <div class="row-6 m-0">
-                                    <p class="text-white">%s</p>
-                                </div>
-                            </div>
-                            ',$tc,$suma,$suma,$tc);
-                        }
-                         echo '</div>';
-                         echo '</div>';
+                            $suma=$hipo!=null?$suma+$hipo:$suma;
+                            $suma=$hiper!=null?$suma+$hiper:$suma;
+                            echo "<input class='d-none' id='{$tc}' value='";
+                                echo  $suma;
+                            echo "'></input>";}
                     }
                 ?>
             </div>
@@ -88,6 +77,7 @@
             </div>
                 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
                 <script src="../functions/js/chartPie.js"></script>
+                <script src="../functions/js/otraStat.js"></script>
         </div>
     </body>
 </html>
