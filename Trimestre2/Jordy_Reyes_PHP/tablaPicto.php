@@ -1,7 +1,8 @@
 <?php
     require_once './ctdb.php';
 
-    public function obtenerImagenes(){
+    function obtenerImagenes(){
+        global $conn;
         $slct = $conn -> prepare ('SELECT imagen from imagenes');
         $slct-> execute();
         $slct->bind_result($img);

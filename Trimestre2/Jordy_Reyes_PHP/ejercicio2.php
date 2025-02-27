@@ -33,7 +33,11 @@
                 <label for="persona" class="form-label">Persona</label>
                 <input type="text" class="form-control" name="persona" id="persona"/>
             </div>
+            <?php
+                require_once 'tablaPicto.php'; 
 
+                obtenerImagenes();
+            ?>
             <input type="submit" value="enviar" name="enviar">
         </form>
     </div>    
