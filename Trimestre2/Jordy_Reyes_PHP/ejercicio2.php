@@ -26,8 +26,9 @@
     }
     function obtenerUsuarios(){
         global $conn;
-
         $slct=$conn->prepare("SELECT nombre,idpersona from personas");
+        $slct->execute();
+        return $slct();
     }
 ?>
 <!DOCTYPE html>
@@ -59,7 +60,10 @@
             <div class="mb-3">
                 <label for="" class="form-label">Persona</label>
                 <select class="form-select form-select-lg" name="persona" id="persona">
-                    
+                    <?php
+                        $usuarios=obtenerUsuarios();
+                        $usuarios->bind_result($nombre,$idpersona);
+                    ?>
                 </select>
             </div>
             <?php
