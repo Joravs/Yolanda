@@ -64,7 +64,7 @@
                         $usuarios=obtenerUsuarios();
                         $usuarios->bind_result($nombre,$idpersona);
                         while ($usuarios->fetch()){
-                            
+                            echo "<option value='{$idpersona}'>{$nombre}</option>";
                         }
                     ?>
                 </select>
