@@ -18,15 +18,15 @@
         $rows=$slct->num_rows;
         echo '<table>';
         $saltoLinea=0;
+        echo '<tr>';
         for($i=0;$i<$rows;$i++){
             $img=$slct->fetch_assoc();
-            echo '<tr>';
-            echo '   <td>
-                        <div class="row"><img src"{$img[$i}"></div>
-                        <div class="row">{$img[$i}</div>
-                    </td>';
-            echo '</tr>';
+            echo '<td>
+                    <div class="row"><img src"{$img[$i}"></div>
+                    <div class="row">{$img[$i}</div>
+                  </td>';
         }
+        echo '</tr>';
         echo '</table>';
     }else{
         echo '<div>No se encontraron Imagenes</div>';
