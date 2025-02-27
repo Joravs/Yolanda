@@ -49,10 +49,14 @@
                 <input type="date" class="form-control" name="fecha" id="fecha" value="<?=$fechaHoy;?>"/>
             </div>
             <div class="mb-3 col-4">
-                <label for="hora" class="form-label">Hora</label>
-                <input type="time" class="form-control" name="hora" id="hora"/>
+                <label for="hora1" class="form-label">Desde</label>
+                <input type="time" class="form-control" name="hora1" id="hora1"/>
             </div>
-            <div class="mb-3">
+            <div class="mb-3 col-4">
+                <label for="hora2" class="form-label">Hasta</label>
+                <input type="time" class="form-control" name="hora2" id="hora2"/>
+            </div>
+            <div class="mb-3 col-4">
                 <label for="" class="form-label">Persona</label>
                 <select class="form-select form-select-lg" name="persona" id="persona">
                     <?php
