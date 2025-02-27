@@ -55,8 +55,10 @@
 </head>
 <body>
     <div class="container-fluid">
-        <h3>Añadir datos agenda</h3>
-        <p><?=$log;?></p>
+        <div class="row">
+            <h3>Añadir datos agenda</h3>
+            <p><?=$log;?></p>
+        </div>
         <form action='<?= $_SERVER['PHP_SELF'];?>' method="POST">
             <div class="mb-3 col-4">
                 <label for="fecha" class="form-label">Fecha</label>
