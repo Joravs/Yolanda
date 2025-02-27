@@ -1,7 +1,34 @@
 <?php
     require_once './ctdb.php';
+    function obtenerImagenes(){
+        global $conn;
+        $slct = $conn -> prepare ('SELECT imagen from imagenes');
+        $slct-> execute();
+        $slct->bind_result($img);
 
-    
+        echo '<table>';
+        $saltoLinea=0;
+        while($slct->fetch()){
+            if($saltoLinea==0){
+                echo '<tr>';
+            }
+            $saltoLinea++;
+            echo "<td>
+                    <div><input type='radio' class='mostrarInput' name='actividad' id='actividad'><img value='{$img}' src='{$img}'></input></div>
+                    <div>{$img}</div>
+                </td>";
+            if($saltoLinea==4){
+                $saltoLinea=0;
+                echo '</tr>';
+            }
+        }
+        echo '</table>';
+    }
+    function obtenerUsuarios(){
+        global $conn;
+
+        $slct=$conn->prepare("SELECT nombre,idpersona from personas");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,30 +62,8 @@
                     
                 </select>
             </div>
-            
             <?php
-                require_once './ctdb.php';
-                $slct = $conn -> prepare ('SELECT imagen from imagenes');
-                $slct-> execute();
-                $slct->bind_result($img);
-            
-                echo '<table>';
-                $saltoLinea=0;
-                while($slct->fetch()){
-                    if($saltoLinea==0){
-                        echo '<tr>';
-                    }
-                    $saltoLinea++;
-                    echo "<td>
-                            <div><input type='radio' class='mostrarInput' name='actividad' id='actividad'><img value='{$img}' src='{$img}'></input></div>
-                            <div>{$img}</div>
-                          </td>";
-                    if($saltoLinea==4){
-                        $saltoLinea=0;
-                        echo '</tr>';
-                    }
-                }
-                echo '</table>';
+                obtenerImagenes();
             ?>
             <input type="submit" value="enviar" name="enviar">
         </form>
