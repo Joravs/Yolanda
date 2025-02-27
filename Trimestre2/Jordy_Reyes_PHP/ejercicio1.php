@@ -17,14 +17,15 @@
     if($slct->num_rows > 0) {
         $rows=$slct->num_rows;
         echo '<table>';
+        $saltoLinea=0;
         for($i=0;$i<$rows;$i++){
             $img=$slct->fetch_assoc();
-            echo '<tr>
-                <td>
-                    <div class="row"><img src"{$img[$i}"></div>
-                    <div class="row">{$img[$i}</div>
-                </td>
-                </tr>';
+            echo '<tr>';
+            echo '   <td>
+                        <div class="row"><img src"{$img[$i}"></div>
+                        <div class="row">{$img[$i}</div>
+                    </td>';
+            echo '</tr>';
         }
         echo '</table>';
     }else{
