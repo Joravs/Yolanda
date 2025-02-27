@@ -82,7 +82,7 @@
             <?php
                 obtenerImagenes();
             ?>
-            <button type="submit" class="btn btn-info" value="Enviar" name="enviar">Añadir entrada en agenda</button>
+            <button type="submit" class="btn btn-info mt-3" value="Enviar" name="enviar">Añadir entrada en agenda</button>
             <a href="ejercicio1.php">Volver al Listado</a>
         </form>
     </div>    

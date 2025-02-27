@@ -1,3 +1,5 @@
 <?php
-require_once './ctdb.php';
+    require_once '../BBDD/ctdb.php';
+
+    
 ?>
