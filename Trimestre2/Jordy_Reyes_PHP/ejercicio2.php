@@ -22,15 +22,15 @@
         <h3>Añadir datos agenda</h3>
         <form action='<?= $_SERVER['PHPSELF'];?>' method="POST">
             <div class="mb-3 col-4">
-                <label for="" class="form-label">Name</label>
-                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder=""/>
+                <label for="fecha" class="form-label">Fecha</label>
+                <input type="date" class="form-control" name="" id="" aria-describedby="helpId" placeholder=""/>
             </div>
             <div class="mb-3 col-4">
-                <label for="" class="form-label">Name</label>
-                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder=""/>
+                <label for="hora" class="form-label">Hora</label>
+                <input type="time" class="form-control" name="" id="" aria-describedby="helpId" placeholder=""/>
             </div>
             <div class="mb-3 col-4">
-                <label for="" class="form-label">Name</label>
+                <label for="persona" class="form-label">Persona</label>
                 <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder=""/>
             </div>
         </form>
