@@ -21,7 +21,18 @@
     <div class="container-fluid">
         <h3>Añadir datos agenda</h3>
         <form action="<?= $_SERVER['PHPSELF'];?>">
-            
+            <div class="col4">
+                <label for="fecha">Fecha: </label>
+                <input type="date" name="fecha" id="fecha">
+            </div>
+            <div class="col4">
+                <label for="hora">Hora: </label>
+                <input type="time" name="hora" id="hora">
+            </div>
+            <div class="col4">
+                <label for="persona">Persona: </label>
+                <input type="text" name="persona" id="persona">
+            </div>
         </form>
     </div>    
 </body>
