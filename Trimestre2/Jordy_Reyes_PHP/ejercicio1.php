@@ -12,7 +12,6 @@
 
     $slct = $conn -> prepare ('SELECT imagen from imagenes');
     $slct-> execute();
-    $slct->get_result();
     $slct->store_result();
 
     if($slct->num_rows > 0) {
@@ -21,11 +20,11 @@
         $saltoLinea=0;
         for($i=0;$i<$rows;$i++){
             $slct->data_seek($i);
+            $img=$slct->fetch_assoc();
             if($saltoLinea<3){
                 echo '<tr>';
             }
             $saltoLinea++;
-            $img=$slct->fetch_assocc();
             echo "<td>
                     <div class='row'><img src'{$img[$i]}'></div>
                     <div class='row'>{$img[$i]}</div>
