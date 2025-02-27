@@ -20,7 +20,10 @@
         for($i=0;$i<$rows;$i++){
             $img=$slct->fetch_assoc();
             echo '<tr>
-                <td>{$img[$i}</td>
+                <td>
+                    <div class="row"><img src"{$img[$i}"></div>
+                    <div class="row">{$img[$i}</div>
+                </td>
                 </tr>';
         }
         echo '</table>';
