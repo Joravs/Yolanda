@@ -13,6 +13,7 @@
     $slct = $conn -> prepare ('SELECT imagen from imagenes');
     $slct-> execute();
     $slct->store_result();
+    $slct->bind_param($img);
 
     if($slct->num_rows > 0) {
         $rows=$slct->num_rows;
