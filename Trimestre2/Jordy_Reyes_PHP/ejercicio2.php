@@ -3,9 +3,9 @@
     $fechaHoy=date('Y-m-d');
     function obtenerImagenes(){
         global $conn;
-        $slct = $conn -> prepare ('SELECT imagen from imagenes');
+        $slct = $conn -> prepare ('SELECT imagen,idimagen from imagenes');
         $slct-> execute();
-        $slct->bind_result($img);
+        $slct->bind_result($img,$idimagen);
 
         echo '<table>';
         $saltoLinea=0;
@@ -15,7 +15,7 @@
             }
             $saltoLinea++;
             echo "<td>
-                    <div><input type='radio' class='mostrarInput' name='actividad' id='actividad'><img value='{$img}' src='{$img}'></input></div>
+                    <div><input type='radio' class='mostrarInput' name='actividad' value='{$idimagen}' id='actividad'><img src='{$img}'></input></div>
                     <div>{$img}</div>
                 </td>";
             if($saltoLinea==4){
@@ -53,12 +53,8 @@
                 <input type="date" class="form-control" name="fecha" id="fecha" value="<?=$fechaHoy;?>"/>
             </div>
             <div class="mb-3 col-4">
-                <label for="hora1" class="form-label">Desde</label>
+                <label for="hora1" class="form-label">Hora</label>
                 <input type="time" class="form-control" name="hora1" id="hora1"/>
-            </div>
-            <div class="mb-3 col-4">
-                <label for="hora2" class="form-label">Hasta</label>
-                <input type="time" class="form-control" name="hora2" id="hora2"/>
             </div>
             <div class="mb-3 col-4">
                 <label for="" class="form-label">Persona</label>
