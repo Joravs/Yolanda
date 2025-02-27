@@ -1,5 +1,6 @@
 <?php
     require_once './ctdb.php';
+    $fechaHoy=new date('Y-m-d');
     function obtenerImagenes(){
         global $conn;
         $slct = $conn -> prepare ('SELECT imagen from imagenes');
@@ -24,13 +25,6 @@
         }
         echo '</table>';
     }
-    function obtenerUsuarios(){
-        global $conn;
-        $usu=$conn->prepare("SELECT nombre,idpersona from personas");
-        $usu->execute();
-        var_dump($usu);
-        return $usu();
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,7 +46,7 @@
         <form action='<?= $_SERVER['PHPSELF'];?>' method="POST">
             <div class="mb-3 col-4">
                 <label for="fecha" class="form-label">Fecha</label>
-                <input type="date" class="form-control" name="fecha" id="fecha"/>
+                <input type="date" class="form-control" name="fecha" id="fecha" value="<?=$fechaHoy;?>"/>
             </div>
             <div class="mb-3 col-4">
                 <label for="hora" class="form-label">Hora</label>
@@ -62,9 +56,10 @@
                 <label for="" class="form-label">Persona</label>
                 <select class="form-select form-select-lg" name="persona" id="persona">
                     <?php
-                        $usuarios=obtenerUsuarios();
-                        $usuarios->bind_result($nombre,$idpersona);
-                        while ($usuarios->fetch()){
+                        $usu=$conn->prepare("SELECT nombre,idpersona from personas");
+                        $usu->execute();
+                        $usu->bind_result($nombre,$idpersona);
+                        while ($usu->fetch()){
                             echo "<option value='{$idpersona}'>{$nombre}</option>";
                         }
                     ?>
