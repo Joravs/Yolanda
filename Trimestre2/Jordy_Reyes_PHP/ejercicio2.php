@@ -25,6 +25,10 @@
         }
         echo '</table>';
     }
+
+    if(isset($_POST['enviar'])){
+        $insert=$conn->prepare('INSERT INTO agenda VALUES');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
