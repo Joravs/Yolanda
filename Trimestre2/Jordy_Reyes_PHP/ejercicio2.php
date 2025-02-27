@@ -23,15 +23,15 @@
         <form action='<?= $_SERVER['PHPSELF'];?>' method="POST">
             <div class="mb-3 col-4">
                 <label for="fecha" class="form-label">Fecha</label>
-                <input type="date" class="form-control" name="" id="" aria-describedby="helpId" placeholder=""/>
+                <input type="date" class="form-control" name="fecha" id="fecha"/>
             </div>
             <div class="mb-3 col-4">
                 <label for="hora" class="form-label">Hora</label>
-                <input type="time" class="form-control" name="" id="" aria-describedby="helpId" placeholder=""/>
+                <input type="time" class="form-control" name="hora" id="hora"/>
             </div>
             <div class="mb-3 col-4">
                 <label for="persona" class="form-label">Persona</label>
-                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder=""/>
+                <input type="text" class="form-control" name="persona" id="persona"/>
             </div>
         </form>
     </div>    
