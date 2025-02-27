@@ -63,6 +63,9 @@
                     <?php
                         $usuarios=obtenerUsuarios();
                         $usuarios->bind_result($nombre,$idpersona);
+                        while ($usuarios->fetch()){
+                            
+                        }
                     ?>
                 </select>
             </div>
