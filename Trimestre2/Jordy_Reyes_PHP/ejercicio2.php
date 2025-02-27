@@ -1,6 +1,6 @@
 <?php
     require_once './ctdb.php';
-    $fechaHoy=new date('Y-m-d');
+    $fechaHoy=date('Y-m-d');
     function obtenerImagenes(){
         global $conn;
         $slct = $conn -> prepare ('SELECT imagen from imagenes');
