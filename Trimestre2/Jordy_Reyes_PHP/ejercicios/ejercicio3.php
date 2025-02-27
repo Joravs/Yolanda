@@ -2,14 +2,14 @@
     session_start();
     require_once '../BBDD/ctdb.php';
     $fechaHoy=date('Y-m-d');
-    function consulta($idpersona){
+    function consulta($idpersona,$fecha){
         global $conn;
         $slct = $conn -> prepare ('SELECT i.imagen from agenda a 
                 inner join imagenes i on(i.idimagen=a.idimagen)
                 inner join personas p on(p.idpersona=a.idpersona)
-                where a.idpersona=?;');
+                where a.idpersona=? and a.fecha=?;');
+        $slct->bind_param('ss',$idpersona,$fecha);
         $slct-> execute();
-        $slct->bind_param($idpersona);
         $slct->bind_result($img);
 
         echo '<table>';
@@ -31,6 +31,7 @@
         echo '</table>';
     }
     if(isset($_POST['enviar'])){
+
     }
 
     $log=isset($_SESSION['log']) ? $_SESSION['log'] :'';
