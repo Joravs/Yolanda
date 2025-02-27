@@ -28,6 +28,7 @@
         global $conn;
         $slct=$conn->prepare("SELECT nombre,idpersona from personas");
         $slct->execute();
+        $slct->store_result();
         return $slct();
     }
 ?>
