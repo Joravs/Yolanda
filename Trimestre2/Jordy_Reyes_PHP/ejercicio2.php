@@ -4,9 +4,9 @@
     $fechaHoy=date('Y-m-d');
     if(isset($_POST['enviar'])){
         $insert=$conn->prepare('INSERT INTO agenda(fecha,hora,idpersona,idimagen) VALUES (?,?,?,?);');
-        $insert=$bind_param('ssii',$_POST['fecha'],$_POST['hora'],$_POST['persona'],$_POST['actividad']);
+        $insert->bind_param('ssii',$_POST['fecha'],$_POST['hora'],$_POST['persona'],$_POST['actividad']);
         $insert->execute();
-        $_SESSION['log']='Dato agendado';
+        $_SESSION['log']='<span class="">Dato agendado</span>';
     }
     function obtenerImagenes(){
         global $conn;
@@ -53,14 +53,14 @@
     <div class="container-fluid">
         <h3>Añadir datos agenda</h3>
         <p><?=$log;?></p>
-        <form action='<?= $_SERVER['PHPSELF'];?>' method="POST">
+        <form action='<?= $_SERVER['PHP_SELF'];?>' method="POST">
             <div class="mb-3 col-4">
                 <label for="fecha" class="form-label">Fecha</label>
                 <input type="date" class="form-control" name="fecha" id="fecha" value="<?=$fechaHoy;?>"/>
             </div>
             <div class="mb-3 col-4">
-                <label for="hora1" class="form-label">Hora</label>
-                <input type="time" class="form-control" name="hora1" id="hora1"/>
+                <label for="hora" class="form-label">Hora</label>
+                <input type="time" class="form-control" name="hora" id="hora"/>
             </div>
             <div class="mb-3 col-4">
                 <label for="" class="form-label">Persona</label>
