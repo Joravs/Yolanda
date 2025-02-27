@@ -4,10 +4,13 @@
     $fechaHoy=date('Y-m-d');
     function consulta($idpersona){
         global $conn;
-        $slct = $conn -> prepare ('SELECT img.imagen from agenda a 
-                inner join imagenes');
+        $slct = $conn -> prepare ('SELECT i.imagen from agenda a 
+                inner join imagenes i on(i.idimagen=a.idimagen)
+                inner join personas p on(p.idpersona=a.idpersona)
+                where a.idpersona=?;');
         $slct-> execute();
-        $slct->bind_result($img,$idimagen);
+        $slct->bind_param($idpersona);
+        $slct->bind_result($img);
 
         echo '<table>';
         $saltoLinea=0;
