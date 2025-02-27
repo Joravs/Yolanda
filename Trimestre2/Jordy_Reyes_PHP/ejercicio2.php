@@ -47,6 +47,9 @@
             width: 200px;
             height: auto;
         }
+        table,td{
+            border:1px solid #000;
+        }
     </style>
 </head>
 <body>
@@ -78,7 +81,8 @@
             <?php
                 obtenerImagenes();
             ?>
-            <input type="submit" value="Enviar" name="enviar">
+            <button type="submit" class="btn btn-info" value="Enviar" name="enviar">Añadir entrada en agenda</button>
+            <a href="ejercicio1.php">Volver al Listado</a>
         </form>
     </div>    
 </body>
