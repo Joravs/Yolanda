@@ -26,10 +26,10 @@
     }
     function obtenerUsuarios(){
         global $conn;
-        $slct=$conn->prepare("SELECT nombre,idpersona from personas");
-        $slct->execute();
-        var_dump($slct);
-        return $slct();
+        $usu=$conn->prepare("SELECT nombre,idpersona from personas");
+        $usu->execute();
+        var_dump($usu);
+        return $usu();
     }
 ?>
 <!DOCTYPE html>
