@@ -16,12 +16,12 @@
 
     if($slct->num_rows > 0) {
         $rows=$slct->num_rows;
+        echo '<table>';
         for($i=0;$i<$rows;$i++){
             $img=$slct->fetch_assoc();
-
+            echo '<tr>{$img[$i}</td>';
         }
-?>
-<?php
+        echo '</table>';
     }else{
         echo '<div>No se encontraron Imagenes</div>';
     }
