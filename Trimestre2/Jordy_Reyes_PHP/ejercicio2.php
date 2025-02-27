@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require_once './ctdb.php';
     $fechaHoy=date('Y-m-d');
     function obtenerImagenes(){
@@ -27,8 +28,13 @@
     }
 
     if(isset($_POST['enviar'])){
-        $insert=$conn->prepare('INSERT INTO agenda VALUES');
+        $insert=$conn->prepare('INSERT INTO agenda(fecha,hora,idpersona,idimagen) VALUES (?,?,?,?);');
+        $insert=$bind_param('ssii',$_POST['fecha'],$_POST['hora'],$_POST['persona'],$_POST['actividad']);
+        $insert->execute();
+        $_SESSION['log']='Dato agendado';
     }
+    $log=isset($_SESSION['log']) ? $_SESSION['log'] :'';
+    unset($_SESSION['log']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,6 +53,7 @@
 <body>
     <div class="container-fluid">
         <h3>Añadir datos agenda</h3>
+        <p><?=$log;?></p>
         <form action='<?= $_SERVER['PHPSELF'];?>' method="POST">
             <div class="mb-3 col-4">
                 <label for="fecha" class="form-label">Fecha</label>
