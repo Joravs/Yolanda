@@ -33,6 +33,8 @@
                 <label for="persona" class="form-label">Persona</label>
                 <input type="text" class="form-control" name="persona" id="persona"/>
             </div>
+
+            <input type="submit" value="enviar" name="enviar">
         </form>
     </div>    
 </body>

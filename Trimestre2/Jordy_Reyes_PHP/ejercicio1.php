@@ -17,7 +17,7 @@
 </head>
 <body>
     <div class="container-fluid">
-    <?php
+<?php
     require_once './ctdb.php';
 
     $slct = $conn -> prepare ('SELECT imagen from imagenes');
