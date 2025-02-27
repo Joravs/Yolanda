@@ -5,7 +5,11 @@
     $slct-> execute();
     $slct->store_result();
 
-    if($slct){
+    if($slct->num_rows > 0) {
+?>
 
+<?php
+    }else{
+        echo '<div>No se encontraron Imagenes</div>';
     }
 ?>
