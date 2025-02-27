@@ -15,7 +15,7 @@
             }
             $saltoLinea++;
             echo "<td>
-                    <div><input class='mostrarInput'><img src='{$img}'></input></div>
+                    <div><input type='radio' class='mostrarInput' name='actividad' id='actividad'><img value='{$img}' src='{$img}'></input></div>
                     <div>{$img}</div>
                   </td>";
             if($saltoLinea==4){
