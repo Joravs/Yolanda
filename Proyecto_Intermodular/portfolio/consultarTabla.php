@@ -25,7 +25,7 @@
                 ?>
                 <div class="accordion-item bg-transparent">
                     <h2 class="accordion-header" id="heading<?= $c;?>">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#<?= $c;?>" aria-expanded="true" aria-controls="<?= $c;?>">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#<?= $c;?>" aria-expanded="false" aria-controls="<?= $c;?>">
                         <?= $c;?>
                     </button>
                     </h2>

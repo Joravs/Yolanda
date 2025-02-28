@@ -20,8 +20,8 @@
     <link rel="icon" href="favicon.webp" type="image/webp">
 </head>
 <body>
-    <div class="container-fluid font-ratushy">
-        <div id="form" class="rounded d-flex flex-column justify-content-center align-item-center mx-auto p-4" style="width: 22rem; margin-top:30vh;">
+    <div class="container-fluid font-ratushy w-auto ">
+        <div id="form" class="rounded d-flex flex-column justify-content-center align-item-center mx-auto p-4 w-75" style="margin-top:25vh;">
             <form class="row g-3 needs-validation opacity-100 " method="post" action="functions/php/validar.php" autocomplete="off">
                 <?php if(isset($span)){echo $span;}?>
                 <div class="mb-3 row-12 text-center">

@@ -33,8 +33,8 @@
                             </div>
                             <div class="mb-3 col-6">
                                 <label for="glu2" class="form-label fs-4">Glucosa despues de Comer</label>
-                                <input type="number" class="form-control" name="glu2" id="glu2" aria-describedby="helpId" placeholder="" min="1" required/>
-                            </div>
+                                <input type="number" class="form-control" name="glu2" id="glu2" aria-describedby="helpId" placeholder="" min="1"/>
+                            </div><!-- Este campo no es requerido obligatoriamente ya que la glucosa aplicada antes de comer tiene un efecto de 3 hr, por lo que este campo puede quedar vacio -->
                             <div class="mb-3 col-6">
                                 <label for="racion" class="form-label fs-4">Racion</label>
                                 <input type="number" class="form-control" name="racion" id="racion" aria-describedby="helpId" placeholder="" min="1" required/>

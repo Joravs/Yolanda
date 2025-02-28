@@ -29,8 +29,8 @@
                         <h1>Bienvenido, <?php echo $_SESSION['nombreUsuario']?></h1>
                     </div>
                 </div>
-                <div class="row d-flex justify-content-center">
-                    <div class="col-4 mt-4 ms-4">
+                <div class="row d-flex justify-content-center mb-5 my-auto">
+                    <div class="col-12 mt-4 ms-4">
                         <div class="row mt-5 gap-3">
                             <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="window.location.href = 'consultarTabla.php'">Consultar Registros</button>
                             <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="window.location.href = 'addRegister.php'">Nuevo Registro</button>

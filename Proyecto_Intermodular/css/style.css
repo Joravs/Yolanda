@@ -3,8 +3,8 @@
     font-family: 'Ratushy', sans-serif;
 }
 body{
-    background-image: url("../recursos/bg-img.jpg");
-    background-position: top center;
+    background-image: url("../recursos/bg-img.webp");
+    min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
 }

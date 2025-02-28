@@ -4,7 +4,8 @@
 
     function addRegister($dat){
         global $conn, $insrtComidas, $insrtHipo, $insrtHiper,$_SESSION;
-
+    
+    try{
         $insrtComidas->bind_param('ddddds',
         $_SESSION['idUsuario'],$dat['glu1'],$dat['glu2'],$dat['racion'],$dat['insulina'],$dat['tipoComida']);
         $insrtComidas->execute();
@@ -27,6 +28,11 @@
         }
         header('Location: ../../portfolio/');
         exit;
+    }catch(mysqli_sql_exception $e){
+        $_SESSION['log']='Registro añadido con anterioridad';
+        header('Location:../../portfolio/');
+        exit;
+    }
     }
     addRegister($_POST);
 ?>
