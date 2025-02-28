@@ -19,7 +19,7 @@
 
     <body>
         <?php if(isset($log)){echo $log;} ?>
-        <div class="container-fluid font-ratushy col-8">
+        <div class="container-fluid font-ratushy col-8 overflow-hidden">
             <div class="row text-center text-white mb-5 mt-3">
                 <h1>Gestor de Administracion de Insulina</h1>
             </div>

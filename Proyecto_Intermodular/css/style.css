@@ -4,7 +4,8 @@
 }
 body{
     background-image: url("../recursos/bg-img.webp");
-    min-height: 100vh;
+    background-position: top center;
+    height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -54,4 +55,7 @@ body{
 #linkreg{
     color: white;
     text-decoration: underline;
+}
+nav{
+    background: rgba(197, 197, 197, 0.829);
 }
