@@ -11,7 +11,7 @@ Route::get('login', function ($username) {
 Route::get('logout', function () {
     return 'Logout';
 });
-Route::get('catalog', [CatalogController::class, 'getIndex']);
-Route::get('catalog/show/{id}', [CatalogController::class, 'getShow']);
-Route::get('catalog/create', [CatalogController::class, 'getCreate']);
-Route::get('catalog/edit/{id}', [CatalogController::class, 'getEdit']);
+Route::get('/catalog', [CatalogController::class, 'getIndex']);
+Route::get('/catalog/show/{id}', [CatalogController::class, 'getShow']);
+Route::get('/catalog/create', [CatalogController::class, 'getCreate']);
+Route::get('/catalog/edit/{id}', [CatalogController::class, 'getEdit']);

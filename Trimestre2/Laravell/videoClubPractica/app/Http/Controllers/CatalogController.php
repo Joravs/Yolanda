@@ -184,6 +184,7 @@ class CatalogController extends Controller
     }
     public function getEdit($id)
     {
+		$pelicula = $this->arrayPeliculas[$id];
         return view('catalog.edit',compact('id'));
     }
 }
