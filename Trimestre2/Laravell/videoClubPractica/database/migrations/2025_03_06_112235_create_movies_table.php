@@ -17,15 +17,12 @@ return new class extends Migration
             $table->string('year',8);
             $table->string('director',64);
             $table->string('poster');
-            $table->boolean('rented');
+            $table->boolean('rented')->default(false);
             $table->text('synopsis');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('movies');

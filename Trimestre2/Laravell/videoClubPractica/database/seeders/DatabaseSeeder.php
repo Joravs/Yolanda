@@ -8,7 +8,6 @@ use Illuminate\Database\Seeder;
 use App\Models\Movie;
 use Illuminate\Support\Facades\DB;
 
-
 class DatabaseSeeder extends Seeder
 {
     private $arrayPeliculas = array(
@@ -80,7 +79,7 @@ class DatabaseSeeder extends Seeder
 			'title' => 'Alguien voló sobre el nido del cuco',
 			'year' => '1975', 
 			'director' => 'Milos Forman', 
-			'poster' => 'https://pics.filmaffinity.com/Alguien_volao_sobre_el_nido_del_cuco-886138071-large.jpg', 
+			'poster' => 'https://imgs.search.brave.com/24ft853TcZBwCOLwiYC4OAh1t6ih9wrgAiNNoErBq0A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1QllqZGtOamRs/TkRndFpUTTFNeTAw/WXpFd0xUazVZakl0/WWpFM1l6bGxaVFZp/TlRWbFhrRXlYa0Zx/Y0djQC5qcGc', 
 			'rented' => false, 
 			'synopsis' => 'Randle McMurphy (Jack Nicholson), un hombre condenado por asalto, y un espíritu libre que vive contracorriente, es recluido en un hospital psiquiátrico. La inflexible disciplina del centro acentúa su contagiosa tendencia al desorden, que acabará desencadenando una guerra entre los pacientes y el personal de la clínica con la fría y severa enfermera Ratched (Louise Fletcher) a la cabeza. La suerte de cada paciente del pabellón está en juego.'
 		),
@@ -104,7 +103,7 @@ class DatabaseSeeder extends Seeder
 			'title' => 'El precio del poder',
 			'year' => '1983', 
 			'director' => 'Brian De Palma', 
-			'poster' => 'https://pics.filmaffinity.com/El_precio_del_poder-611992615-large.jpg', 
+			'poster' => 'https://imgs.search.brave.com/AkJUP1MXCR70X3cP4VcKcJJ3ZYkDi3ya1iRUP3hRAvQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMucG9zdGVycy5j/ei9pbWFnZS8zNTAv/cG9zdGVycy9lbC1w/cmVjaW8tZGVsLXBv/ZGVyLXNheS1oZWxs/by10by1teS1saXR0/bGUtZnJpZW5kLWkx/MDkyNC5qcGc', 
 			'rented' => false, 
 			'synopsis' => 'Tony Montana es un emigrante cubano frío y sanguinario que se instala en Miami con el propósito de convertirse en un gángster importante. Con la colaboración de su amigo Manny Rivera inicia una fulgurante carrera delictiva con el objetivo de acceder a la cúpula de una organización de narcos.'
 		),
@@ -168,7 +167,7 @@ class DatabaseSeeder extends Seeder
 			'title' => 'El club de la lucha',
 			'year' => '1999', 
 			'director' => 'David Fincher', 
-			'poster' => 'https://pics.filmaffinity.com/El_club_de_la_lucha-320750671-large.jpg', 
+			'poster' => 'https://imgs.search.brave.com/lzK3NU00X_j_bQUj0-xOuXukCWR5ok-6m3ezbQqiBZo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9oaXBz/LmhlYXJzdGFwcHMu/Y29tL2htZy1wcm9k/L2ltYWdlcy9lbC1j/bHViLWRlLWxhLWx1/Y2hhLTY2MjA0ZWJl/ZTVjNDkuanBnP3Jl/c2l6ZT05ODA6Kg', 
 			'rented' => true, 
 			'synopsis' => 'Un joven hastiado de su gris y monótona vida lucha contra el insomnio. En un viaje en avión conoce a un carismático vendedor de jabón que sostiene una teoría muy particular: el perfeccionismo es cosa de gentes débiles; sólo la autodestrucción hace que la vida merezca la pena. Ambos deciden entonces fundar un club secreto de lucha, donde poder descargar sus frustaciones y su ira, que tendrá un éxito arrollador.'
 		)
@@ -183,12 +182,12 @@ class DatabaseSeeder extends Seeder
         DB::table('movies')->delete();
         foreach ($this->arrayPeliculas as $pelicula) {
             $p=new Movie;
-            $p->title=$pelicula['title'];
-            $p->year=$pelicula['year'];
-            $p->director=$pelicula['director'];
-            $p->poster=$pelicula['poster'];
-            $p->rented=$pelicula['rented'];
-            $p->synopsis=$pelicula['synopsis'];
+			$p->title=$pelicula['title'];
+			$p->year=$pelicula['year'];
+			$p->director=$pelicula['director'];
+			$p->poster=$pelicula['poster'];
+			$p->rented=$pelicula['rented'];
+			$p->synopsis=$pelicula['synopsis'];
             $p->save();
         }
     }
