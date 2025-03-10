@@ -29,4 +29,8 @@ class CatalogController extends Controller
         $pelicula = $peliculas->findOrFail($id);
         return view('catalog.edit',compact('pelicula'));
     }
+    public function postEdit(Request $request)
+    {
+        dd($request->title);
+    }
 }
