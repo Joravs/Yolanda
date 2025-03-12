@@ -72,7 +72,9 @@
                             echo "'></input>";}
                         }
                     ?>
-                    <?= isset($_POST['envbiar'])?'<canvas id="myPieChart" class="mx-auto"></canvas>':''?>
+                    <?= isset($_POST['envbiar']) ? 
+                    '<h1 class="mt-2">Desde: ' . htmlspecialchars($_POST['fecha1']) . ', Hasta: ' . htmlspecialchars($_POST['fecha2']) . '</h1>' .
+                    '<canvas id="myPieChart" class="mx-auto"></canvas>' : '' ?>
                 </div>
             </div>
                 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

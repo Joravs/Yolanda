@@ -16,11 +16,23 @@
     <body>
         <div class="container-fluid font-ratushy">
             <?php include 'navbar.html';?>
+            <form class="row g-3 needs-validation text-white text-center" autocomplete="off" method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
+                <legend>Selecciona fecha para ver datos</legend>
+                <div class="row d-flex align-items-baseline mx-auto col-6">
+                    <div class="mb-3 col">
+                        <label for="month" class="form-label fs-5">Mes y Año</label>
+                        <input type="month" class="form-control" name="month" id="month" aria-describedby="helpId" placeholder=""/>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-secondary btn-md">Buscar</button>
+            </form>
+            <?php if (isset($_POST['month'])){
+            ?>
             <div class="accordion" id="accordion">
                 <?php 
                     $comidas=['Desayuno','Mediodia','Comida','Merienda','Cena'];
                     $diaActual=date("d");
-                    $mesActual=date("Y-m");
+                    $mesActual=$_POST['month'];
                     foreach($comidas as $c){
                 ?>
                 <div class="accordion-item bg-transparent">
@@ -97,6 +109,7 @@
                 </div>
                 <?php }?>
             </div>
+            <?php }?>
         </div>
     </body>
 </html>
