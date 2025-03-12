@@ -14,7 +14,7 @@
         <div class="container-fluid font-ratushy">
             <?php include 'navbar.html';?>
             <form class="row g-3 needs-validation text-white text-center" autocomplete="off" method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
-                <legend>Selecciona fecha a mostrar la suma de glucosa por tipo de comida</legend>
+                <legend>Selecciona una fecha para ver datos</legend>
                 <div class="row d-flex align-items-baseline mx-auto col-12">
                     <div class="mb-3">
                         <label for="fecha" class="form-label fs-5">Fecha</label>

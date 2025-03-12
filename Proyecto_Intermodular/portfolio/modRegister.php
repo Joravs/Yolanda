@@ -13,6 +13,16 @@
     <body>
         <div class="container-fluid font-ratushy">
             <?php include 'navbar.html';?>
+            <form class="row g-3 needs-validation text-white text-center" autocomplete="off" method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
+                <legend>Selecciona una fecha para ver datos</legend>
+                <div class="row d-flex align-items-baseline mx-auto col-12">
+                    <div class="mb-3">
+                        <label for="fecha" class="form-label fs-5">Fecha</label>
+                        <input type="date" class="form-control" name="fecha" id="fecha" aria-describedby="helpId" placeholder=""/>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-secondary btn-md">Buscar</button>
+            </form>
             <?php if (isset($_POST['fecha'])){
                 $fecha = $_POSt['fecha'];
             ?>
