@@ -67,53 +67,33 @@ INSERT INTO `usuario`(`nombre`, `apellido`, `fechaNac`, `username`, `password`) 
 
 /*Control Glucosa Datos Ejemplo*/
 
-INSERT INTO `controlGlucosa`(`idUsuario`, `fecha`, `lenta`, `deporte`) VALUES (1,'2025-02-11',0,0);
-INSERT INTO `controlGlucosa`(`idUsuario`, `fecha`, `lenta`, `deporte`) VALUES (2,'2025-02-11',0,0);
-INSERT INTO `controlGlucosa`(`idUsuario`, `fecha`, `lenta`, `deporte`) VALUES (2,'2025-02-10',0,0);
-INSERT INTO `controlGlucosa`(`idUsuario`, `fecha`, `lenta`, `deporte`) VALUES (1,'2025-02-10',0,0);
+INSERT INTO controlGlucosa (idUsuario, fecha) VALUES
+(9, '2024-02-01'),
+(9, '2024-02-02'),
+(9, '2024-02-03'),
+(9, '2024-02-04'),
+(9, '2024-02-05'),
+(9, '2024-02-06'),
+(9, '2024-02-07'),
+(9, '2024-02-08'),
+(9, '2024-02-09'),
+(9, '2024-02-10'),
+(9, '2024-02-11'),
+(9, '2024-02-12'),
+(9, '2024-02-13'),
+(9, '2024-02-14'),
+(9, '2024-02-15'),
+(9, '2024-02-16'),
+(9, '2024-02-17'),
+(9, '2024-02-18'),
+(9, '2024-02-19'),
+(9, '2024-02-20'),
+(9, '2024-02-21'),
+(9, '2024-02-22'),
+(9, '2024-02-23'),
+(9, '2024-02-24'),
+(9, '2024-02-25'),
+(9, '2024-02-26'),
+(9, '2024-02-27'),
+(9, '2024-02-28');
 
-/*Comidas Datos Ejemplo*/
-
-INSERT INTO `comidas`(`idUsuario`, `fecha`, `glucosa1`, `glucosa2`, `racion`, `insulina`, `tipoComida`) 
-VALUES (1,curdate(),80,90,1,1,'Desayuno');
-INSERT INTO `comidas`(`idUsuario`, `fecha`, `glucosa1`, `glucosa2`, `racion`, `insulina`, `tipoComida`) 
-VALUES (1,curdate(),80,90,1,1,'Mediodia');
-INSERT INTO `comidas`(`idUsuario`, `fecha`, `glucosa1`, `glucosa2`, `racion`, `insulina`, `tipoComida`) 
-VALUES (1,curdate(),80,90,1,1,'Comida');
-INSERT INTO `comidas`(`idUsuario`, `fecha`, `glucosa1`, `glucosa2`, `racion`, `insulina`, `tipoComida`) 
-VALUES (1,curdate(),80,90,1,1,'Merienda');
-INSERT INTO `comidas`(`idUsuario`, `fecha`, `glucosa1`, `glucosa2`, `racion`, `insulina`, `tipoComida`) 
-VALUES (1,curdate(),80,90,1,1,'Cena');
-
-INSERT INTO `comidas`(`idUsuario`, `fecha`, `glucosa1`, `glucosa2`, `racion`, `insulina`, `tipoComida`) 
-VALUES (1,'2025-02-11',80,90,1,1,'Desayuno');
-INSERT INTO `comidas`(`idUsuario`, `fecha`, `glucosa1`, `glucosa2`, `racion`, `insulina`, `tipoComida`) 
-VALUES (1,'2025-02-11',80,90,1,1,'Mediodia');
-INSERT INTO `comidas`(`idUsuario`, `fecha`, `glucosa1`, `glucosa2`, `racion`, `insulina`, `tipoComida`) 
-VALUES (1,'2025-02-11',80,90,1,1,'Comida');
-INSERT INTO `comidas`(`idUsuario`, `fecha`, `glucosa1`, `glucosa2`, `racion`, `insulina`, `tipoComida`) 
-VALUES (1,'2025-02-11',80,90,1,1,'Merienda');
-INSERT INTO `comidas`(`idUsuario`, `fecha`, `glucosa1`, `glucosa2`, `racion`, `insulina`, `tipoComida`) 
-VALUES (1,'2025-02-11',80,90,1,1,'Cena');
-
-INSERT INTO `comidas`(`idUsuario`, `fecha`, `glucosa1`, `glucosa2`, `racion`, `insulina`, `tipoComida`) 
-VALUES (2,'2025-02-10',80,90,1,1,'Desayuno');
-INSERT INTO `comidas`(`idUsuario`, `fecha`, `glucosa1`, `glucosa2`, `racion`, `insulina`, `tipoComida`) 
-VALUES (2,'2025-02-10',80,90,1,1,'Mediodia');
-INSERT INTO `comidas`(`idUsuario`, `fecha`, `glucosa1`, `glucosa2`, `racion`, `insulina`, `tipoComida`) 
-VALUES (2,'2025-02-10',80,90,1,1,'Comida');
-INSERT INTO `comidas`(`idUsuario`, `fecha`, `glucosa1`, `glucosa2`, `racion`, `insulina`, `tipoComida`) 
-VALUES (2,'2025-02-10',80,90,1,1,'Merienda');
-INSERT INTO `comidas`(`idUsuario`, `fecha`, `glucosa1`, `glucosa2`, `racion`, `insulina`, `tipoComida`) 
-VALUES (2,'2025-02-10',80,90,1,1,'Cena');
-
-INSERT INTO `comidas`(`idUsuario`, `fecha`, `glucosa1`, `glucosa2`, `racion`, `insulina`, `tipoComida`) 
-VALUES (2,'2025-02-11',80,90,1,1,'Desayuno');
-INSERT INTO `comidas`(`idUsuario`, `fecha`, `glucosa1`, `glucosa2`, `racion`, `insulina`, `tipoComida`) 
-VALUES (2,'2025-02-11',80,90,1,1,'Mediodia');
-INSERT INTO `comidas`(`idUsuario`, `fecha`, `glucosa1`, `glucosa2`, `racion`, `insulina`, `tipoComida`) 
-VALUES (2,'2025-02-11',80,90,1,1,'Comida');
-INSERT INTO `comidas`(`idUsuario`, `fecha`, `glucosa1`, `glucosa2`, `racion`, `insulina`, `tipoComida`) 
-VALUES (2,'2025-02-11',80,90,1,1,'Merienda');
-INSERT INTO `comidas`(`idUsuario`, `fecha`, `glucosa1`, `glucosa2`, `racion`, `insulina`, `tipoComida`) 
-VALUES (2,'2025-02-11',80,90,1,1,'Cena');
