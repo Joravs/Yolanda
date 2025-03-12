@@ -16,7 +16,7 @@
             <div class="row">
                 <div id="form" class="rounded d-flex flex-column justify-content-center align-item-center mx-auto p-3" style="width: 50rem; margin-top:20vh;">
                     <form class="row g-3 needs-validation text-white text-center" autocomplete="off" method="post" action="../functions/php/qryaddregister.php">
-                        <div class="mb-3">
+                        <div class="mb-3 col-6">
                             <label for="tipoComida" class="form-label fs-4">Tipo de Comida</label>
                             <select class="form-select form-select-md" name="tipoComida" id="tipoComida">
                                 <option selected value="Desayuno">Desayuno</option>
@@ -25,6 +25,10 @@
                                 <option value="Merienda">Merienda</option>
                                 <option value="Cena">Cena</option>
                             </select>
+                        </div>
+                        <div class="mb-3 col-6">
+                            <label for="fecha" class="form-label fs-5">Fecha</label>
+                            <input type="date" class="form-control" name="fecha" id="fecha" aria-describedby="helpId" placeholder=""/>
                         </div>
                         <div class="row d-flex align-items-baseline">
                             <div class="mb-3 col-6">

@@ -13,6 +13,19 @@
     <body>
         <div class="container-fluid font-ratushy">
             <?php include 'navbar.html';?>
+            <form class="row g-3 needs-validation text-white text-center" autocomplete="off" method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
+                <legend>Selecciona fecha a mostrar la suma de glucosa por tipo de comida</legend>
+                <div class="row d-flex align-items-baseline mx-auto col-12">
+                    <div class="mb-3">
+                        <label for="fecha" class="form-label fs-5">Fecha</label>
+                        <input type="date" class="form-control" name="fecha" id="fecha" aria-describedby="helpId" placeholder=""/>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-secondary btn-md">Buscar</button>
+            </form>
+            <?php if(isset($_POST['fecha'])){
+                $fecha = $_POST['fecha'];
+            ?>
             <div class="row">
                 <div class="table-responsive mt-4">
                     <table class="table table-striped table-bordered table-primary align-middle">
@@ -28,7 +41,7 @@
                         </thead>
                         <tbody class="table-group-divider text-white">
                             <?php 
-                                $selctTabla=consultarMod($username);
+                                $selctTabla=consultarMod($username, $fecha);
                                 $selctTabla->bind_result($fecha,$hipoGlu,$hipoHora,$hiperGlu,$hiperHora,$corr,$tipocomida,$glu1,$rac,$insulina,$glu2);
                                 while($selctTabla->fetch()){
                                     echo '<form action="../functions/php/qrydelregister.php" method="post" autocomplete="off"><tr>';
@@ -54,6 +67,7 @@
                     </table>
                 </div>
             </div>
+            <?php }?>
             <script src="../functions/js/toggleOptions.js"></script>
         </div>
     </body>

@@ -3,16 +3,16 @@
 
     $insrtComidas=$conn->prepare(
         'INSERT INTO `comidas`(`idUsuario`, `fecha`, `glucosa1`, `glucosa2`, `racion`, `insulina`, `tipoComida`) 
-        VALUES (?,CURDATE(),?,?,?,?,?)'
+        VALUES (?,?,?,?,?,?,?)'
     );
 
     $insrtHipo=$conn->prepare(
         'INSERT INTO `hipo`(`idUsuario`, `fecha`, `tipoComida`, `hora`, `glucosa`) 
-        VALUES (?,CURDATE(),?,?,?)'
+        VALUES (?,?,?,?,?)'
     );
 
     $insrtHiper=$conn->prepare(
         'INSERT INTO `hiper`(`idUsuario`, `fecha`, `tipoComida`, `hora`, `glucosa`, `correccion`) 
-        VALUES (?,CURDATE(),?,?,?,?)'
+        VALUES (?,?,?,?,?,?)'
     );
 ?>

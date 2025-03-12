@@ -13,6 +13,9 @@
     <body>
         <div class="container-fluid font-ratushy">
             <?php include 'navbar.html';?>
+            <?php if (isset($_POST['fecha'])){
+                $fecha = $_POSt['fecha'];
+            ?>
             <div class="row">
                 <div class="table-responsive mt-4">
                     <table class="table table-striped table-bordered table-primary align-middle">
@@ -99,6 +102,7 @@
                         </tbody>
                     </table>
                 </div>
+                <?php }?>
             </div>
             <script src="../functions/js/toggleOptions.js"></script>
         </div>

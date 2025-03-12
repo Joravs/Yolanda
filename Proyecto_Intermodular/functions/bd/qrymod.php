@@ -12,7 +12,7 @@
             FROM controlGlucosa cg
             INNER JOIN comidas c ON (c.idUsuario=cg.idUsuario)
             WHERE c.idUsuario=(select u.idUsuario from usuario u where u.username=?)
-            AND c.fecha=CURDATE()
+            AND c.fecha=?
             GROUP BY c.idUsuario, c.tipoComida
             ORDER BY FIELD(tipoComida, "Desayuno","Mediodia","Comida","Merienda","Cena");'
     );
@@ -21,7 +21,7 @@
         'SELECT fecha,lenta,deporte
             FROM controlGlucosa cg
             WHERE cg.idUsuario=(select u.idUsuario from usuario u where u.username=?)
-            AND cg.fecha=CURDATE()
+            AND cg.fecha=?
             GROUP BY cg.idUsuario
             ORDER BY fecha;'
     );
