@@ -25,7 +25,7 @@
                             <?php if(isset($_POST['deporte'])){ ?>
                                 <div class="col-6 mb-3">
                                     <label for="deporte" class="form-label fs-4">Deporte</label>
-                                    <input type="number" class="form-control" name="deporte" id="deporte" aria-describedby="helpId" placeholder="" min="1" required/>                                
+                                    <input type="number" class="form-control" name="deporte" id="deporte" aria-describedby="helpId" placeholder="" min="1" max="5" required/>                                
                                 </div>
                             <?php }else{?>
                                 <div class="col-6 mb-3">

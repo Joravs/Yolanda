@@ -33,19 +33,19 @@
                         <div class="row d-flex align-items-baseline">
                             <div class="mb-3 col-6">
                                 <label for="glu1" class="form-label fs-4">Glucosa antes de Comer</label>
-                                <input type="number" class="form-control" name="glu1" id="glu1" aria-describedby="helpId" placeholder="" min="1" required/>
+                                <input type="number" class="form-control" name="glu1" id="glu1" aria-describedby="helpId" placeholder="" min="1" max="200" required/>
                             </div>
                             <div class="mb-3 col-6">
                                 <label for="glu2" class="form-label fs-4">Glucosa despues de Comer</label>
-                                <input type="number" class="form-control" name="glu2" id="glu2" aria-describedby="helpId" placeholder="" min="1"/>
+                                <input type="number" class="form-control" name="glu2" id="glu2" aria-describedby="helpId" placeholder="" min="1" max="200"/>
                             </div><!-- Este campo no es requerido obligatoriamente ya que la glucosa aplicada antes de comer tiene un efecto de 3 hr, por lo que este campo puede quedar vacio -->
                             <div class="mb-3 col-6">
                                 <label for="racion" class="form-label fs-4">Racion</label>
-                                <input type="number" class="form-control" name="racion" id="racion" aria-describedby="helpId" placeholder="" min="1" required/>
+                                <input type="number" class="form-control" name="racion" id="racion" aria-describedby="helpId" placeholder="" min="1" max="25" required/>
                             </div>
                             <div class="mb-3 col-6">
                                 <label for="insulina" class="form-label fs-4">Insulina</label>
-                                <input type="number" class="form-control" name="insulina" id="insulina" aria-describedby="helpId" placeholder="" min="1" required/>
+                                <input type="number" class="form-control" name="insulina" id="insulina" aria-describedby="helpId" placeholder="" min="1" max="15" required/>
                             </div>
                         </div>
                         <div id="hipoper" class="d-flex justify-content-center gap-3">
@@ -65,7 +65,7 @@
                         <div id="ataqueglucemia" class="row d-none justify-content-center">
                             <div class="mb-3 col-6">
                                 <label for="hipoperGlu" class="form-label fs-4">Glucosa administrada</label>
-                                <input type="number" class="form-control" name="hipoperGlu" id="hipoperGlu" aria-describedby="helpId" placeholder="" min="1"/>
+                                <input type="number" class="form-control" name="hipoperGlu" id="hipoperGlu" aria-describedby="helpId" placeholder="" min="1" max="200"/>
                             </div>
                             <div class="mb-3 col-6">
                                 <label for="hipoperHora" class="form-label fs-4">Hora</label>
@@ -73,7 +73,7 @@
                             </div>
                             <div id="hiperAG" class="d-none col-6 mb-3">
                                 <label for="correcion" class="form-label fs-4">Correccion</label>
-                                <input type="number" class="form-control" name="correccion" id="correccion" aria-describedby="helpId" placeholder="" min="1"/>                                
+                                <input type="number" class="form-control" name="correccion" id="correccion" aria-describedby="helpId" placeholder="" min="1" max="200"/>                                
                             </div>
                         </div>
                         <button type="submit" class="btn btn-secondary btn-md">Añadir</button>

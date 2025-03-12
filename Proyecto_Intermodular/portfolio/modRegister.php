@@ -13,18 +13,8 @@
     <body>
         <div class="container-fluid font-ratushy">
             <?php include 'navbar.html';?>
-            <form class="row g-3 needs-validation text-white text-center" autocomplete="off" method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
-                <legend>Selecciona una fecha para ver datos</legend>
-                <div class="row d-flex align-items-baseline mx-auto col-12">
-                    <div class="mb-3">
-                        <label for="fecha" class="form-label fs-5">Fecha</label>
-                        <input type="date" class="form-control" name="fecha" id="fecha" aria-describedby="helpId" placeholder=""/>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-secondary btn-md">Buscar</button>
-            </form>
             <?php if (isset($_POST['fecha'])){
-                $fecha = $_POSt['fecha'];
+                $fecha = $_POST['fecha'];
             ?>
             <div class="row">
                 <div class="table-responsive mt-4">
@@ -45,7 +35,7 @@
                         </thead>
                         <tbody class="table-group-divider text-white">
                             <?php 
-                                $selctTabla=consultarMod($username);
+                                $selctTabla=consultarMod($username,$fecha);
                                 $selctTabla->bind_result($fecha,$hipoglu,$hipohora,$hiperglu,$hiperhora,$corr,$tipocomida,$glu1,$rac,$insulina,$glu2);
                                 while($selctTabla->fetch()){
                                     echo '<form action="modRegisterHipoper.php" method="post" autocomplete="off"><tr>';
@@ -93,7 +83,7 @@
                         </thead>
                         <tbody class="table-group-divider text-white">
                             <?php 
-                                $selctLD=consultaLentaDeporte($username);
+                                $selctLD=consultaLentaDeporte($username,$fecha);
                                 $selctLD->bind_result($fecha,$lenta,$deporte);
                                 while($selctLD->fetch()){
                                     echo '<form action="modResgisterLD.php" method="post" autocomplete="off"><tr>';
@@ -112,7 +102,18 @@
                         </tbody>
                     </table>
                 </div>
-                <?php }?>
+                <?php }else{?>
+            <form class="row g-3 needs-validation text-white text-center" autocomplete="off" method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
+                <legend>Selecciona una fecha para ver datos</legend>
+                <div class="row d-flex align-items-baseline mx-auto col-12">
+                    <div class="mb-3">
+                        <label for="fecha" class="form-label fs-5">Fecha</label>
+                        <input type="date" class="form-control" name="fecha" id="fecha" aria-describedby="helpId" placeholder=""/>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-secondary btn-md">Buscar</button>
+            </form>
+            <?php }?>
             </div>
             <script src="../functions/js/toggleOptions.js"></script>
         </div>

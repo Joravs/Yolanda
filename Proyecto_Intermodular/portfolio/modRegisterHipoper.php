@@ -30,25 +30,25 @@
                                 <div class="row d-flex align-items-baseline">
                                     <div class="mb-3 col-6">
                                         <label for="glu1" class="form-label fs-4">Glucosa antes de Comer</label>
-                                        <input type="number" class="form-control" name="glu1" id="glu1" aria-describedby="helpId" value="<?= $_POST['glucosa1']; ?>" min="1" />
+                                        <input type="number" class="form-control" name="glu1" id="glu1" aria-describedby="helpId" value="<?= $_POST['glucosa1']; ?>" min="1" max="200" />
                                     </div>
                                     <div class="mb-3 col-6">
                                         <label for="glu2" class="form-label fs-4">Glucosa despues de Comer</label>
-                                        <input type="number" class="form-control" name="glu2" id="glu2" aria-describedby="helpId" value="<?= $_POST['glucosa2']; ?>" min="1" />
+                                        <input type="number" class="form-control" name="glu2" id="glu2" aria-describedby="helpId" value="<?= $_POST['glucosa2']; ?>" min="1" max="200" />
                                     </div>
                                     <div class="mb-3 col-6">
                                         <label for="racion" class="form-label fs-4">Racion</label>
-                                        <input type="number" class="form-control" name="racion" id="racion" aria-describedby="helpId" value="<?= $_POST['racion']; ?>" min="1" />
+                                        <input type="number" class="form-control" name="racion" id="racion" aria-describedby="helpId" value="<?= $_POST['racion']; ?>" min="1" max="25" />
                                     </div>
                                     <div class="mb-3 col-6">
                                         <label for="insulina" class="form-label fs-4">Insulina</label>
-                                        <input type="number" class="form-control" name="insulina" id="insulina" aria-describedby="helpId" value="<?= $_POST['insulina']; ?>" min="1" />
+                                        <input type="number" class="form-control" name="insulina" id="insulina" aria-describedby="helpId" value="<?= $_POST['insulina']; ?>" min="1" max="15"/>
                                     </div>
                                 </div>
                             <?php }else{ ?>
                             <div class="mb-3 col-6">
                                 <label for="hipoperGlu" class="form-label fs-4">Glucosa administrada</label>
-                                <input type="number" class="form-control" name="hipoperGlu" id="hipoperGlu" aria-describedby="helpId" value="<?= isset($_POST['hipoglu'])?$_POST['hipoglu']:$_POST['hiperglu']; ?>" min="1" required/>
+                                <input type="number" class="form-control" name="hipoperGlu" id="hipoperGlu" aria-describedby="helpId" value="<?= isset($_POST['hipoglu'])?$_POST['hipoglu']:$_POST['hiperglu']; ?>" min="1" max="200" required/>
                             </div>
                             <div class="mb-3 col-6">
                                 <label for="hipoperHora" class="form-label fs-4">Hora</label>
@@ -57,7 +57,7 @@
                             <?php }if(isset($_POST['hiper'])){ ?>
                                 <div id="hiperAG" class="col-6 mb-3">
                                     <label for="correcion" class="form-label fs-4">Correccion</label>
-                                    <input type="number" class="form-control" name="correccion" id="correccion" aria-describedby="helpId" value="<?=$_POST['correccion']; ?>" min="1" required/>                                
+                                    <input type="number" class="form-control" name="correccion" id="correccion" aria-describedby="helpId" value="<?=$_POST['correccion']; ?>" min="1" max="200" required/>                                
                                 </div>
                             <?php }?>
                         </div>

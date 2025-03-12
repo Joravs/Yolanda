@@ -16,6 +16,7 @@
 
         $select=$conn->query("SELECT username FROM usuario");
         $usuarios=$select;
+        $fechaHoy=date("Y-m-d");
         
         if($usuarios->num_rows > 0){
             echo "<input class='d-none' id='nombresUsuarios' value='";
@@ -64,7 +65,7 @@
                 </div>
                 <div class="mb-3 row-12 text-center">
                     <label for="fechaNac" class="form-label text-white fs-5">Fecha de Nacimiento</label>
-                    <input type="date" name="fechaNac" id="fechaNac" required>
+                    <input type="date" name="fechaNac" id="fechaNac" max="<?=$fechaHoy;?>" required>
                 </div>
                 <button name="register" type="submit" class="btn btn-secondary btn-md">Registrarse</button>
             </form>
