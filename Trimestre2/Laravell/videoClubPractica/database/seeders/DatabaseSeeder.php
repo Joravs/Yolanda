@@ -93,7 +93,7 @@ class DatabaseSeeder extends Seeder
 			"title" => "Uno de los nuestros",
 			"year" => "1990",
 			"director" => "Martin Scorsese",
-			"poster" => "https://pics.filmaffinity.com/Uno_de_los_nuestros-343032101-large.jpg",
+			"poster" => "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDB4ZGkzZms0Y3hzNnk4MjNpMmt0a3o4bTk3Y2Rxb3BwY21xajR1OCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/xVPosMMzT60Xzv31my/giphy.gif",
 			"rented" => "0",
 			"synopsis" => "Henry Hill, hijo de padre irlandés y madre siciliana, vive en Brooklyn y se siente fascinado por la vida que llevan los gángsters de su barrio, donde la mayoría de los vecinos son inmigrantes. Paul Cicero, el patriarca de la familia Pauline, es el protector del barrio. A los trece años, Henry decide abandonar la escuela y entrar a formar parte de la organización mafiosa como chico de los recados; muy pronto se gana la confianza de sus jefes, gracias a lo cual irá subiendo de categoría.",
 			"created_at" => "2025-03-06 13:10:47",
