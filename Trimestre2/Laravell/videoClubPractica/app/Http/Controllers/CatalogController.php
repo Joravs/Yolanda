@@ -54,6 +54,6 @@ class CatalogController extends Controller
             'rented' => $request['rented']
         ];
         $pelicula = Movie::updateOrCreate(['id' => $request->id], $validateData);
-        return view('catalog.show',compact('pelicula'))->with('status','Pelicula editada correctamente');
+        return redirect()->route('index')->with('status','Pelicula editada correctamente');
     }
 }
