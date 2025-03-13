@@ -1,6 +1,11 @@
 @extends('layouts.master')
     @section('content')
     <div class="row">
+        @if(session('status'))
+        <div class="alert alert-success" role="alert">
+            @{{ session('status') }}
+        </div>
+        @endif
         <h1>Vista detalle pelicula {{$pelicula->title}}</h1>
         <div class="col-12 col-lg-4">
             <img src="{{$pelicula->poster}}" style="width:300px;height:auto;"></img>

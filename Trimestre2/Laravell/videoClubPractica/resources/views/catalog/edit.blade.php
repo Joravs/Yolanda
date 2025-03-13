@@ -15,8 +15,9 @@
         </div>
     </div>
     <h1>Modificar pelicula "{{$pelicula->title}}"</h1>
-    <form action="{{url('/catalog/editar')}}" method="post">
+    <form action="{{url('catalog/edit')}}" method="post">
         @csrf
+        <input type="hidden" name="id" value="{{$pelicula->id}}">
         <div class="row">
             <div class="mb-3 col-6">
                 <label for="title" class="form-label">Titulo</label>
@@ -24,7 +25,7 @@
             </div>
             <div class="mb-3 col-6">
                 <label for="director" class="form-label">Director</label>
-                <input type="year" class="form-control" name="director" id="director" aria-describedby="helpId" value="{{$pelicula->director}}"/>
+                <input type="director" class="form-control" name="director" id="director" aria-describedby="helpId" value="{{$pelicula->director}}"/>
             </div>
             <div class="mb-3 col-6">
                 <label for="year" class="form-label">Año</label>
