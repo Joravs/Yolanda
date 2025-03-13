@@ -137,7 +137,7 @@ class DatabaseSeeder extends Seeder
 			"title" => "El precio del poder",
 			"year" => "1983",
 			"director" => "Brian De Palma",
-			"poster" => "https://imgs.search.brave.com/AkJUP1MXCR70X3cP4VcKcJJ3ZYkDi3ya1iRUP3hRAvQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMucG9zdGVycy5j/ei9pbWFnZS8zNTAv/cG9zdGVycy9lbC1w/cmVjaW8tZGVsLXBv/ZGVyLXNheS1oZWxs/by10by1teS1saXR0/bGUtZnJpZW5kLWkx/MDkyNC5qcGc",
+			"poster" => "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExejE1b3gybzNjMnFzY2YwOW5udGx5aDFmaXRvMW42OTF5dmpjNmk3YSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/xT0xeDR5iYp9DWTeVO/giphy.gif",
 			"rented" => "0",
 			"synopsis" => "Tony Montana es un emigrante cubano frío y sanguinario que se instala en Miami con el propósito de convertirse en un gángster importante. Con la colaboración de su amigo Manny Rivera inicia una fulgurante carrera delictiva con el objetivo de acceder a la cúpula de una organización de narcos.",
 			"created_at" => "2025-03-06 13:10:47",
