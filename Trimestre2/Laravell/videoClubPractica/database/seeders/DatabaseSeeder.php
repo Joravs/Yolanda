@@ -104,7 +104,7 @@ class DatabaseSeeder extends Seeder
 			"title" => "Alguien voló sobre el nido del cuco",
 			"year" => "1975",
 			"director" => "Milos Forman",
-			"poster" => "https://imgs.search.brave.com/24ft853TcZBwCOLwiYC4OAh1t6ih9wrgAiNNoErBq0A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TFY1QllqZGtOamRs/TkRndFpUTTFNeTAw/WXpFd0xUazVZakl0/WWpFM1l6bGxaVFZp/TlRWbFhrRXlYa0Zx/Y0djQC5qcGc",
+			"poster" => "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXdlbWs4d2FyMTJ3dXk3MTE5NGQzNm4zb21ma3FmMmthZWpvMHl1cyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/xUOxfhVNgbuXvSTq0g/giphy.gif",
 			"rented" => "0",
 			"synopsis" => "Randle McMurphy (Jack Nicholson), un hombre condenado por asalto, y un espíritu libre que vive contracorriente, es recluido en un hospital psiquiátrico. La inflexible disciplina del centro acentúa su contagiosa tendencia al desorden, que acabará desencadenando una guerra entre los pacientes y el personal de la clínica con la fría y severa enfermera Ratched (Louise Fletcher) a la cabeza. La suerte de cada paciente del pabellón está en juego.",
 			"created_at" => "2025-03-06 13:10:47",
