@@ -4,7 +4,14 @@
     </div>
     <div class="row">
         @foreach ($imgs as $img)
-            <img class='imgs' src="{{$img->imagen}}" alt="">
+        <div class="card col-3 text-center">
+            <img class="card-img-top imgs mx-auto" src="{{$img->imagen}}" alt="{{$img->desripcion}}">
+            <div class="card-body">
+            <h5 class="card-title">{{$img->imagen}}</h5>
+            </div>
+        </div>
         @endforeach
+        <a href="{{url('/agenda/add')}}"><button class="btn btn-info">Ejercicio 2</button></a>
+        
     </div>
 </x-layout>
