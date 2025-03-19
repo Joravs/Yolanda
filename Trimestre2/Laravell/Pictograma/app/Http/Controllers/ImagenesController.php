@@ -10,6 +10,7 @@ class ImagenesController extends Controller
     public function getContent()
     {
         $imgs = Imagenes::all();
+        dd($imgs);
         return view('catalog.index', compact('imgs'));
     }
 }
